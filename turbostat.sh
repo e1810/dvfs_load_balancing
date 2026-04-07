@@ -1,0 +1,1 @@
+sudo turbostat --show "CPU,TSC_MHz,Busy%,Bzy_MHz,Avg_MHz,IPC"
