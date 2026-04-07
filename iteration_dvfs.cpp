@@ -2,6 +2,7 @@
 #include<omp.h>
 #include<cstdio>
 #include "msr_freq.hpp"
+#include "power_meter.hpp"
 
 void trans_sdrc(int ist, int ied, int buf[], int rank, int num_ranks) {
     int req0, req1;
@@ -40,8 +41,14 @@ int main(int argc, char **argv) {
     divloop(LOOPSIZE, ist, ied, numth);
 
 
+    // start iteration
     for(int iter=0; iter<1000; iter++) {
-    MPI_Barrier(MPI_COMM_WORLD);
+        MPI_Barrier(MPI_COMM_WORLD);
+        // start iteration level measurement
+        power::EnergyMeter energy_meter;
+        bool energy_started = energy_meter.start();
+        double time_iter_start = MPI_Wtime();
+
 
     if(rank == 0) {
         printf("Threads workloads\n");
@@ -50,14 +57,15 @@ int main(int argc, char **argv) {
         printf("Threads times\n");
     }
 
+    // threads setting
     int ith;
-    double time_iter_start = MPI_Wtime();
-
     double freq_mhz[numth];
     int cpu_id;
-    double target_mhz = 4200.0, bus_mhz = 100.0, base_mhz = 3417.0;
+    double target_mhz = 00.0;
+    double bus_mhz = 100.0, base_mhz = 3417.0;
     msr::CounterSample sample1, sample2;
 
+    // start thread parallel region
     #pragma omp parallel private(ith) \
         private(cpu_id,sample1,sample2)
     {
@@ -86,8 +94,8 @@ int main(int argc, char **argv) {
         time_th_end[ith] = omp_get_wtime();
     }// omp end parallel
 
-    
 
+    // output thread metrics
     {
         for(int i=0; i<numth; i++) {
             printf("Rank %d, Thread %d [%f MHz]: %f ms\n", 
@@ -95,9 +103,15 @@ int main(int argc, char **argv) {
             time_th_sum[i] += time_th_end[i] - time_th_start[i];
         }
     }
+
     
+    // stop iteration level measurement
     double time_iter_end = MPI_Wtime();
     printf("Rank %d, Iteration %d:, %f ms\n", rank, iter, (time_iter_end - time_iter_start)*1000);
+    energy_meter.stop();
+    double energy_j = energy_meter.consumed_joule();
+    printf("Rank %d, Iteration %d: %f J, %f W\n",
+        rank, iter, energy_j, energy_j / (time_iter_end - time_iter_start));
     fflush(stdout);
 
 
