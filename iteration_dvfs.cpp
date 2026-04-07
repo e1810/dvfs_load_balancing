@@ -23,6 +23,7 @@ void divloop(int loopsize, int *ist, int *ied, int numth) {
 }
 
 int main(int argc, char **argv) {
+    const int ITER_COUNT = 5;
     const int LOOPSIZE = 1e9;
     const int BUFSIZE = 1e9;
 
@@ -42,7 +43,7 @@ int main(int argc, char **argv) {
 
 
     // start iteration
-    for(int iter=0; iter<1000; iter++) {
+    for(int iter=0; iter<ITER_COUNT; iter++) {
         MPI_Barrier(MPI_COMM_WORLD);
         // start iteration level measurement
         power::EnergyMeter energy_meter;
