@@ -65,8 +65,12 @@ int current_cpu() {
 }
 
 CounterSample sample() {
-    CounterSample out{0ULL, 0ULL};
     int cpu = sched_getcpu();
+    return sample_on_cpu(cpu);
+}
+
+CounterSample sample_on_cpu(int cpu) {
+    CounterSample out{0ULL, 0ULL};
     if (cpu < 0) return out;
 
     std::uint64_t aperf = 0;
@@ -131,12 +135,12 @@ bool set_freq_on_cpu(int cpu, double freq_mhz, double bus_mhz) {
     }
 
     std::uint64_t value = (static_cast<std::uint64_t>(ratio) << 8);
-    if (write_msr_on_cpu(cpu, 0x199, value) != 0) {
+    while (write_msr_on_cpu(cpu, 0x199, value) != 0) {
         std::fprintf(stderr, "Failed to write MSR 0x199 on CPU %d\n", cpu);
         if (cpu >= 0 && cpu < kMaxCpus && msr_fd_write[cpu] < 0) {
             std::fprintf(stderr, "MSR write fd not open (root required)\n");
         }
-        return false;
+        //return false;
     }
 
     return true;

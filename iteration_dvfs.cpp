@@ -4,12 +4,15 @@
 #include "msr_freq.hpp"
 #include "power_meter.hpp"
 
+
+const int ITER_COUNT = 5;
+const int LOOPSIZE = 1e9;
+const int BUFSIZE = 1e9;
+
 void trans_sdrc(int ist, int ied, int buf[], int rank, int num_ranks) {
     int req0, req1;
-    // Send/receive full LOOPSIZE worth of data, not thread-specific size
-    const int LOOPSIZE = 1e9;
-    MPI_Isend(buf, LOOPSIZE, MPI_INT, (rank+1)%num_ranks, 0, MPI_COMM_WORLD, &req0);
-    MPI_Irecv(buf, LOOPSIZE, MPI_INT, (rank-1+num_ranks)%num_ranks, 0, MPI_COMM_WORLD, &req1);
+    MPI_Isend(buf, BUFSIZE, MPI_INT, (rank+1)%num_ranks, 0, MPI_COMM_WORLD, &req0);
+    MPI_Irecv(buf, BUFSIZE, MPI_INT, (rank-1+num_ranks)%num_ranks, 0, MPI_COMM_WORLD, &req1);
     MPI_Wait(&req0, MPI_STATUS_IGNORE);
     MPI_Wait(&req1, MPI_STATUS_IGNORE);
 }
@@ -23,9 +26,6 @@ void divloop(int loopsize, int *ist, int *ied, int numth) {
 }
 
 int main(int argc, char **argv) {
-    const int ITER_COUNT = 5;
-    const int LOOPSIZE = 1e9;
-    const int BUFSIZE = 1e9;
 
     MPI_Init(&argc, &argv);
     int rank, num_ranks;
@@ -33,7 +33,8 @@ int main(int argc, char **argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     int numth = omp_get_max_threads();
 
-    int *buf = new int[BUFSIZE];
+    int *comm_buf = new int[BUFSIZE];
+    int *comp_buf = new int[BUFSIZE];
     double time_th_start[numth], time_th_end[numth];
     double time_th_sum[numth];
     for(int i=0; i<numth; i++) time_th_sum[i] = 0.0;
@@ -52,19 +53,28 @@ int main(int argc, char **argv) {
 
 
     if(rank == 0) {
-        printf("Threads workloads\n");
+        printf("\nThreads workloads\n");
         for(int i=0; i<numth; i++) printf("%d ", ied[i]-ist[i]);
         printf("\n");
-        printf("Threads times\n");
     }
 
     // threads setting
     int ith;
-    double freq_mhz[numth];
-    int cpu_id;
-    double target_mhz = 00.0;
+    double target_mhz[numth], freq_mhz[numth];
+    for(int i=0; i<numth; i++) {
+        if(rank < 2) target_mhz[i] = 3000;
+        else target_mhz[i] = 00;
+    }
+    target_mhz[0] = 800;
     double bus_mhz = 100.0, base_mhz = 3417.0;
+    int cpu_id;
     msr::CounterSample sample1, sample2;
+
+    if(rank == 0) {
+        printf("\nTarget frequencies\n");
+        for(int i=0; i<numth; i++) printf("%.0f ", target_mhz[i]);
+        printf("\nThreads times\n");
+    }
 
     // start thread parallel region
     #pragma omp parallel private(ith) \
@@ -74,32 +84,36 @@ int main(int argc, char **argv) {
         ith = omp_get_thread_num();
         time_th_start[ith] = omp_get_wtime();
         cpu_id = msr::current_cpu();
-        msr::set_freq_on_cpu(cpu_id, target_mhz, bus_mhz);
-        sample1 = msr::sample();
+        msr::set_freq_on_cpu(cpu_id, target_mhz[ith], bus_mhz);
+        sample1 = msr::sample_on_cpu(cpu_id);
 
         #pragma omp master
         {
-            trans_sdrc(ist[ith], ied[ith], buf, rank, num_ranks);
+            //msr::set_freq_on_cpu(msr::current_cpu(), 800, 100);
+            trans_sdrc(ist[ith], ied[ith], comm_buf, rank, num_ranks);
+            //msr::set_freq_on_cpu(msr::current_cpu(), 0, 100);
+
         }
         
         for(int i=ist[ith]; i<ied[ith]; i++) {
-            buf[i] = i;
+            comp_buf[i] = i+iter;
             for(int j=0; j<5000; j++) {
-                if(j%2) buf[i]++;
-                else buf[i]--;
+                if(j%2) comp_buf[i]++;
+                else comp_buf[i]--;
             }
         }
 
-        sample2 = msr::sample();
+        sample2 = msr::sample_on_cpu(cpu_id);
         freq_mhz[ith] = msr::compute_freq_mhz(base_mhz, sample1, sample2);
         time_th_end[ith] = omp_get_wtime();
+        msr::set_freq_on_cpu(cpu_id, 0, 100);
     }// omp end parallel
 
 
     // output thread metrics
     {
         for(int i=0; i<numth; i++) {
-            printf("Rank %d, Thread %d [%f MHz]: %f ms\n", 
+            printf("Rank %d, Thread %d [%.0f MHz]: %.0f ms\n", 
                 rank, i, freq_mhz[i], (time_th_end[i] - time_th_start[i])*1000);
             time_th_sum[i] += time_th_end[i] - time_th_start[i];
         }
@@ -108,7 +122,7 @@ int main(int argc, char **argv) {
     
     // stop iteration level measurement
     double time_iter_end = MPI_Wtime();
-    printf("Rank %d, Iteration %d:, %f ms\n", rank, iter, (time_iter_end - time_iter_start)*1000);
+    printf("Rank %d, Iteration %d: %f ms\n", rank, iter, (time_iter_end - time_iter_start)*1000);
     energy_meter.stop();
     double energy_j = energy_meter.consumed_joule();
     printf("Rank %d, Iteration %d: %f J, %f W\n",
@@ -121,10 +135,13 @@ int main(int argc, char **argv) {
 
 
     for(int i=0; i<numth; i++) {
-        printf("sum of Thread %d: %f ms\n", i, time_th_sum[i]);
+        printf("sum of Rank %d, Thread %d: %f ms\n", rank, i, time_th_sum[i]);
     }
 
-    delete[] buf;
+    #pragma omp parallel
+    msr::set_freq_on_cpu(msr::current_cpu(), 0, 100);
+    delete[] comm_buf;
+    delete[] comp_buf;
     delete[] ist;
     delete[] ied;
     MPI_Finalize();

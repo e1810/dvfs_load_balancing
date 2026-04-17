@@ -12,6 +12,7 @@ struct CounterSample {
 };
 
 int current_cpu();
+CounterSample sample_on_cpu(int cpu);
 CounterSample sample();
 double compute_freq_mhz(double base_mhz,
                         const CounterSample& first,
