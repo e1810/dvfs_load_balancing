@@ -21,7 +21,7 @@ void divloop(int loopsize, int *ist, int *ied, int numth) {
     ist[0] = 0; ied[0] = 0;
     for(int i=1; i<numth; i++) {
         if(i>0) ist[i] = ied[i-1];
-        ied[i] = ist[i] + loopsize/3;
+        ied[i] = ist[i] + loopsize/(numth-1);
     }
 }
 
@@ -62,10 +62,10 @@ int main(int argc, char **argv) {
     int ith;
     double target_mhz[numth], freq_mhz[numth];
     for(int i=0; i<numth; i++) {
-        if(rank < 2) target_mhz[i] = 00;
-        else target_mhz[i] = 00;
+        if(rank < 2) target_mhz[i] = 4800;
+        else target_mhz[i] = 4800;
     }
-    //target_mhz[0] = 800;
+    target_mhz[0] = 1000;
     double bus_mhz = 100.0, base_mhz = 2496.0;
     int cpu_id;
     msr::CounterSample sample1, sample2;
