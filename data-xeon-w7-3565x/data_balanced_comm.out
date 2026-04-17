@@ -1,0 +1,215 @@
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.17  Build 20251215 (id: 2ac2f63)
+[0] MPI startup(): Copyright (C) 2003-2025 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 2.2.0-impi_2021.17.2
+[0] MPI startup(): libfabric provider: tcp
+[0] MPI startup(): File "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp_1_x1.dat" not found
+[0] MPI startup(): File "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp_1.dat" not found
+[0] MPI startup(): Load tuning file: "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp.dat"
+[0] MPI startup(): Number of NICs:  1 
+[0] MPI startup(): ===== NIC pinning on fanfan.dlab.internal =====
+[0] MPI startup(): Rank    Thread id  Pin nic
+[0] MPI startup(): 0       0          eth0
+[0] MPI startup(): 1       0          eth0
+[0] MPI startup(): 2       0          eth0
+[0] MPI startup(): 3       0          eth0
+[0] MPI startup(): ===== CPU pinning =====
+[0] MPI startup(): Rank    Pid      Node name             Pin cpu
+[0] MPI startup(): 0       21721    fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       21722    fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       21723    fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       21724    fanfan.dlab.internal  {12-15}
+[0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
+[0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
+[0] MPI startup(): I_MPI_MPIRUN=mpirun
+[0] MPI startup(): I_MPI_BIND_WIN_ALLOCATE=localalloc
+[0] MPI startup(): I_MPI_HYDRA_TOPOLIB=ipl2
+[0] MPI startup(): I_MPI_PIN_DOMAIN_SIZE=omp
+[0] MPI startup(): I_MPI_PIN_DOMAIN_SIZE=omp
+[0] MPI startup(): I_MPI_RETURN_WIN_MEM_NUMA=-1
+[0] MPI startup(): I_MPI_PIN=1
+[0] MPI startup(): I_MPI_PIN_CELL=core
+[0] MPI startup(): I_MPI_PIN_DOMAIN=omp:compact
+[0] MPI startup(): I_MPI_PIN_ORDER=scatter
+[0] MPI startup(): I_MPI_INTERNAL_MEM_POLICY=default
+[0] MPI startup(): I_MPI_FABRICS=shm:ofi
+[0] MPI startup(): I_MPI_OFI_PROVIDER=tcp
+[0] MPI startup(): I_MPI_THREAD_LEVEL=funneled
+[0] MPI startup(): I_MPI_DEBUG=5
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+800 4800 4800 4800 
+Threads times
+Failed to write MSR 0x199 on CPU 12
+MSR write fd not open (root required)
+Rank 1, Thread 0 [3932 MHz]: 2732 ms
+Rank 1, Thread 1 [4056 MHz]: 2733 ms
+Rank 1, Thread 2 [4062 MHz]: 2709 ms
+Rank 1, Thread 3 [4010 MHz]: 2745 ms
+Rank 1, Iteration 0: 2745.216777 ms
+Rank 1, Iteration 0: 763.085449 J, 277.969104 W
+Rank 3, Thread 0 [79 MHz]: 2930 ms
+Rank 3, Thread 1 [4046 MHz]: 2902 ms
+Rank 3, Thread 2 [4061 MHz]: 2748 ms
+Rank 3, Thread 3 [4047 MHz]: 2755 ms
+Rank 3, Iteration 0: 2930.100857 ms
+Rank 3, Iteration 0: 806.127880 J, 275.119499 W
+Rank 2, Thread 0 [3980 MHz]: 2731 ms
+Rank 2, Thread 1 [4085 MHz]: 3371 ms
+Rank 2, Thread 2 [4070 MHz]: 3322 ms
+Rank 2, Thread 3 [4071 MHz]: 3341 ms
+Rank 2, Iteration 0: 3372.463629 ms
+Rank 2, Iteration 0: 899.888809 J, 266.834252 W
+Rank 0, Thread 0 [3947 MHz]: 2930 ms
+Rank 0, Thread 1 [4086 MHz]: 3534 ms
+Rank 0, Thread 2 [4073 MHz]: 3382 ms
+Rank 0, Thread 3 [4074 MHz]: 3403 ms
+Rank 0, Iteration 0: 3534.380799 ms
+Rank 0, Iteration 0: 927.846379 J, 262.520207 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+800 4800 4800 4800 
+Threads times
+Rank 1, Thread 0 [799 MHz]: 1249 ms
+Rank 1, Thread 1 [4090 MHz]: 2278 ms
+Rank 1, Thread 2 [4090 MHz]: 2277 ms
+Rank 1, Thread 3 [4089 MHz]: 2278 ms
+Rank 1, Iteration 1: 2278.374245 ms
+Rank 1, Iteration 1: 627.972758 J, 275.623182 W
+Rank 3, Thread 0 [799 MHz]: 1249 ms
+Rank 3, Thread 1 [4089 MHz]: 2284 ms
+Rank 3, Thread 2 [4090 MHz]: 2279 ms
+Rank 3, Thread 3 [4089 MHz]: 2277 ms
+Rank 3, Iteration 1: 2283.889157 ms
+Rank 3, Iteration 1: 629.169044 J, 275.481427 W
+Rank 2, Thread 0 [799 MHz]: 1249 ms
+Rank 2, Thread 1 [4089 MHz]: 2283 ms
+Rank 2, Thread 2 [4090 MHz]: 2277 ms
+Rank 2, Thread 3 [4089 MHz]: 2288 ms
+Rank 2, Iteration 1: 2287.534357 ms
+Rank 2, Iteration 1: 629.850195 J, 275.340212 W
+Rank 0, Thread 0 [4017 MHz]: 1249 ms
+Rank 0, Thread 1 [4090 MHz]: 2277 ms
+Rank 0, Thread 2 [4090 MHz]: 2283 ms
+Rank 0, Thread 3 [4087 MHz]: 2328 ms
+Rank 0, Iteration 1: 2327.574524 ms
+Rank 0, Iteration 1: 637.065386 J, 273.703540 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+800 4800 4800 4800 
+Threads times
+Rank 1, Thread 0 [799 MHz]: 1261 ms
+Rank 1, Thread 1 [4101 MHz]: 2276 ms
+Rank 1, Thread 2 [4101 MHz]: 2274 ms
+Rank 1, Thread 3 [4102 MHz]: 2270 ms
+Rank 1, Iteration 2: 2275.823834 ms
+Rank 1, Iteration 2: 620.465148 J, 272.633206 W
+Rank 3, Thread 0 [799 MHz]: 1261 ms
+Rank 3, Thread 1 [4100 MHz]: 2277 ms
+Rank 3, Thread 2 [4101 MHz]: 2276 ms
+Rank 3, Thread 3 [4102 MHz]: 2269 ms
+Rank 3, Iteration 2: 2277.333454 ms
+Rank 3, Iteration 2: 620.716917 J, 272.563035 W
+Rank 2, Thread 0 [801 MHz]: 1261 ms
+Rank 2, Thread 1 [4100 MHz]: 2278 ms
+Rank 2, Thread 2 [4102 MHz]: 2270 ms
+Rank 2, Thread 3 [4100 MHz]: 2280 ms
+Rank 2, Iteration 2: 2279.571913 ms
+Rank 2, Iteration 2: 621.084470 J, 272.456625 W
+Rank 0, Thread 0 [799 MHz]: 1261 ms
+Rank 0, Thread 1 [4102 MHz]: 2270 ms
+Rank 0, Thread 2 [4100 MHz]: 2276 ms
+Rank 0, Thread 3 [4097 MHz]: 2334 ms
+Rank 0, Iteration 2: 2333.649497 ms
+Rank 0, Iteration 2: 631.343294 J, 270.539040 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+800 4800 4800 4800 
+Threads times
+Rank 1, Thread 0 [3690 MHz]: 1243 ms
+Rank 1, Thread 1 [4111 MHz]: 2271 ms
+Rank 1, Thread 2 [4111 MHz]: 2271 ms
+Rank 1, Thread 3 [4111 MHz]: 2265 ms
+Rank 1, Iteration 3: 2270.901141 ms
+Rank 1, Iteration 3: 629.134558 J, 277.041808 W
+Rank 2, Thread 0 [800 MHz]: 1243 ms
+Rank 2, Thread 1 [4111 MHz]: 2271 ms
+Rank 2, Thread 2 [4111 MHz]: 2266 ms
+Rank 2, Thread 3 [4111 MHz]: 2273 ms
+Rank 2, Iteration 3: 2272.791706 ms
+Rank 2, Iteration 3: 629.773229 J, 277.092365 W
+Rank 3, Thread 0 [800 MHz]: 1243 ms
+Rank 3, Thread 1 [4073 MHz]: 2298 ms
+Rank 3, Thread 2 [4111 MHz]: 2269 ms
+Rank 3, Thread 3 [4111 MHz]: 2265 ms
+Rank 3, Iteration 3: 2298.280817 ms
+Rank 3, Iteration 3: 634.638695 J, 276.136271 W
+Rank 0, Thread 0 [800 MHz]: 1243 ms
+Rank 0, Thread 1 [4111 MHz]: 2268 ms
+Rank 0, Thread 2 [4111 MHz]: 2265 ms
+Rank 0, Thread 3 [4109 MHz]: 2301 ms
+Rank 0, Iteration 3: 2301.346205 ms
+Rank 0, Iteration 3: 635.167990 J, 275.998452 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+800 4800 4800 4800 
+Threads times
+Rank 1, Thread 0 [3424 MHz]: 1236 ms
+Rank 1, Thread 1 [4073 MHz]: 2293 ms
+Rank 1, Thread 2 [4073 MHz]: 2293 ms
+Rank 1, Thread 3 [4072 MHz]: 2287 ms
+Rank 1, Iteration 4: 2292.894001 ms
+Rank 1, Iteration 4: 635.131309 J, 276.999856 W
+sum of Rank 1, Thread 0: 4.988061 ms
+sum of Rank 1, Thread 1: 9.117353 ms
+sum of Rank 1, Thread 2: 9.114739 ms
+sum of Rank 1, Thread 3: 9.100107 ms
+Rank 3, Thread 0 [3450 MHz]: 1225 ms
+Rank 3, Thread 1 [4073 MHz]: 2293 ms
+Rank 3, Thread 2 [4073 MHz]: 2293 ms
+Rank 3, Thread 3 [4072 MHz]: 2287 ms
+Rank 3, Iteration 4: 2293.454627 ms
+Rank 3, Iteration 4: 635.131309 J, 276.932145 W
+sum of Rank 3, Thread 0: 4.977169 ms
+sum of Rank 3, Thread 1: 9.152113 ms
+sum of Rank 3, Thread 2: 9.117107 ms
+sum of Rank 3, Thread 3: 9.098321 ms
+Rank 2, Thread 0 [804 MHz]: 1236 ms
+Rank 2, Thread 1 [4073 MHz]: 2293 ms
+Rank 2, Thread 2 [4072 MHz]: 2290 ms
+Rank 2, Thread 3 [4072 MHz]: 2305 ms
+Rank 2, Iteration 4: 2305.069398 ms
+Rank 2, Iteration 4: 637.465653 J, 276.549441 W
+sum of Rank 2, Thread 0: 4.988225 ms
+sum of Rank 2, Thread 1: 9.125573 ms
+sum of Rank 2, Thread 2: 9.103700 ms
+sum of Rank 2, Thread 3: 9.144941 ms
+Rank 0, Thread 0 [800 MHz]: 1225 ms
+Rank 0, Thread 1 [4073 MHz]: 2293 ms
+Rank 0, Thread 2 [4072 MHz]: 2288 ms
+Rank 0, Thread 3 [4069 MHz]: 2330 ms
+Rank 0, Iteration 4: 2329.584161 ms
+Rank 0, Iteration 4: 641.913945 J, 275.548725 W
+sum of Rank 0, Thread 0: 4.977214 ms
+sum of Rank 0, Thread 1: 9.108483 ms
+sum of Rank 0, Thread 2: 9.112088 ms
+sum of Rank 0, Thread 3: 9.292084 ms
+
+Execution time: 14.902856 seconds
+Whole-program energy: 3639.117881 J
+Whole-program average power: 244.189296 W
