@@ -62,10 +62,10 @@ int main(int argc, char **argv) {
     int ith;
     double target_mhz[numth], freq_mhz[numth];
     for(int i=0; i<numth; i++) {
-        if(rank < 2) target_mhz[i] = 4800;
-        else target_mhz[i] = 4800;
+        if(rank < 2) target_mhz[i] = 00;
+        else target_mhz[i] = 00;
     }
-    target_mhz[0] = 800;
+    //target_mhz[0] = 800;
     double bus_mhz = 100.0, base_mhz = 2496.0;
     int cpu_id;
     msr::CounterSample sample1, sample2;

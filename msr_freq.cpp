@@ -110,28 +110,15 @@ bool set_freq_on_cpu(int cpu, double freq_mhz, double bus_mhz) {
         max_ratio = static_cast<int>(hwp_cap & 0xFFULL);
     }
 
-    if (use_hwp && freq_mhz == 0.0 && max_ratio > 0) {
-        int ratio = max_ratio;
-        std::uint64_t hwp_value = 0;
-        if (read_msr_on_cpu(cpu, 0x774, &hwp_value) == 0) {
-            std::uint64_t new_hwp = (ratio & 0xFF) |
-                                    ((static_cast<std::uint64_t>(ratio) & 0xFFULL) << 8) |
-                                    ((static_cast<std::uint64_t>(ratio) & 0xFFULL) << 16) |
-                                    (0x80ULL << 24);
-            if (write_msr_on_cpu(cpu, 0x774, new_hwp) == 0) return true;
+    int ratio;
+    if (freq_mhz <= 0.0) {
+        ratio = (max_ratio > 0) ? max_ratio : 55;
+    } else {
+        ratio = static_cast<int>(freq_mhz / bus_mhz + 0.5);
+        if (max_ratio > 0) {
+            double estimated_bus = (max_ratio >= 50) ? 5300.0 / max_ratio : 4200.0 / max_ratio;
+            ratio = static_cast<int>(freq_mhz / estimated_bus + 0.5);
         }
-        return false;
-    }
-
-    int ratio = static_cast<int>(freq_mhz / bus_mhz + 0.5);
-
-    if (max_ratio > 0) {
-        double estimated_bus = (max_ratio >= 50) ? 5300.0 / max_ratio : 4200.0 / max_ratio;
-        ratio = static_cast<int>(freq_mhz / estimated_bus + 0.5);
-    }
-
-    if (!use_hwp && freq_mhz == 0.0 && max_ratio > 0) {
-        ratio = max_ratio;
     }
 
     if (ratio < 8) ratio = 8;
