@@ -1,0 +1,213 @@
+[0] MPI startup(): Intel(R) MPI Library, Version 2021.17  Build 20251215 (id: 2ac2f63)
+[0] MPI startup(): Copyright (C) 2003-2025 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 2.2.0-impi_2021.17.2
+[0] MPI startup(): libfabric provider: tcp
+[0] MPI startup(): File "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp_1_x1.dat" not found
+[0] MPI startup(): File "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp_1.dat" not found
+[0] MPI startup(): Load tuning file: "/opt/intel/oneapi/mpi/2021.17/opt/mpi/etc/tuning_spr_shm-ofi_tcp.dat"
+[0] MPI startup(): Number of NICs:  1 
+[0] MPI startup(): ===== NIC pinning on fanfan.dlab.internal =====
+[0] MPI startup(): Rank    Thread id  Pin nic
+[0] MPI startup(): 0       0          eth0
+[0] MPI startup(): 1       0          eth0
+[0] MPI startup(): 2       0          eth0
+[0] MPI startup(): 3       0          eth0
+[0] MPI startup(): ===== CPU pinning =====
+[0] MPI startup(): Rank    Pid      Node name             Pin cpu
+[0] MPI startup(): 0       84727    fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       84728    fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       84729    fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       84730    fanfan.dlab.internal  {12-15}
+[0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
+[0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
+[0] MPI startup(): I_MPI_MPIRUN=mpirun
+[0] MPI startup(): I_MPI_BIND_WIN_ALLOCATE=localalloc
+[0] MPI startup(): I_MPI_HYDRA_TOPOLIB=ipl2
+[0] MPI startup(): I_MPI_PIN_DOMAIN_SIZE=omp
+[0] MPI startup(): I_MPI_PIN_DOMAIN_SIZE=omp
+[0] MPI startup(): I_MPI_RETURN_WIN_MEM_NUMA=-1
+[0] MPI startup(): I_MPI_PIN=1
+[0] MPI startup(): I_MPI_PIN_CELL=core
+[0] MPI startup(): I_MPI_PIN_DOMAIN=omp:compact
+[0] MPI startup(): I_MPI_PIN_ORDER=scatter
+[0] MPI startup(): I_MPI_INTERNAL_MEM_POLICY=default
+[0] MPI startup(): I_MPI_FABRICS=shm:ofi
+[0] MPI startup(): I_MPI_OFI_PROVIDER=tcp
+[0] MPI startup(): I_MPI_THREAD_LEVEL=funneled
+[0] MPI startup(): I_MPI_DEBUG=5
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 3, Thread 0 [4071 MHz]: 2869 ms
+Rank 3, Thread 1 [4055 MHz]: 2706 ms
+Rank 3, Thread 2 [4060 MHz]: 2689 ms
+Rank 3, Thread 3 [4059 MHz]: 2718 ms
+Rank 3, Iteration 0: 2868.794433 ms
+Rank 3, Iteration 0: 799.943204 J, 278.842985 W
+Rank 2, Thread 0 [4050 MHz]: 2492 ms
+Rank 2, Thread 1 [4086 MHz]: 3362 ms
+Rank 2, Thread 2 [4080 MHz]: 3319 ms
+Rank 2, Thread 3 [4082 MHz]: 3315 ms
+Rank 2, Iteration 0: 3363.085174 ms
+Rank 2, Iteration 0: 924.495681 J, 274.895114 W
+Rank 1, Thread 0 [4060 MHz]: 2616 ms
+Rank 1, Thread 1 [4073 MHz]: 3492 ms
+Rank 1, Thread 2 [4082 MHz]: 3313 ms
+Rank 1, Thread 3 [4083 MHz]: 3329 ms
+Rank 1, Iteration 0: 3492.957398 ms
+Rank 1, Iteration 0: 955.098202 J, 273.435400 W
+Rank 0, Thread 0 [4063 MHz]: 2868 ms
+Rank 0, Thread 1 [4090 MHz]: 3505 ms
+Rank 0, Thread 2 [4078 MHz]: 3333 ms
+Rank 0, Thread 3 [4084 MHz]: 3367 ms
+Rank 0, Iteration 0: 3505.473397 ms
+Rank 0, Iteration 0: 957.783498 J, 273.225151 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 0, Thread 0 [4014 MHz]: 696 ms
+Rank 0, Thread 1 [4112 MHz]: 2274 ms
+Rank 0, Thread 2 [4112 MHz]: 2274 ms
+Rank 0, Thread 3 [4112 MHz]: 2273 ms
+Rank 0, Iteration 1: 2274.528969 ms
+Rank 0, Iteration 1: 650.608747 J, 286.041091 W
+Rank 2, Thread 0 [4016 MHz]: 696 ms
+Rank 2, Thread 1 [4112 MHz]: 2271 ms
+Rank 2, Thread 2 [4112 MHz]: 2281 ms
+Rank 2, Thread 3 [4112 MHz]: 2272 ms
+Rank 2, Iteration 1: 2281.027795 ms
+Rank 2, Iteration 1: 652.250284 J, 285.945785 W
+Rank 3, Thread 0 [4016 MHz]: 696 ms
+Rank 3, Thread 1 [4112 MHz]: 2273 ms
+Rank 3, Thread 2 [4112 MHz]: 2282 ms
+Rank 3, Thread 3 [4111 MHz]: 2281 ms
+Rank 3, Iteration 1: 2282.346335 ms
+Rank 3, Iteration 1: 652.494546 J, 285.887613 W
+Rank 1, Thread 0 [4015 MHz]: 696 ms
+Rank 1, Thread 1 [4109 MHz]: 2300 ms
+Rank 1, Thread 2 [4112 MHz]: 2279 ms
+Rank 1, Thread 3 [4112 MHz]: 2272 ms
+Rank 1, Iteration 1: 2300.277711 ms
+Rank 1, Iteration 1: 656.637113 J, 285.459929 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 0, Thread 0 [4046 MHz]: 694 ms
+Rank 0, Thread 1 [4122 MHz]: 2268 ms
+Rank 0, Thread 2 [4122 MHz]: 2270 ms
+Rank 0, Thread 3 [4122 MHz]: 2266 ms
+Rank 0, Iteration 2: 2269.634950 ms
+Rank 0, Iteration 2: 651.430767 J, 287.020063 W
+Rank 3, Thread 0 [4046 MHz]: 694 ms
+Rank 3, Thread 1 [4122 MHz]: 2268 ms
+Rank 3, Thread 2 [4122 MHz]: 2272 ms
+Rank 3, Thread 3 [4121 MHz]: 2276 ms
+Rank 3, Iteration 2: 2275.920294 ms
+Rank 3, Iteration 2: 653.287878 J, 287.043391 W
+Rank 1, Thread 0 [4044 MHz]: 694 ms
+Rank 1, Thread 1 [4120 MHz]: 2284 ms
+Rank 1, Thread 2 [4122 MHz]: 2270 ms
+Rank 1, Thread 3 [4122 MHz]: 2271 ms
+Rank 1, Iteration 2: 2284.428207 ms
+Rank 1, Iteration 2: 655.037813 J, 286.740380 W
+Rank 2, Thread 0 [4046 MHz]: 694 ms
+Rank 2, Thread 1 [4122 MHz]: 2267 ms
+Rank 2, Thread 2 [4117 MHz]: 2294 ms
+Rank 2, Thread 3 [4121 MHz]: 2275 ms
+Rank 2, Iteration 2: 2293.607767 ms
+Rank 2, Iteration 2: 657.308254 J, 286.582677 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 3, Thread 0 [4127 MHz]: 692 ms
+Rank 3, Thread 1 [4153 MHz]: 2248 ms
+Rank 3, Thread 2 [4153 MHz]: 2253 ms
+Rank 3, Thread 3 [4153 MHz]: 2253 ms
+Rank 3, Iteration 3: 2253.081494 ms
+Rank 3, Iteration 3: 657.869837 J, 291.986703 W
+Rank 0, Thread 0 [4127 MHz]: 692 ms
+Rank 0, Thread 1 [4153 MHz]: 2252 ms
+Rank 0, Thread 2 [4152 MHz]: 2256 ms
+Rank 0, Thread 3 [4153 MHz]: 2249 ms
+Rank 0, Iteration 3: 2256.315084 ms
+Rank 0, Iteration 3: 658.671531 J, 291.923560 W
+Rank 2, Thread 0 [4127 MHz]: 692 ms
+Rank 2, Thread 1 [4153 MHz]: 2249 ms
+Rank 2, Thread 2 [4153 MHz]: 2255 ms
+Rank 2, Thread 3 [4152 MHz]: 2260 ms
+Rank 2, Iteration 3: 2260.118656 ms
+Rank 2, Iteration 3: 659.690267 J, 291.883024 W
+Rank 1, Thread 0 [4122 MHz]: 692 ms
+Rank 1, Thread 1 [4150 MHz]: 2268 ms
+Rank 1, Thread 2 [4153 MHz]: 2253 ms
+Rank 1, Thread 3 [4152 MHz]: 2257 ms
+Rank 1, Iteration 3: 2268.518446 ms
+Rank 1, Iteration 3: 661.689041 J, 291.683342 W
+
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 3, Thread 0 [4119 MHz]: 686 ms
+Rank 3, Thread 1 [4150 MHz]: 2251 ms
+Rank 3, Thread 2 [4150 MHz]: 2254 ms
+Rank 3, Thread 3 [4150 MHz]: 2264 ms
+Rank 3, Iteration 4: 2263.844818 ms
+Rank 3, Iteration 4: 657.997522 J, 290.654870 W
+sum of Rank 3, Thread 0: 5.637230 ms
+sum of Rank 3, Thread 1: 11.746329 ms
+sum of Rank 3, Thread 2: 11.749461 ms
+sum of Rank 3, Thread 3: 11.790835 ms
+Rank 0, Thread 0 [4119 MHz]: 686 ms
+Rank 0, Thread 1 [4150 MHz]: 2255 ms
+Rank 0, Thread 2 [4149 MHz]: 2265 ms
+Rank 0, Thread 3 [4150 MHz]: 2255 ms
+Rank 0, Iteration 4: 2265.470892 ms
+Rank 0, Iteration 4: 658.564232 J, 290.696400 W
+sum of Rank 0, Thread 0: 5.637066 ms
+sum of Rank 0, Thread 1: 12.553955 ms
+sum of Rank 0, Thread 2: 12.398253 ms
+sum of Rank 0, Thread 3: 12.409963 ms
+Rank 1, Thread 0 [4118 MHz]: 686 ms
+Rank 1, Thread 1 [4149 MHz]: 2270 ms
+Rank 1, Thread 2 [4150 MHz]: 2259 ms
+Rank 1, Thread 3 [4150 MHz]: 2253 ms
+Rank 1, Iteration 4: 2269.871747 ms
+Rank 1, Iteration 4: 659.648641 J, 290.610534 W
+sum of Rank 1, Thread 0: 5.384354 ms
+sum of Rank 1, Thread 1: 12.614682 ms
+sum of Rank 1, Thread 2: 12.373607 ms
+sum of Rank 1, Thread 3: 12.382556 ms
+Rank 2, Thread 0 [4119 MHz]: 686 ms
+Rank 2, Thread 1 [4150 MHz]: 2252 ms
+Rank 2, Thread 2 [4143 MHz]: 2296 ms
+Rank 2, Thread 3 [4150 MHz]: 2263 ms
+Rank 2, Iteration 4: 2296.317077 ms
+Rank 2, Iteration 4: 666.551455 J, 290.269781 W
+sum of Rank 2, Thread 0: 5.260276 ms
+sum of Rank 2, Thread 1: 12.401813 ms
+sum of Rank 2, Thread 2: 12.444564 ms
+sum of Rank 2, Thread 3: 12.385012 ms
+
+Execution time: 13.466978 seconds
+Whole-program energy: 3709.144008 J
+Whole-program average power: 275.425112 W
