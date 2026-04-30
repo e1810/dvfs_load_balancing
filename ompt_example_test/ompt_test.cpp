@@ -2,9 +2,26 @@
 
 #include <cstdio>
 #include <map>
+#include <vector>
 #include <omp.h>
 
-static std::map<const void*, unsigned int> region_begin_count;
+namespace {
+
+struct RegionState {
+    unsigned int begin_count;
+    std::vector<double> elapsed_ms;
+    std::vector<unsigned int> target_mhz;
+
+    RegionState() : begin_count(0) {
+        elapsed_ms.resize(omp_get_max_threads());
+        target_mhz.resize(omp_get_max_threads());
+    }
+};
+
+std::map<const void*, RegionState> region_states;
+
+}  // namespace
+
 
 void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
                              const ompt_frame_t* encountering_task_frame,
@@ -22,19 +39,20 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
-    
-    unsigned int count = ++region_begin_count[event.codeptr_ra];
-    omp_set_num_threads(5-count);
-    
+    auto& region_state = region_states[event.codeptr_ra];
+    region_state.begin_count += 1;
+
     std::fprintf(stderr,
-                 "[OMPT] codeptr_ra=%p begin_count=%u\n",
+                 "[OMPT] codeptr_ra=%p begin_count=%u thread_count=%zu\n",
                  event.codeptr_ra,
-                 count);
+                 region_state.begin_count,
+                 region_state.target_mhz.size());
     std::fprintf(stderr, "[OMPT] parallel begin: requested=%u flags=%d parallel=%llu\n",
                  event.requested_parallelism,
                  event.flags,
                  static_cast<unsigned long long>(event.parallel_data ? event.parallel_data->value : 0ULL));
 }
+
 
 int ompt_initialize(ompt_function_lookup_t lookup,
                     int /*initial_device_num*/,
@@ -57,6 +75,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 void ompt_finalize(ompt_data_t* /*tool_data*/) {
     (void)0;
 }
+
 
 extern "C" {
 
