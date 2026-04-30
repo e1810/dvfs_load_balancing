@@ -1,6 +1,10 @@
 #include "ompt_test.hpp"
 
 #include <cstdio>
+#include <map>
+#include <omp.h>
+
+static std::map<const void*, unsigned int> region_begin_count;
 
 void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
                              const ompt_frame_t* encountering_task_frame,
@@ -18,9 +22,15 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
-    std::fprintf(stdout,
-                 "[OMPT] codeptr_ra=%p parallel begin: requested=%u flags=%d parallel=%llu\n",
+    
+    unsigned int count = ++region_begin_count[event.codeptr_ra];
+    omp_set_num_threads(5-count);
+    
+    std::fprintf(stderr,
+                 "[OMPT] codeptr_ra=%p begin_count=%u\n",
                  event.codeptr_ra,
+                 count);
+    std::fprintf(stderr, "[OMPT] parallel begin: requested=%u flags=%d parallel=%llu\n",
                  event.requested_parallelism,
                  event.flags,
                  static_cast<unsigned long long>(event.parallel_data ? event.parallel_data->value : 0ULL));

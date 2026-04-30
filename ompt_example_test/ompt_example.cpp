@@ -4,7 +4,7 @@
 
 int main() {
 
-    for(int i=0; i<10; i++) {
+    for(int i=0; i<4; i++) {
         #pragma omp parallel
         {
             std::printf("region 1: hello from thread %d\n", omp_get_thread_num());
