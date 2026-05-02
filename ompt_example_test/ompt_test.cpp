@@ -1,27 +1,50 @@
 #include "ompt_test.hpp"
 
 #include <cstdio>
-#include <map>
+#include <chrono>
+#include <memory>
 #include <vector>
+#include <unordered_map>
 #include <omp.h>
 
 namespace {
 
 struct RegionState {
+    const void* codeptr_ra;
     unsigned int begin_count;
+    int nthreads;
     std::vector<double> elapsed_ms;
     std::vector<unsigned int> target_mhz;
+    std::chrono::steady_clock::time_point start_time;
 
-    RegionState() : begin_count(0) {
-        elapsed_ms.resize(omp_get_max_threads());
-        target_mhz.resize(omp_get_max_threads());
+    RegionState(const omptool::ParallelRegionBeginEvent& ev)
+        : codeptr_ra(ev.codeptr_ra), begin_count(0) {
+        nthreads = (ev.requested_parallelism > 0) ? static_cast<std::size_t>(ev.requested_parallelism) : static_cast<std::size_t>(omp_get_max_threads());
+        elapsed_ms.assign(nthreads, 0.0);
+        target_mhz.assign(nthreads, 0U);
     }
 };
 
-std::map<const void*, RegionState> region_states;
+static std::unordered_map<const void*, std::unique_ptr<RegionState>> region_states;
 
 }  // namespace
 
+
+void dispatch_parallel_end(ompt_data_t* parallel_data,
+                           ompt_data_t* task_data,
+                           int flags,
+                           const void* codeptr_ra) {
+    (void)task_data; (void)flags; (void)codeptr_ra;
+    if (!parallel_data || !parallel_data->ptr) return;
+    
+    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
+    if (!rs) return;
+
+    for (int i = 0; i < rs->nthreads; ++i) {
+        std::fprintf(stderr, "[OMPT] final codeptr_ra=%p thread=%d elapsed_ms=%.6f\n",
+                         rs->codeptr_ra, i, rs->elapsed_ms[i]);
+    }
+}
 
 void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
                              const ompt_frame_t* encountering_task_frame,
@@ -39,18 +62,42 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
-    auto& region_state = region_states[event.codeptr_ra];
-    region_state.begin_count += 1;
+    RegionState* rs = nullptr;
+    auto it = region_states.find(event.codeptr_ra);
+    if (it == region_states.end()) {
+        auto up = std::make_unique<RegionState>(event);
+        it = region_states.emplace(event.codeptr_ra, std::move(up)).first;
+    }
+    rs = it->second.get();
+    rs->begin_count += 1;
+    rs->start_time = std::chrono::steady_clock::now();
 
-    std::fprintf(stderr,
-                 "[OMPT] codeptr_ra=%p begin_count=%u thread_count=%zu\n",
-                 event.codeptr_ra,
-                 region_state.begin_count,
-                 region_state.target_mhz.size());
-    std::fprintf(stderr, "[OMPT] parallel begin: requested=%u flags=%d parallel=%llu\n",
-                 event.requested_parallelism,
-                 event.flags,
-                 static_cast<unsigned long long>(event.parallel_data ? event.parallel_data->value : 0ULL));
+    parallel_data->ptr = rs;
+
+    std::fprintf(stderr, "[OMPT] codeptr_ra=%p begin_count=%u thread_count=%d\n",
+                event.codeptr_ra, rs->begin_count, rs->nthreads);
+}
+
+void dispatch_barrier_wait(ompt_sync_region_t kind,
+                          ompt_scope_endpoint_t endpoint,
+                          ompt_data_t* parallel_data,
+                          ompt_data_t* task_data,
+                          const void* codeptr_ra) {
+    (void)kind; (void)task_data; (void)codeptr_ra;
+    if (endpoint != ompt_scope_begin) return;
+    if (!parallel_data || !parallel_data->ptr) return;
+    
+    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
+    if (!rs) return;
+
+    int tid = omp_get_thread_num();
+    if (tid >= 0 && static_cast<std::size_t>(tid) < rs->elapsed_ms.size()) {
+        auto now = std::chrono::steady_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_time);
+        rs->elapsed_ms[static_cast<std::size_t>(tid)] = elapsed.count();
+        // std::fprintf(stderr, "[OMPT] barrier_wait codeptr_ra=%p thread=%d elapsed_ms=%.6f\n",
+        //             rs->codeptr_ra, tid, elapsed.count());
+    }
 }
 
 
@@ -69,6 +116,10 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 
     set_callback(ompt_callback_parallel_begin,
                  reinterpret_cast<ompt_callback_t>(&dispatch_parallel_begin));
+    set_callback(ompt_callback_parallel_end,
+                 reinterpret_cast<ompt_callback_t>(&dispatch_parallel_end));
+    set_callback(ompt_callback_sync_region,
+                 reinterpret_cast<ompt_callback_t>(&dispatch_barrier_wait));
     return 1;
 }
 
