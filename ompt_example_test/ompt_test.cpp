@@ -2,7 +2,6 @@
 
 #include <cstdio>
 #include <chrono>
-#include <memory>
 #include <vector>
 #include <unordered_map>
 #include <omp.h>
@@ -25,7 +24,7 @@ struct RegionState {
     }
 };
 
-static std::unordered_map<const void*, std::unique_ptr<RegionState>> region_states;
+static std::unordered_map<const void*, RegionState> region_states;
 
 }  // namespace
 
@@ -62,13 +61,11 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
-    RegionState* rs = nullptr;
     auto it = region_states.find(event.codeptr_ra);
     if (it == region_states.end()) {
-        auto up = std::make_unique<RegionState>(event);
-        it = region_states.emplace(event.codeptr_ra, std::move(up)).first;
+        it = region_states.emplace(event.codeptr_ra, RegionState(event)).first;
     }
-    rs = it->second.get();
+    auto* rs = &it->second;
     rs->begin_count += 1;
     rs->start_time = std::chrono::steady_clock::now();
 
