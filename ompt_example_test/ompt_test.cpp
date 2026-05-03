@@ -167,10 +167,13 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                  reinterpret_cast<ompt_callback_t>(&dispatch_parallel_end));
     set_callback(ompt_callback_sync_region,
                  reinterpret_cast<ompt_callback_t>(&dispatch_barrier_wait));
+
+    msr::reset_freq_all();
     return 1;
 }
 
 void ompt_finalize(ompt_data_t* /*tool_data*/) {
+    msr::reset_freq_all();
     (void)0;
 }
 

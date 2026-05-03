@@ -138,16 +138,13 @@ bool set_freq_on_cpu(int cpu, double freq_mhz, double bus_mhz) {
     return true;
 }
 
-bool set_freq_multi(const std::vector<int>& cpu_list,
-                    double freq_mhz,
-                    double bus_mhz) {
-    bool all_ok = true;
-    for (int cpu : cpu_list) {
-        if (!set_freq_on_cpu(cpu, freq_mhz, bus_mhz)) {
-            all_ok = false;
-        }
+
+bool reset_freq_all() {
+    auto target_cpus = get_allowed_cpus();
+    for(int cpu: target_cpus) {
+        if(!set_freq_on_cpu(cpu, 0, 100)) return false;
     }
-    return all_ok;
+    return true;
 }
 
 bool set_freq(double freq_mhz, double bus_mhz) {
