@@ -29,21 +29,6 @@ static std::unordered_map<const void*, RegionState> region_states;
 }  // namespace
 
 
-void dispatch_parallel_end(ompt_data_t* parallel_data,
-                           ompt_data_t* task_data,
-                           int flags,
-                           const void* codeptr_ra) {
-    (void)task_data; (void)flags; (void)codeptr_ra;
-    if (!parallel_data || !parallel_data->ptr) return;
-    
-    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
-    if (!rs) return;
-
-    for (int i = 0; i < rs->nthreads; ++i) {
-        std::fprintf(stderr, "[OMPT] final codeptr_ra=%p thread=%d elapsed_ms=%.6f\n",
-                         rs->codeptr_ra, i, rs->elapsed_ms[i]);
-    }
-}
 
 void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
                              const ompt_frame_t* encountering_task_frame,
@@ -61,19 +46,20 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
-    auto it = region_states.find(event.codeptr_ra);
-    if (it == region_states.end()) {
-        it = region_states.emplace(event.codeptr_ra, RegionState(event)).first;
+    auto iter = region_states.find(event.codeptr_ra);
+    if (iter == region_states.end()) {
+        iter = region_states.emplace(event.codeptr_ra, RegionState(event)).first;
     }
-    auto* rs = &it->second;
+    auto* rs = &iter->second;
+
     rs->begin_count += 1;
     rs->start_time = std::chrono::steady_clock::now();
-
     parallel_data->ptr = rs;
 
-    std::fprintf(stderr, "[OMPT] codeptr_ra=%p begin_count=%u thread_count=%d\n",
+    std::fprintf(stderr, "[OMPT] begin region  [%p] (begin_count=%u thread_count=%d)\n",
                 event.codeptr_ra, rs->begin_count, rs->nthreads);
 }
+
 
 void dispatch_barrier_wait(ompt_sync_region_t kind,
                           ompt_scope_endpoint_t endpoint,
@@ -82,20 +68,48 @@ void dispatch_barrier_wait(ompt_sync_region_t kind,
                           const void* codeptr_ra) {
     (void)kind; (void)task_data; (void)codeptr_ra;
     if (endpoint != ompt_scope_begin) return;
-    if (!parallel_data || !parallel_data->ptr) return;
-    
+    if (!parallel_data || !parallel_data->ptr) {
+        std::fprintf(stderr, "[OMPT] parallel_data is not registered\n");
+        return;
+    }
+
     auto* rs = static_cast<RegionState*>(parallel_data->ptr);
-    if (!rs) return;
+    if (!rs) {
+        std::fprintf(stderr, "[OMPT] RegionState is not found\n");
+        return;
+    }
 
     int tid = omp_get_thread_num();
-    if (tid >= 0 && static_cast<std::size_t>(tid) < rs->elapsed_ms.size()) {
-        auto now = std::chrono::steady_clock::now();
-        auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_time);
-        rs->elapsed_ms[static_cast<std::size_t>(tid)] = elapsed.count();
-        // std::fprintf(stderr, "[OMPT] barrier_wait codeptr_ra=%p thread=%d elapsed_ms=%.6f\n",
-        //             rs->codeptr_ra, tid, elapsed.count());
+    auto now = std::chrono::steady_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_time);
+    rs->elapsed_ms[static_cast<std::size_t>(tid)] = elapsed.count();
+}
+
+
+void dispatch_parallel_end(ompt_data_t* parallel_data,
+                           ompt_data_t* task_data,
+                           int flags,
+                           const void* codeptr_ra) {
+    (void)task_data; (void)flags; (void)codeptr_ra;
+    std::fprintf(stderr, "[OMPT] end region  [%p]\n", codeptr_ra);
+    
+    if (!parallel_data || !parallel_data->ptr) {
+        std::fprintf(stderr, "[OMPT] parallel_data is not registered\n");
+        return;
+    }
+
+    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
+    if (!rs) {
+        std::fprintf(stderr, "[OMPT] RegionState is not found\n");
+        return;
+    }
+
+    for (int i = 0; i < rs->nthreads; i++) {
+        std::fprintf(stderr, "\t(thread %d: %.6f ms)\n",
+                        i, rs->elapsed_ms[i]);
     }
 }
+
 
 
 int ompt_initialize(ompt_function_lookup_t lookup,
@@ -123,6 +137,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
 void ompt_finalize(ompt_data_t* /*tool_data*/) {
     (void)0;
 }
+
 
 
 extern "C" {
