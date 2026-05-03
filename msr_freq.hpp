@@ -23,6 +23,7 @@ bool set_freq_multi(const std::vector<int>& cpu_list,
                     double freq_mhz,
                     double bus_mhz = 100.0);
 bool set_freq(double freq_mhz, double bus_mhz = 100.0);
+bool reset_freq_all();
 bool sysfs_set_freq_on_cpu(int cpu, int freq_khz);
 
 }  // namespace msr

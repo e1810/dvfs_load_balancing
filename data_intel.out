@@ -15,10 +15,10 @@
 [0] MPI startup(): 3       0          eth0
 [0] MPI startup(): ===== CPU pinning =====
 [0] MPI startup(): Rank    Pid      Node name             Pin cpu
-[0] MPI startup(): 0       261241   fanfan.dlab.internal  {0-3}
-[0] MPI startup(): 1       261242   fanfan.dlab.internal  {4-7}
-[0] MPI startup(): 2       261243   fanfan.dlab.internal  {8-11}
-[0] MPI startup(): 3       261244   fanfan.dlab.internal  {12-15}
+[0] MPI startup(): 0       316345   fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       316346   fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       316347   fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       316348   fanfan.dlab.internal  {12-15}
 [0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
 [0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
 [0] MPI startup(): I_MPI_MPIRUN=mpirun
@@ -43,109 +43,24 @@ Threads workloads
 Target frequencies
 4800 4800 4800 4800 
 Threads times
-[OMPT] begin region  [0x4030a7] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=1 thread_count=4)
-[OMPT] end region  [0x4030a7]
-	(thread 0: 2723.358280 ms)
-	(thread 1: 2709.837381 ms)
-	(thread 2: 2733.035984 ms)
-	(thread 3: 2687.735291 ms)
-Rank 1, Thread 0 [4032 MHz]: 2723 ms
-Rank 1, Thread 1 [4026 MHz]: 2709 ms
-Rank 1, Thread 2 [4003 MHz]: 2732 ms
-Rank 1, Thread 3 [4028 MHz]: 2687 ms
-Rank 1, Iteration 0: 2733.173102 ms
-Rank 1, Iteration 0: 764.525020 J, 279.720673 W
-Rank 3, Thread 0 [4014 MHz]: 2906 ms
-Rank 3, Thread 1 [4028 MHz]: 2729 ms
-Rank 3, Thread 2 [4026 MHz]: 2738 ms
-Rank 3, Thread 3 [4025 MHz]: 2724 ms
-Rank 3, Iteration 0: 2907.486951 ms
-Rank 3, Iteration 0: 803.839189 J, 276.472157 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 2907.012426 ms)
-	(thread 1: 2730.058109 ms)
-	(thread 2: 2739.084762 ms)
-	(thread 3: 2724.723943 ms)
-Rank 2, Thread 0 [4028 MHz]: 2723 ms
-Rank 2, Thread 1 [4055 MHz]: 3391 ms
-Rank 2, Thread 2 [4052 MHz]: 3330 ms
-Rank 2, Thread 3 [4031 MHz]: 3361 ms
-Rank 2, Iteration 0: 3391.900769 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 2723.346985 ms)
-	(thread 1: 3391.619818 ms)
-	(thread 2: 3330.336821 ms)
-	(thread 3: 3361.284400 ms)
-Rank 2, Iteration 0: 907.795405 J, 267.636192 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 2907.183289 ms)
-	(thread 1: 3541.234250 ms)
-	(thread 2: 3375.322033 ms)
-	(thread 3: 3377.870872 ms)
-Rank 0, Thread 0 [4028 MHz]: 2907 ms
-Rank 0, Thread 1 [4065 MHz]: 3541 ms
-Rank 0, Thread 2 [4056 MHz]: 3375 ms
-Rank 0, Thread 3 [4041 MHz]: 3377 ms
-Rank 0, Iteration 0: 3541.609192 ms
-Rank 0, Iteration 0: 932.598992 J, 263.326342 W
-
-Threads workloads
-0 333333333 333333333 333333333 
-
-Target frequencies
-4800 4800 4800 [OMPT] begin region  [0x4030a7] (begin_count=2 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=2 thread_count=4)
-4800 
-Threads times
-[OMPT] begin region  [0x4030a7] (begin_count=2 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=2 thread_count=4)
-Rank 2, Thread 0 [3964 MHz]: 700 ms
-Rank 2, Thread 1 [4090 MHz]: 2286 ms
-Rank 2, Thread 2 [4091 MHz]: 2301 ms
-Rank 2, Thread 3 [4090 MHz]: 2293 ms
-Rank 2, Iteration 1: 2300.862554 ms
-Rank 2, Iteration 1: 646.040887 J, 280.782042 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.092714 ms)
-	(thread 1: 2285.622507 ms)
-	(thread 2: 2300.832490 ms)
-	(thread 3: 2292.860034 ms)
-Rank 0, Thread 0 [3964 MHz]: 700 ms
-Rank 0, Thread 1 [4090 MHz]: 2289 ms
-Rank 0, Thread 2 [4091 MHz]: 2301 ms
-Rank 0, Thread 3 [4090 MHz]: 2287 ms
-Rank 0, Iteration 1: 2301.016062 ms
-Rank 0, Iteration 1: 646.040887 J, 280.763311 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.077537 ms)
-	(thread 1: 2289.242690 ms)
-	(thread 2: 2300.969753 ms)
-	(thread 3: 2287.423041 ms)
-Rank 3, Thread 0 [3964 MHz]: 700 ms
-Rank 3, Thread 1 [4090 MHz]: 2295 ms
-Rank 3, Thread 2 [4090 MHz]: 2301 ms
-Rank 3, Thread 3 [4089 MHz]: 2294 ms
-Rank 3, Iteration 1: 2301.065488 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.102923 ms)
-	(thread 1: 2295.521875 ms)
-	(thread 2: 2301.007871 ms)
-	(thread 3: 2293.688051 ms)
-Rank 3, Iteration 1: 646.040887 J, 280.757280 W
-Rank 1, Thread 0 [3964 MHz]: 700 ms
-Rank 1, Thread 1 [4089 MHz]: 2300 ms
-Rank 1, Thread 2 [4090 MHz]: 2291 ms
-Rank 1, Thread 3 [4089 MHz]: 2314 ms
-Rank 1, Iteration 1: 2313.890866 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.080737 ms)
-	(thread 1: 2300.666405 ms)
-	(thread 2: 2291.634138 ms)
-	(thread 3: 2313.865544 ms)
-Rank 1, Iteration 1: 648.619921 J, 280.315693 W
+Rank 0, Thread 0 [4063 MHz]: 2856 ms
+Rank 0, Thread 1 [4056 MHz]: 2704 ms
+Rank 0, Thread 2 [4056 MHz]: 2700 ms
+Rank 0, Thread 3 [4056 MHz]: 2704 ms
+Rank 0, Iteration 0: 2856.310961 ms
+Rank 0, Iteration 0: 771.391886 J, 270.065793 W
+Rank 3, Thread 0 [4058 MHz]: 2459 ms
+Rank 3, Thread 1 [4070 MHz]: 3381 ms
+Rank 3, Thread 2 [4067 MHz]: 3259 ms
+Rank 3, Thread 3 [4066 MHz]: 3301 ms
+Rank 3, Iteration 0: 3381.544348 ms
+Rank 3, Iteration 0: 900.897719 J, 266.416059 W
+Rank 2, Thread 0 [4055 MHz]: 2496 ms
+Rank 2, Thread 1 [4077 MHz]: 3390 ms
+Rank 2, Thread 2 [4068 MHz]: 3326 ms
+Rank 2, Thread 3 [4069 MHz]: 3343 ms
+Rank 2, Iteration 0: 3390.121557 ms
+Rank 2, Iteration 0: 902.697946 J, 266.273032 W
 
 Threads workloads
 0 333333333 333333333 333333333 
@@ -153,54 +68,36 @@ Threads workloads
 Target frequencies
 4800 4800 4800 4800 
 Threads times
-[OMPT] begin region  [0x4030a7] (begin_count=3 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=3 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=3 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=3 thread_count=4)
-Rank 1, Thread 0 [3946 MHz]: 700 ms
-Rank 1, Thread 1 [4101 MHz]: 2278 ms
-Rank 1, Thread 2 [4101 MHz]: 2277 ms
-Rank 1, Thread 3 [4101 MHz]: 2280 ms
-Rank 1, Iteration 2: 2279.874935 ms
-Rank 1, Iteration 2: 643.877136 J, 282.417744 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.436254 ms)
-	(thread 1: 2278.239230 ms)
-	(thread 2: 2276.998019 ms)
-	(thread 3: 2279.851967 ms)
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.433452 ms)
-	(thread 1: 2277.715464 ms)
-	(thread 2: 2280.580532 ms)
-	(thread 3: 2280.242088 ms)
-Rank 2, Thread 0 [3955 MHz]: 700 ms
-Rank 2, Thread 1 [4101 MHz]: 2278 ms
-Rank 2, Thread 2 [4101 MHz]: 2281 ms
-Rank 2, Thread 3 [4101 MHz]: 2280 ms
-Rank 2, Iteration 2: 2280.647015 ms
-Rank 2, Iteration 2: 643.877136 J, 282.322136 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.389761 ms)
-	(thread 1: 2278.824372 ms)
-	(thread 2: 2283.440220 ms)
-	(thread 3: 2276.810136 ms)
-Rank 3, Thread 0 [3952 MHz]: 700 ms
-Rank 3, Thread 1 [4101 MHz]: 2279 ms
-Rank 3, Thread 2 [4101 MHz]: 2283 ms
-Rank 3, Thread 3 [4101 MHz]: 2277 ms
-Rank 3, Iteration 2: 2283.502197 ms
-Rank 3, Iteration 2: 644.613401 J, 282.291562 W
-Rank 0, Thread 0 [3955 MHz]: 700 ms
-Rank 0, Thread 1 [4101 MHz]: 2282 ms
-Rank 0, Thread 2 [4099 MHz]: 2295 ms
-Rank 0, Thread 3 [4101 MHz]: 2278 ms
-Rank 0, Iteration 2: 2294.785569 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.431804 ms)
-	(thread 1: 2281.911872 ms)
-	(thread 2: 2294.760550 ms)
-	(thread 3: 2278.231133 ms)
-Rank 0, Iteration 2: 646.585442 J, 281.762902 W
+Rank 1, Thread 0 [4059 MHz]: 2855 ms
+Rank 1, Thread 1 [4079 MHz]: 3492 ms
+Rank 1, Thread 2 [4069 MHz]: 3335 ms
+Rank 1, Thread 3 [4070 MHz]: 3385 ms
+Rank 1, Iteration 0: 3492.996694 ms
+Rank 1, Iteration 0: 926.316538 J, 265.192504 W
+Rank 0, Thread 0 [4045 MHz]: 705 ms
+Rank 0, Thread 1 [4119 MHz]: 2262 ms
+Rank 0, Thread 2 [4121 MHz]: 2261 ms
+Rank 0, Thread 3 [4121 MHz]: 2261 ms
+Rank 0, Iteration 1: 2262.274145 ms
+Rank 0, Iteration 1: 633.528346 J, 280.040484 W
+Rank 2, Thread 0 [4045 MHz]: 705 ms
+Rank 2, Thread 1 [4121 MHz]: 2263 ms
+Rank 2, Thread 2 [4121 MHz]: 2261 ms
+Rank 2, Thread 3 [4120 MHz]: 2264 ms
+Rank 2, Iteration 1: 2264.460192 ms
+Rank 2, Iteration 1: 633.528346 J, 279.770141 W
+Rank 3, Thread 0 [4045 MHz]: 705 ms
+Rank 3, Thread 1 [4121 MHz]: 2261 ms
+Rank 3, Thread 2 [4121 MHz]: 2261 ms
+Rank 3, Thread 3 [4120 MHz]: 2265 ms
+Rank 3, Iteration 1: 2265.768120 ms
+Rank 3, Iteration 1: 634.167383 J, 279.890681 W
+Rank 1, Thread 0 [4045 MHz]: 705 ms
+Rank 1, Thread 1 [4121 MHz]: 2261 ms
+Rank 1, Thread 2 [4121 MHz]: 2261 ms
+Rank 1, Thread 3 [4120 MHz]: 2266 ms
+Rank 1, Iteration 1: 2265.930277 ms
+Rank 1, Iteration 1: 634.467797 J, 280.003230 W
 
 Threads workloads
 0 333333333 333333333 333333333 
@@ -208,54 +105,30 @@ Threads workloads
 Target frequencies
 4800 4800 4800 4800 
 Threads times
-[OMPT] begin region  [0x4030a7] (begin_count=4 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=4 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=4 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=4 thread_count=4)
-Rank 2, Thread 0 [3981 MHz]: 700 ms
-Rank 2, Thread 1 [4100 MHz]: 2287 ms
-Rank 2, Thread 2 [4100 MHz]: 2280 ms
-Rank 2, Thread 3 [4100 MHz]: 2280 ms
-Rank 2, Iteration 3: 2287.578153 ms
-Rank 2, Iteration 3: 646.401177 J, 282.570095 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.316620 ms)
-	(thread 1: 2287.464159 ms)
-	(thread 2: 2279.635806 ms)
-	(thread 3: 2279.795350 ms)
-Rank 3, Thread 0 [3981 MHz]: 700 ms
-Rank 3, Thread 1 [4100 MHz]: 2278 ms
-Rank 3, Thread 2 [4100 MHz]: 2289 ms
-Rank 3, Thread 3 [4100 MHz]: 2282 ms
-Rank 3, Iteration 3: 2289.331976 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.309843 ms)
-	(thread 1: 2278.297359 ms)
-	(thread 2: 2289.308365 ms)
-	(thread 3: 2281.963782 ms)
-Rank 3, Iteration 3: 646.731926 J, 282.498097 W
-Rank 0, Thread 0 [3982 MHz]: 700 ms
-Rank 0, Thread 1 [4100 MHz]: 2282 ms
-Rank 0, Thread 2 [4101 MHz]: 2291 ms
-Rank 0, Thread 3 [4100 MHz]: 2281 ms
-Rank 0, Iteration 3: 2290.711183 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.362540 ms)
-	(thread 1: 2282.375247 ms)
-	(thread 2: 2290.683327 ms)
-	(thread 3: 2281.509096 ms)
-Rank 0, Iteration 3: 646.974601 J, 282.433947 W
-[OMPT] end region  [0x4030a7]
-	(thread 0: 700.356176 ms)
-	(thread 1: 2291.856322 ms)
-	(thread 2: 2282.665588 ms)
-	(thread 3: 2277.109405 ms)
-Rank 1, Thread 0 [3982 MHz]: 700 ms
-Rank 1, Thread 1 [4100 MHz]: 2292 ms
-Rank 1, Thread 2 [4100 MHz]: 2283 ms
-Rank 1, Thread 3 [4100 MHz]: 2277 ms
-Rank 1, Iteration 3: 2291.945176 ms
-Rank 1, Iteration 3: 647.255118 J, 282.404276 W
+Rank 3, Thread 0 [4010 MHz]: 701 ms
+Rank 3, Thread 1 [4117 MHz]: 2262 ms
+Rank 3, Thread 2 [4117 MHz]: 2262 ms
+Rank 3, Thread 3 [4117 MHz]: 2262 ms
+Rank 3, Iteration 2: 2262.690710 ms
+Rank 3, Iteration 2: 635.033958 J, 280.654336 W
+Rank 0, Thread 0 [3981 MHz]: 701 ms
+Rank 0, Thread 1 [4117 MHz]: 2263 ms
+Rank 0, Thread 2 [4117 MHz]: 2263 ms
+Rank 0, Thread 3 [4117 MHz]: 2263 ms
+Rank 0, Iteration 2: 2263.186117 ms
+Rank 0, Iteration 2: 635.033958 J, 280.592901 W
+Rank 1, Thread 0 [3980 MHz]: 701 ms
+Rank 1, Thread 1 [4117 MHz]: 2263 ms
+Rank 1, Thread 2 [4117 MHz]: 2268 ms
+Rank 1, Thread 3 [4117 MHz]: 2268 ms
+Rank 1, Iteration 2: 2268.109025 ms
+Rank 1, Iteration 2: 636.253620 J, 280.521621 W
+Rank 2, Thread 0 [3972 MHz]: 701 ms
+Rank 2, Thread 1 [4117 MHz]: 2267 ms
+Rank 2, Thread 2 [4117 MHz]: 2262 ms
+Rank 2, Thread 3 [4116 MHz]: 2269 ms
+Rank 2, Iteration 2: 2269.521776 ms
+Rank 2, Iteration 2: 636.791094 J, 280.583822 W
 
 Threads workloads
 0 333333333 333333333 333333333 
@@ -263,95 +136,82 @@ Threads workloads
 Target frequencies
 4800 4800 4800 4800 
 Threads times
-[OMPT] begin region  [0x4030a7] (begin_count=5 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=5 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=5 thread_count=4)
-[OMPT] begin region  [0x4030a7] (begin_count=5 thread_count=4)
-Rank 2, Thread 0 [4010 MHz]: 700 ms
-Rank 2, Thread 1 [4102 MHz]: 2279 ms
-Rank 2, Thread 2 [4102 MHz]: 2278 ms
-Rank 2, Thread 3 [4102 MHz]: 2281 ms
-Rank 2, Iteration 4: 2281.463651 ms
-Rank 2, Iteration 4: 645.085446 J, 282.750701 W
-sum of Rank 2, Thread 0: 5.523711 ms
-sum of Rank 2, Thread 1: 12.520541 ms
-sum of Rank 2, Thread 2: 12.468174 ms
-sum of Rank 2, Thread 3: 12.494871 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 699.860271 ms)
-	(thread 1: 2278.631958 ms)
-	(thread 2: 2277.575533 ms)
-	(thread 3: 2281.434630 ms)
-[OMPT] begin region  [0x403442] (begin_count=1 thread_count=4)
-[OMPT] end region  [0x403442]
-	(thread 0: 0.011684 ms)
-	(thread 1: 0.016790 ms)
-	(thread 2: 0.013476 ms)
-	(thread 3: 0.008214 ms)
-Rank 3, Thread 0 [4001 MHz]: 700 ms
-Rank 3, Thread 1 [4102 MHz]: 2281 ms
-Rank 3, Thread 2 [4102 MHz]: 2282 ms
-Rank 3, Thread 3 [4102 MHz]: 2280 ms
-Rank 3, Iteration 4: 2281.647021 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 699.860344 ms)
-	(thread 1: 2281.375330 ms)
-	(thread 2: 2281.590653 ms)
-	(thread 3: 2279.874891 ms)
-Rank 3, Iteration 4: 645.085446 J, 282.727977 W
-sum of Rank 3, Thread 0: 5.706958 ms
-sum of Rank 3, Thread 1: 11.863153 ms
-sum of Rank 3, Thread 2: 11.893158 ms
-sum of Rank 3, Thread 3: 11.855946 ms
-[OMPT] begin region  [0x403442] (begin_count=1 thread_count=4)
-[OMPT] end region  [0x403442]
-	(thread 0: 0.019885 ms)
-	(thread 1: 0.019166 ms)
-	(thread 2: 0.018818 ms)
-	(thread 3: 0.018609 ms)
-Rank 0, Thread 0 [4010 MHz]: 700 ms
-Rank 0, Thread 1 [4102 MHz]: 2282 ms
-Rank 0, Thread 2 [4101 MHz]: 2289 ms
-Rank 0, Thread 3 [4102 MHz]: 2280 ms
-Rank 0, Iteration 4: 2288.974678 ms
-[OMPT] end region  [0x4030a7]
-	(thread 0: 699.850748 ms)
-	(thread 1: 2281.906028 ms)
-	(thread 2: 2288.950622 ms)
-	(thread 3: 2279.844164 ms)
-Rank 0, Iteration 4: 646.758049 J, 282.553606 W
-sum of Rank 0, Thread 0: 5.707251 ms
-sum of Rank 0, Thread 1: 12.676036 ms
-sum of Rank 0, Thread 2: 12.549897 ms
-sum of Rank 0, Thread 3: 12.504083 ms
-[OMPT] begin region  [0x403442] (begin_count=1 thread_count=4)
-[OMPT] end region  [0x403442]
-	(thread 0: 0.009653 ms)
-	(thread 1: 0.013407 ms)
-	(thread 2: 0.007020 ms)
-	(thread 3: 0.012319 ms)
-[OMPT] end region  [0x4030a7]
-	(thread 0: 699.830256 ms)
-	(thread 1: 2289.769427 ms)
-	(thread 2: 2282.928423 ms)
-	(thread 3: 2278.305096 ms)
-Rank 1, Thread 0 [4007 MHz]: 700 ms
-Rank 1, Thread 1 [4101 MHz]: 2290 ms
-Rank 1, Thread 2 [4102 MHz]: 2283 ms
-Rank 1, Thread 3 [4102 MHz]: 2278 ms
-Rank 1, Iteration 4: 2289.857624 ms
-Rank 1, Iteration 4: 646.758049 J, 282.444656 W
-sum of Rank 1, Thread 0: 5.523718 ms
-sum of Rank 1, Thread 1: 11.869429 ms
-sum of Rank 1, Thread 2: 11.866280 ms
-sum of Rank 1, Thread 3: 11.835841 ms
-[OMPT] begin region  [0x403442] (begin_count=1 thread_count=4)
-[OMPT] end region  [0x403442]
-	(thread 0: 0.027099 ms)
-	(thread 1: 0.013990 ms)
-	(thread 2: 0.018986 ms)
-	(thread 3: 0.018389 ms)
+Rank 3, Thread 0 [3934 MHz]: 695 ms
+Rank 3, Thread 1 [4111 MHz]: 2266 ms
+Rank 3, Thread 2 [4111 MHz]: 2267 ms
+Rank 3, Thread 3 [4111 MHz]: 2269 ms
+Rank 3, Iteration 3: 2269.540105 ms
+Rank 3, Iteration 3: 636.123189 J, 280.287265 W
+Rank 0, Thread 0 [3992 MHz]: 695 ms
+Rank 0, Thread 1 [4111 MHz]: 2266 ms
+Rank 0, Thread 2 [4111 MHz]: 2270 ms
+Rank 0, Thread 3 [4111 MHz]: 2267 ms
+Rank 0, Iteration 3: 2270.126845 ms
+Rank 0, Iteration 3: 636.123189 J, 280.214822 W
+Rank 1, Thread 0 [3922 MHz]: 695 ms
+Rank 1, Thread 1 [4111 MHz]: 2266 ms
+Rank 1, Thread 2 [4110 MHz]: 2272 ms
+Rank 1, Thread 3 [4110 MHz]: 2272 ms
+Rank 1, Iteration 3: 2271.811917 ms
+Rank 1, Iteration 3: 636.699054 J, 280.260460 W
+Rank 2, Thread 0 [4019 MHz]: 695 ms
+Rank 2, Thread 1 [4111 MHz]: 2270 ms
+Rank 2, Thread 2 [4111 MHz]: 2270 ms
+Rank 2, Thread 3 [4109 MHz]: 2278 ms
+Rank 2, Iteration 3: 2278.235656 ms
+Rank 2, Iteration 3: 638.041031 J, 280.059277 W
 
-Execution time: 14.186658 seconds
-Whole-program energy: 3732.298001 J
-Whole-program average power: 263.085078 W
+Threads workloads
+0 333333333 333333333 333333333 
+
+Target frequencies
+4800 4800 4800 4800 
+Threads times
+Rank 3, Thread 0 [3968 MHz]: 696 ms
+Rank 3, Thread 1 [4123 MHz]: 2260 ms
+Rank 3, Thread 2 [4123 MHz]: 2259 ms
+Rank 3, Thread 3 [4123 MHz]: 2260 ms
+Rank 3, Iteration 4: 2260.147655 ms
+Rank 3, Iteration 4: 637.734573 J, 282.165004 W
+sum of Rank 3, Thread 0: 5.255887 ms
+sum of Rank 3, Thread 1: 12.430787 ms
+sum of Rank 3, Thread 2: 12.308191 ms
+sum of Rank 3, Thread 3: 12.358031 ms
+Rank 0, Thread 0 [4014 MHz]: 696 ms
+Rank 0, Thread 1 [4123 MHz]: 2259 ms
+Rank 0, Thread 2 [4123 MHz]: 2264 ms
+Rank 0, Thread 3 [4123 MHz]: 2259 ms
+Rank 0, Iteration 4: 2263.950958 ms
+Rank 0, Iteration 4: 638.696973 J, 282.116082 W
+sum of Rank 0, Thread 0: 5.652263 ms
+sum of Rank 0, Thread 1: 11.753671 ms
+sum of Rank 0, Thread 2: 11.757611 ms
+sum of Rank 0, Thread 3: 11.754004 ms
+Rank 2, Thread 0 [4003 MHz]: 696 ms
+Rank 2, Thread 1 [4123 MHz]: 2265 ms
+Rank 2, Thread 2 [4123 MHz]: 2259 ms
+Rank 2, Thread 3 [4123 MHz]: 2262 ms
+Rank 2, Iteration 4: 2264.794043 ms
+Rank 2, Iteration 4: 638.956677 J, 282.125732 W
+sum of Rank 2, Thread 0: 5.292460 ms
+sum of Rank 2, Thread 1: 12.454051 ms
+sum of Rank 2, Thread 2: 12.379396 ms
+Rank 1, Thread 0 [3968 MHz]: 696 ms
+Rank 1, Thread 1 [4123 MHz]: 2260 ms
+Rank 1, Thread 2 [4123 MHz]: 2265 ms
+Rank 1, Thread 3 [4123 MHz]: 2264 ms
+Rank 1, Iteration 4: 2264.950926 ms
+sum of Rank 2, Thread 3: 12.416303 ms
+Rank 1, Iteration 4: 638.956677 J, 282.106190 W
+sum of Rank 1, Thread 0: 5.652269 ms
+sum of Rank 1, Thread 1: 12.543177 ms
+sum of Rank 1, Thread 2: 12.400645 ms
+sum of Rank 1, Thread 3: 12.454286 ms
+Failed to write MSR 0x199 on CPU 645354270
+Failed to write MSR 0x199 on CPU 767719520
+Failed to write MSR 0x199 on CPU 1018674962
+Failed to write MSR 0x199 on CPU 1064375161
+
+Execution time: 13.387532 seconds
+Whole-program energy: 3583.319623 J
+Whole-program average power: 267.660947 W

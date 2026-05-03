@@ -4,6 +4,7 @@
 #include <array>
 #include <cstdint>
 #include <cstdio>
+#include <vector>
 
 #include <fcntl.h>
 #include <sched.h>
@@ -61,6 +62,24 @@ bool hwp_available_on_cpu(int cpu) {
         return false;
     }
     return (pm_enable & 0x1ULL) != 0;
+}
+
+std::vector<int> get_allowed_cpus() {
+    cpu_set_t mask;
+    CPU_ZERO(&mask);
+
+    if (sched_getaffinity(0, sizeof(mask), &mask) != 0) {
+        return {};
+    }
+
+    std::vector<int> target_cpus;
+    for (int cpu = 0; cpu < CPU_SETSIZE; ++cpu) {
+        if (CPU_ISSET(cpu, &mask)) {
+            target_cpus.push_back(cpu);
+        }
+    }
+
+    return target_cpus;
 }
 
 }  // namespace
