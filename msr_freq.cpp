@@ -159,11 +159,16 @@ bool set_freq_on_cpu(int cpu, double freq_mhz, double bus_mhz) {
 
 
 bool reset_freq_all() {
+    bool result = true;
     auto target_cpus = get_allowed_cpus();
     for(int cpu: target_cpus) {
-        if(!set_freq_on_cpu(cpu, 0, 100)) return false;
+        std::fprintf(stderr, "[MSR] Resetting frequency on CPU %d\n", cpu);
+        if(!set_freq_on_cpu(cpu, 0, 100)) {
+            std::fprintf(stderr, "[MSR] Failed to reset frequency on CPU %d\n", cpu);
+            result = false;
+        }
     }
-    return true;
+    return result;
 }
 
 bool set_freq(double freq_mhz, double bus_mhz) {

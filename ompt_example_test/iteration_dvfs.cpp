@@ -45,8 +45,6 @@ int main(int argc, char **argv) {
     int *ied = new int[numth];
     divloop(LOOPSIZE, ist, ied, numth);
 
-    #pragma omp parallel
-    msr::set_freq_on_cpu(msr::current_cpu(), 0, 100);
 
     // start iteration
     for(int iter=0; iter<ITER_COUNT; iter++) {
@@ -129,8 +127,9 @@ int main(int argc, char **argv) {
         printf("sum of Rank %d, Thread %d: %f ms\n", rank, i, time_th_sum[i]);
     }
 
-    #pragma omp parallel
-    msr::set_freq_on_cpu(msr::current_cpu(), 0, 100);
+
+    msr::reset_freq_all();
+    
     delete[] comm_buf;
     delete[] comp_buf;
     delete[] ist;

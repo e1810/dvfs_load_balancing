@@ -22,7 +22,7 @@ hostname
 start_energy_uj=$(cat /sys/class/powercap/intel-rapl:0/energy_uj)
 start_time=$(date +%s.%N)
 
-OMP_TOOL=enabled OMP_TOOL_LIBRARIES=$PWD/ompt_example_test/libompt_test.so mpirun -n 4 ./main_intel.exe 2>&1 | tee data_intel.out
+mpirun -n 4 ./main_intel.exe 2>&1 | tee data_intel.out
 mpi_status=${PIPESTATUS[0]}
 
 end_time=$(date +%s.%N)
