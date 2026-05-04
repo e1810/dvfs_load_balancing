@@ -86,6 +86,10 @@ std::vector<int> get_allowed_cpus() {
 
 namespace msr {
 
+void msr_init() {
+    init_msr_access();
+}
+
 int current_cpu() {
     int cpu = sched_getcpu();
     if (cpu < 0) return -1;
@@ -162,7 +166,7 @@ bool reset_freq_all() {
     bool result = true;
     auto target_cpus = get_allowed_cpus();
     for(int cpu: target_cpus) {
-        std::fprintf(stderr, "[MSR] Resetting frequency on CPU %d\n", cpu);
+        //std::fprintf(stderr, "[MSR] Resetting frequency on CPU %d\n", cpu);
         if(!set_freq_on_cpu(cpu, 0, 100)) {
             std::fprintf(stderr, "[MSR] Failed to reset frequency on CPU %d\n", cpu);
             result = false;

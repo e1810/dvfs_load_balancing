@@ -15,10 +15,10 @@
 [0] MPI startup(): 3       0          eth0
 [0] MPI startup(): ===== CPU pinning =====
 [0] MPI startup(): Rank    Pid      Node name             Pin cpu
-[0] MPI startup(): 0       408293   fanfan.dlab.internal  {0-3}
-[0] MPI startup(): 1       408294   fanfan.dlab.internal  {4-7}
-[0] MPI startup(): 2       408295   fanfan.dlab.internal  {8-11}
-[0] MPI startup(): 3       408296   fanfan.dlab.internal  {12-15}
+[0] MPI startup(): 0       432505   fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       432506   fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       432507   fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       432508   fanfan.dlab.internal  {12-15}
 [0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
 [0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
 [0] MPI startup(): I_MPI_MPIRUN=mpirun
@@ -38,246 +38,240 @@
 [0] MPI startup(): I_MPI_DEBUG=5
 
 Threads workloads
-0 333333333 333333333 333333333 
+0 499999999 166666667 333333333 
 
 Threads times
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [4024 MHz]: 2891 ms
-Rank 3, Thread 1 [4011 MHz]: 2761 ms
-Rank 3, Thread 2 [4009 MHz]: 2758 ms
-Rank 3, Thread 3 [3986 MHz]: 2770 ms
-Rank 3, Iteration 0: 2891.809794 ms
-Rank 3, Iteration 0: 783.162302 J, 270.820821 W
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [2620853 MHz]: 2406 ms
-Rank 2, Thread 1 [4033 MHz]: 3385 ms
-Rank 2, Thread 2 [4030 MHz]: 3323 ms
-Rank 2, Thread 3 [4013 MHz]: 3350 ms
-Rank 2, Iteration 0: 3385.386244 ms
-Rank 2, Iteration 0: 904.812076 J, 267.269969 W
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [4019 MHz]: 2614 ms
-Rank 1, Thread 1 [4039 MHz]: 3501 ms
-Rank 1, Thread 2 [4013 MHz]: 3409 ms
-Rank 1, Thread 3 [4034 MHz]: 3404 ms
-Rank 1, Iteration 0: 3501.976459 ms
-Rank 1, Iteration 0: 932.013728 J, 266.139347 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-Rank 0, Thread 0 [4024 MHz]: 2891 ms
-Rank 0, Thread 1 [4040 MHz]: 3544 ms
-Rank 0, Thread 2 [4033 MHz]: 3377 ms
-Rank 0, Thread 3 [4012 MHz]: 3401 ms
-Rank 0, Iteration 0: 3544.468067 ms
-Rank 0, Iteration 0: 941.620942 J, 265.659310 W
+Rank 0, Thread 0 [4120 MHz]: 2782 ms
+Rank 0, Thread 1 [4154 MHz]: 3942 ms
+Rank 0, Thread 2 [4069 MHz]: 1374 ms
+Rank 0, Thread 3 [4070 MHz]: 2698 ms
+Rank 0, Iteration 0: 3942.709729 ms
+Rank 0, Iteration 0: 997.631662 J, 253.031983 W
+Rank 2, Thread 0 [4111 MHz]: 2569 ms
+Rank 2, Thread 1 [4157 MHz]: 4085 ms
+Rank 2, Thread 2 [4061 MHz]: 1516 ms
+Rank 2, Thread 3 [4103 MHz]: 2819 ms
+Rank 2, Iteration 0: 4085.587899 ms
+Rank 2, Iteration 0: 1025.731505 J, 251.060932 W
+Rank 3, Thread 0 [3 MHz]: 2569 ms
+Rank 3, Thread 1 [4171 MHz]: 4587 ms
+Rank 3, Thread 2 [4066 MHz]: 1753 ms
+Rank 3, Thread 3 [4129 MHz]: 3250 ms
+Rank 3, Iteration 0: 4587.672818 ms
+Rank 3, Iteration 0: 1119.089786 J, 243.934088 W
 
 Threads workloads
-0 333333333 333333333 333333333 
+0 499999999 166666667 333333333 
 
 Threads times
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [2896 MHz]: 744 ms
-Rank 2, Thread 1 [4121 MHz]: 2260 ms
-Rank 2, Thread 2 [4121 MHz]: 2263 ms
-Rank 2, Thread 3 [4042 MHz]: 2310 ms
-Rank 2, Iteration 1: 2310.505830 ms
-Rank 2, Iteration 1: 623.070854 J, 269.668592 W
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [4014 MHz]: 734 ms
-Rank 1, Thread 1 [4121 MHz]: 2261 ms
-Rank 1, Thread 2 [3960 MHz]: 2352 ms
-Rank 1, Thread 3 [3960 MHz]: 2352 ms
-Rank 1, Iteration 1: 2352.393459 ms
-Rank 1, Iteration 1: 633.504604 J, 269.302145 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-Rank 0, Thread 0 [3394 MHz]: 744 ms
-Rank 0, Thread 1 [4121 MHz]: 2260 ms
-Rank 0, Thread 2 [3960 MHz]: 2354 ms
-Rank 0, Thread 3 [3960 MHz]: 2352 ms
-Rank 0, Iteration 1: 2353.716546 ms
-Rank 0, Iteration 1: 633.504604 J, 269.150763 W
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [4017 MHz]: 743 ms
-Rank 3, Thread 1 [4116 MHz]: 2439 ms
-Rank 3, Thread 2 [3960 MHz]: 2352 ms
-Rank 3, Thread 3 [3960 MHz]: 2355 ms
-Rank 3, Iteration 1: 2439.768579 ms
-Rank 3, Iteration 1: 654.947359 J, 268.446510 W
+Rank 1, Thread 0 [4117 MHz]: 2782 ms
+Rank 1, Thread 1 [4175 MHz]: 4677 ms
+Rank 1, Thread 2 [4068 MHz]: 1774 ms
+Rank 1, Thread 3 [4129 MHz]: 3295 ms
+Rank 1, Iteration 0: 4678.191374 ms
+Rank 1, Iteration 0: 1135.995078 J, 242.827834 W
+Rank 0, Thread 0 [2896 MHz]: 712 ms
+Rank 0, Thread 1 [4200 MHz]: 3331 ms
+Rank 0, Thread 2 [4123 MHz]: 1131 ms
+Rank 0, Thread 3 [4170 MHz]: 2237 ms
+Rank 0, Iteration 1: 3331.762788 ms
+Rank 0, Iteration 1: 764.735591 J, 229.528823 W
+Rank 1, Thread 0 [4107 MHz]: 702 ms
+Rank 1, Thread 1 [4159 MHz]: 3364 ms
+Rank 1, Thread 2 [4120 MHz]: 1133 ms
+Rank 1, Thread 3 [2895 MHz]: 3222 ms
+Rank 1, Iteration 1: 3364.824690 ms
+Rank 1, Iteration 1: 771.643410 J, 229.326482 W
+Rank 3, Thread 0 [2297 MHz]: 712 ms
+Rank 3, Thread 1 [4159 MHz]: 3364 ms
+Rank 3, Thread 2 [4123 MHz]: 1132 ms
+Rank 3, Thread 3 [2896 MHz]: 3222 ms
+Rank 3, Iteration 1: 3365.643305 ms
+Rank 3, Iteration 1: 771.643410 J, 229.270704 W
+Rank 2, Thread 0 [2597 MHz]: 701 ms
+Rank 2, Thread 1 [4158 MHz]: 3365 ms
+Rank 2, Thread 2 [1498 MHz]: 3114 ms
+Rank 2, Thread 3 [2796 MHz]: 3337 ms
+Rank 2, Iteration 1: 3366.080143 ms
+Rank 2, Iteration 1: 771.643410 J, 229.240950 W
 
 Threads workloads
-0 333333333 333333333 333333333 
+0 499999999 166666667 333333333 
 
 Threads times
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [1299 MHz]: 932 ms
-Rank 2, Thread 1 [4014 MHz]: 2320 ms
-Rank 2, Thread 2 [4014 MHz]: 2321 ms
-Rank 2, Thread 3 [4082 MHz]: 2288 ms
-Rank 2, Iteration 2: 2321.587273 ms
-Rank 2, Iteration 2: 618.408939 J, 266.373333 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-Rank 0, Thread 0 [1299 MHz]: 956 ms
-Rank 0, Thread 1 [3945 MHz]: 2360 ms
-Rank 0, Thread 2 [4081 MHz]: 2282 ms
-Rank 0, Thread 3 [4014 MHz]: 2320 ms
-Rank 0, Iteration 2: 2360.528447 ms
-Rank 0, Iteration 2: 628.011637 J, 266.047053 W
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [1299 MHz]: 932 ms
-Rank 1, Thread 1 [3945 MHz]: 2361 ms
-Rank 1, Thread 2 [4081 MHz]: 2283 ms
-Rank 1, Thread 3 [4014 MHz]: 2321 ms
-Rank 1, Iteration 2: 2361.407436 ms
-Rank 1, Iteration 2: 628.011637 J, 265.948022 W
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [3273 MHz]: 956 ms
-Rank 3, Thread 1 [4081 MHz]: 2459 ms
-Rank 3, Thread 2 [3945 MHz]: 2361 ms
-Rank 3, Thread 3 [3945 MHz]: 2362 ms
-Rank 3, Iteration 2: 2459.594542 ms
-Rank 3, Iteration 2: 651.698588 J, 264.961796 W
+Rank 0, Thread 0 [4032 MHz]: 700 ms
+Rank 0, Thread 1 [4155 MHz]: 3367 ms
+Rank 0, Thread 2 [4084 MHz]: 1142 ms
+Rank 0, Thread 3 [2796 MHz]: 3337 ms
+Rank 0, Iteration 2: 3367.386778 ms
+Rank 0, Iteration 2: 801.491539 J, 238.015883 W
+Rank 1, Thread 0 [3998 MHz]: 700 ms
+Rank 1, Thread 1 [4155 MHz]: 3367 ms
+Rank 1, Thread 2 [4082 MHz]: 1143 ms
+Rank 1, Thread 3 [3968 MHz]: 2350 ms
+Rank 1, Iteration 2: 3368.072163 ms
+Rank 3, Thread 0 [3985 MHz]: 700 ms
+Rank 3, Thread 1 [4155 MHz]: 3368 ms
+Rank 3, Thread 2 [4083 MHz]: 1143 ms
+Rank 1, Iteration 2: 801.491539 J, 237.967448 W
+Rank 3, Thread 3 [3968 MHz]: 2351 ms
+Rank 3, Iteration 2: 3368.228595 ms
+Rank 3, Iteration 2: 801.491539 J, 237.956397 W
+Rank 2, Thread 0 [4038 MHz]: 700 ms
+Rank 2, Thread 1 [4155 MHz]: 3369 ms
+Rank 2, Thread 2 [3779 MHz]: 1234 ms
+Rank 2, Thread 3 [4053 MHz]: 2303 ms
+Rank 2, Iteration 2: 3369.600794 ms
+Rank 2, Iteration 2: 801.851829 J, 237.966417 W
 
 Threads workloads
-0 333333333 333333333 333333333 
+0 499999999 166666667 333333333 
 
 Threads times
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [1598 MHz]: 862 ms
-Rank 2, Thread 1 [4032 MHz]: 2310 ms
-Rank 2, Thread 2 [4107 MHz]: 2270 ms
-Rank 2, Thread 3 [4033 MHz]: 2316 ms
-Rank 2, Iteration 3: 2315.812820 ms
-Rank 2, Iteration 3: 621.395382 J, 268.327119 W
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [1598 MHz]: 862 ms
-Rank 1, Thread 1 [4107 MHz]: 2269 ms
-Rank 1, Thread 2 [3956 MHz]: 2354 ms
-Rank 1, Thread 3 [4032 MHz]: 2310 ms
-Rank 1, Iteration 3: 2354.455682 ms
-Rank 1, Iteration 3: 631.421418 J, 268.181484 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-Rank 0, Thread 0 [1698 MHz]: 862 ms
-Rank 0, Thread 1 [4107 MHz]: 2268 ms
-Rank 0, Thread 2 [3956 MHz]: 2355 ms
-Rank 0, Thread 3 [4032 MHz]: 2310 ms
-Rank 0, Iteration 3: 2355.518322 ms
-Rank 0, Iteration 3: 631.421418 J, 268.060500 W
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [4014 MHz]: 862 ms
-Rank 3, Thread 1 [4101 MHz]: 2447 ms
-Rank 3, Thread 2 [3956 MHz]: 2354 ms
-Rank 3, Thread 3 [3956 MHz]: 2356 ms
-Rank 3, Iteration 3: 2447.472547 ms
-Rank 3, Iteration 3: 653.406958 J, 266.972130 W
+Rank 1, Thread 0 [3857 MHz]: 697 ms
+Rank 1, Thread 1 [4125 MHz]: 3392 ms
+Rank 1, Thread 2 [3995 MHz]: 1168 ms
+Rank 1, Thread 3 [2896 MHz]: 3221 ms
+Rank 1, Iteration 3: 3392.596477 ms
+Rank 1, Iteration 3: 787.188476 J, 232.031272 W
+Rank 2, Thread 0 [3910 MHz]: 697 ms
+Rank 2, Thread 1 [4125 MHz]: 3392 ms
+Rank 2, Thread 2 [4000 MHz]: 1166 ms
+Rank 2, Thread 3 [2795 MHz]: 3337 ms
+Rank 2, Iteration 3: 3392.956216 ms
+Rank 2, Iteration 3: 787.188476 J, 232.006671 W
+Rank 0, Thread 0 [3849 MHz]: 697 ms
+Rank 0, Thread 1 [4125 MHz]: 3393 ms
+Rank 0, Thread 2 [4000 MHz]: 1166 ms
+Rank 0, Thread 3 [4020 MHz]: 2321 ms
+Rank 0, Iteration 3: 3393.269502 ms
+Rank 3, Thread 0 [3848 MHz]: 697 ms
+Rank 3, Thread 1 [4125 MHz]: 3392 ms
+Rank 3, Thread 2 [3999 MHz]: 1167 ms
+Rank 3, Thread 3 [2896 MHz]: 3222 ms
+Rank 3, Iteration 3: 3393.275572 ms
+Rank 0, Iteration 3: 787.188476 J, 231.985251 W
+Rank 3, Iteration 3: 787.188476 J, 231.984836 W
 
 Threads workloads
-0 333333333 333333333 333333333 
+0 499999999 166666667 333333333 
 
 Threads times
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [1498 MHz]: 877 ms
-Rank 2, Thread 1 [4016 MHz]: 2318 ms
-Rank 2, Thread 2 [4016 MHz]: 2320 ms
-Rank 2, Thread 3 [4082 MHz]: 2288 ms
-Rank 2, Iteration 4: 2320.439795 ms
-Rank 2, Iteration 4: 619.793884 J, 267.101903 W
-sum of Rank 2, Thread 0: 5.820276 ms
-sum of Rank 2, Thread 1: 12.592587 ms
-sum of Rank 2, Thread 2: 12.496884 ms
-sum of Rank 2, Thread 3: 12.552554 ms
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [1498 MHz]: 877 ms
-Rank 1, Thread 1 [3950 MHz]: 2358 ms
-Rank 1, Thread 2 [4082 MHz]: 2281 ms
-Rank 1, Thread 3 [4016 MHz]: 2318 ms
-Rank 1, Iteration 4: 2358.127365 ms
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-Rank 1, Iteration 4: 628.974952 J, 266.726455 W
-sum of Rank 1, Thread 0: 6.019051 ms
-sum of Rank 1, Thread 1: 12.749633 ms
-sum of Rank 1, Thread 2: 12.680044 ms
-sum of Rank 1, Thread 3: 12.704979 ms
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-Rank 0, Thread 0 [1498 MHz]: 901 ms
-Rank 0, Thread 1 [3950 MHz]: 2358 ms
-Rank 0, Thread 2 [4082 MHz]: 2289 ms
-Rank 0, Thread 3 [4016 MHz]: 2319 ms
-Rank 0, Iteration 4: 2358.306533 ms
-Rank 0, Iteration 4: 628.974952 J, 266.706191 W
-sum of Rank 0, Thread 0: 6.354100 ms
-sum of Rank 0, Thread 1: 12.790880 ms
-sum of Rank 0, Thread 2: 12.657297 ms
-sum of Rank 0, Thread 3: 12.703456 ms
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [3973 MHz]: 901 ms
-Rank 3, Thread 1 [4080 MHz]: 2460 ms
-Rank 3, Thread 2 [3950 MHz]: 2357 ms
-Rank 3, Thread 3 [3949 MHz]: 2360 ms
-Rank 3, Iteration 4: 2460.143100 ms
-Rank 3, Iteration 4: 655.490082 J, 266.443884 W
-sum of Rank 3, Thread 0: 6.353449 ms
-sum of Rank 3, Thread 1: 12.566158 ms
-sum of Rank 3, Thread 2: 12.181943 ms
-sum of Rank 3, Thread 3: 12.201640 ms
+Rank 2, Thread 0 [4102 MHz]: 737 ms
+Rank 2, Thread 1 [4163 MHz]: 3359 ms
+Rank 2, Thread 2 [4116 MHz]: 1133 ms
+Rank 2, Thread 3 [4063 MHz]: 2296 ms
+Rank 2, Iteration 4: 3360.007626 ms
+Rank 2, Iteration 4: 808.239813 J, 240.547017 W
+sum of Rank 2, Thread 0: 5.404454 ms
+sum of Rank 2, Thread 1: 17.570465 ms
+sum of Rank 2, Thread 2: 8.162993 ms
+sum of Rank 2, Thread 3: 14.092006 ms
+Rank 1, Thread 0 [4056 MHz]: 736 ms
+Rank 1, Thread 1 [4163 MHz]: 3360 ms
+Rank 1, Thread 2 [4111 MHz]: 1136 ms
+Rank 1, Thread 3 [3845 MHz]: 2426 ms
+Rank 1, Iteration 4: 3360.336130 ms
+Rank 1, Iteration 4: 808.239813 J, 240.523502 W
+sum of Rank 1, Thread 0: 5.618227 ms
+sum of Rank 1, Thread 1: 18.161340 ms
+sum of Rank 1, Thread 2: 6.353072 ms
+sum of Rank 1, Thread 3: 14.514834 ms
+Rank 0, Thread 0 [4058 MHz]: 737 ms
+Rank 0, Thread 1 [4163 MHz]: 3360 ms
+Rank 0, Thread 2 [1398 MHz]: 3339 ms
+Rank 0, Thread 3 [4174 MHz]: 2236 ms
+Rank 0, Iteration 4: 3360.698532 ms
+Rank 0, Iteration 4: 808.239813 J, 240.497565 W
+sum of Rank 0, Thread 0: 5.627922 ms
+sum of Rank 0, Thread 1: 17.392395 ms
+sum of Rank 0, Thread 2: 8.151968 ms
+sum of Rank 0, Thread 3: 12.829462 ms
+Rank 3, Thread 0 [4052 MHz]: 737 ms
+Rank 3, Thread 1 [4163 MHz]: 3361 ms
+Rank 3, Thread 2 [4113 MHz]: 1134 ms
+Rank 3, Thread 3 [3885 MHz]: 2400 ms
+Rank 3, Iteration 4: 3361.363713 ms
+Rank 3, Iteration 4: 808.239813 J, 240.449973 W
+sum of Rank 3, Thread 0: 5.415097 ms
+sum of Rank 3, Thread 1: 18.071880 ms
+sum of Rank 3, Thread 2: 6.328138 ms
+sum of Rank 3, Thread 3: 14.444884 ms
 
-Execution time: 14.076593 seconds
-Whole-program energy: 3645.505804 J
-Whole-program average power: 258.976423 W
+Execution time: 18.982664 seconds
+Whole-program energy: 4406.290783 J
+Whole-program average power: 232.121830 W
+
+Execution time: 20.777260 seconds
+Whole-program energy: 5891.405756 J
+Whole-program average power: 283.550658 W
+
+Execution time: 21.041903 seconds
+Whole-program energy: 5785.878926 J
+Whole-program average power: 274.969369 W
+
+Execution time: 16.124450 seconds
+Whole-program energy: 4772.742543 J
+Whole-program average power: 295.994135 W
+
+Execution time: 16.530247 seconds
+Whole-program energy: 4913.683527 J
+Whole-program average power: 297.254095 W
+
+Execution time: 16.446082 seconds
+Whole-program energy: 4872.328774 J
+Whole-program average power: 296.260764 W
+
+Execution time: 17.329899 seconds
+Whole-program energy: 4930.456311 J
+Whole-program average power: 284.505776 W
+
+Execution time: 23.679119 seconds
+Whole-program energy: 5947.388462 J
+Whole-program average power: 251.165956 W
+
+Execution time: 23.526086 seconds
+Whole-program energy: 5954.093339 J
+Whole-program average power: 253.084736 W
+
+Execution time: 20.859806 seconds
+Whole-program energy: 5928.243064 J
+Whole-program average power: 284.194550 W
+
+Execution time: 20.839795 seconds
+Whole-program energy: 5921.014017 J
+Whole-program average power: 284.120545 W
+
+Execution time: 23.803654 seconds
+Whole-program energy: 6050.608900 J
+Whole-program average power: 254.188235 W
+
+Execution time: 23.351717 seconds
+Whole-program energy: 5952.924824 J
+Whole-program average power: 254.924497 W
+
+Execution time: 20.988668 seconds
+Whole-program energy: 5830.103178 J
+Whole-program average power: 277.773847 W
+
+Execution time: 21.023746 seconds
+Whole-program energy: 5882.346330 J
+Whole-program average power: 279.795351 W
+
+Execution time: 20.987831 seconds
+Whole-program energy: 5862.306831 J
+Whole-program average power: 279.319322 W
+
+Execution time: 21.053088 seconds
+Whole-program energy: -256335.829862 J
+Whole-program average power: -12175.687979 W
+
+Execution time: 20.896490 seconds
+Whole-program energy: 5830.493314 J
+Whole-program average power: 279.017836 W
+
+Execution time: 20.874260 seconds
+Whole-program energy: 5899.381992 J
+Whole-program average power: 282.615138 W
+
+Execution time: 20.839195 seconds

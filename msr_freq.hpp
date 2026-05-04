@@ -6,6 +6,8 @@
 
 namespace msr {
 
+void msr_init();
+
 struct CounterSample {
     std::uint64_t aperf;
     std::uint64_t mperf;

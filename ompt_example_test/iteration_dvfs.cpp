@@ -26,6 +26,8 @@ void divloop(int loopsize, int *ist, int *ied, int numth) {
         if(i>0) ist[i] = ied[i-1];
         ied[i] = ist[i] + loopsize/(numth-1);
     }
+    ied[1] += (ied[1] - ist[1]) / 2;
+    ist[2] = ied[1];
 }
 
 
@@ -128,8 +130,8 @@ int main(int argc, char **argv) {
     }
 
 
-    msr::reset_freq_all();
-    
+    msr::reset_freq_all(); // バグあり：消したいが、これを消すと全体が遅くなる
+
     delete[] comm_buf;
     delete[] comp_buf;
     delete[] ist;

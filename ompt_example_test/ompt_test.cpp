@@ -34,9 +34,9 @@ struct RegionState {
                         codeptr_ra, begin_count, nthreads);
         }
 
-        int max_mhz = 4200;
+        int max_mhz = 4800;
         if(begin_count == 1) {
-            msr::reset_freq_all();
+            msr::reset_freq_all(); // バグあり：master にしか効かない
             return;
         }
 
@@ -85,10 +85,10 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
     auto* rs = &iter->second;
 
     rs->begin_count += 1;
+    rs->balance_freq();
+
     rs->start_time = std::chrono::steady_clock::now();
     parallel_data->ptr = rs;
-
-    rs->balance_freq();
 
     if (debug) {
         std::fprintf(stderr, "[OMPT] begin region  [%p] (begin_count=%u thread_count=%d)\n",
@@ -118,9 +118,9 @@ void dispatch_barrier_wait(ompt_sync_region_t kind,
     int tid = omp_get_thread_num();
     auto now = std::chrono::steady_clock::now();
     auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_time);
-    rs->elapsed_ms[static_cast<std::size_t>(tid)] = elapsed.count();
+    rs->elapsed_ms[tid] = elapsed.count();
 
-    if(rs->begin_count == 1) rs->cpu_map[static_cast<std::size_t>(tid)] = msr::current_cpu();
+    if(rs->begin_count == 1) rs->cpu_map[tid] = msr::current_cpu();
 }
 
 
@@ -143,7 +143,7 @@ void dispatch_parallel_end(ompt_data_t* parallel_data,
     }
 
     for(int i = 0; i < rs->nthreads; i++) {
-        printf("    Resetting frequency on CPU %d\n", rs->cpu_map[i]);
+        if(debug) printf("    Resetting frequency on CPU %d\n", rs->cpu_map[i]);
         msr::set_freq_on_cpu(rs->cpu_map[i], 0, 100);
     }
 
@@ -176,6 +176,7 @@ int ompt_initialize(ompt_function_lookup_t lookup,
     set_callback(ompt_callback_sync_region,
                  reinterpret_cast<ompt_callback_t>(&dispatch_barrier_wait));
 
+    msr::msr_init();
     msr::reset_freq_all();
     return 1;
 }
