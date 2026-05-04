@@ -91,7 +91,7 @@ int main(int argc, char **argv) {
             
             for(int i=ist[ith]; i<ied[ith]; i++) {
                 comp_buf[i] = i+iter;
-                for(int j=0; j<5000; j++) {
+                for(int j=0; j<50000; j++) {
                     if(j%2) comp_buf[i]++;
                     else comp_buf[i]--;
                 }

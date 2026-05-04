@@ -19,14 +19,14 @@
 [0] MPI startup(): 7       0          eth0
 [0] MPI startup(): ===== CPU pinning =====
 [0] MPI startup(): Rank    Pid      Node name             Pin cpu
-[0] MPI startup(): 0       452945   fanfan.dlab.internal  {0-3}
-[0] MPI startup(): 1       452946   fanfan.dlab.internal  {4-7}
-[0] MPI startup(): 2       452947   fanfan.dlab.internal  {8-11}
-[0] MPI startup(): 3       452948   fanfan.dlab.internal  {12-15}
-[0] MPI startup(): 4       452949   fanfan.dlab.internal  {16-19}
-[0] MPI startup(): 5       452950   fanfan.dlab.internal  {20-23}
-[0] MPI startup(): 6       452951   fanfan.dlab.internal  {24-27}
-[0] MPI startup(): 7       452952   fanfan.dlab.internal  {28-31}
+[0] MPI startup(): 0       455212   fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       455213   fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       455214   fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       455215   fanfan.dlab.internal  {12-15}
+[0] MPI startup(): 4       455216   fanfan.dlab.internal  {16-19}
+[0] MPI startup(): 5       455217   fanfan.dlab.internal  {20-23}
+[0] MPI startup(): 6       455218   fanfan.dlab.internal  {24-27}
+[0] MPI startup(): 7       455219   fanfan.dlab.internal  {28-31}
 [0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
 [0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
 [0] MPI startup(): I_MPI_MPIRUN=mpirun
@@ -49,299 +49,299 @@ Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-Rank 5, Thread 0 [3386 MHz]: 1746 ms
-Rank 5, Thread 1 [3655 MHz]: 4478 ms
-Rank 5, Thread 2 [3374 MHz]: 1668 ms
-Rank 5, Thread 3 [3447 MHz]: 3206 ms
-Rank 5, Iteration 0: 4478.521457 ms
-Rank 5, Iteration 0: 1270.194808 J, 283.619230 W
-Rank 6, Thread 0 [3445 MHz]: 3172 ms
-Rank 6, Thread 1 [3655 MHz]: 4497 ms
-Rank 6, Thread 2 [3387 MHz]: 1657 ms
-Rank 6, Thread 3 [3444 MHz]: 3210 ms
-Rank 6, Iteration 0: 4497.170987 ms
-Rank 6, Iteration 0: 1274.334324 J, 283.363547 W
-Rank 1, Thread 0 [3426 MHz]: 2978 ms
-Rank 1, Thread 1 [3655 MHz]: 4500 ms
-Rank 1, Thread 2 [3387 MHz]: 1660 ms
-Rank 1, Thread 3 [3444 MHz]: 3176 ms
-Rank 1, Iteration 0: 4500.486256 ms
-Rank 1, Iteration 0: 1275.066072 J, 283.317402 W
-Rank 2, Thread 0 [3415 MHz]: 2977 ms
-Rank 2, Thread 1 [3720 MHz]: 5088 ms
-Rank 2, Thread 2 [3386 MHz]: 2106 ms
-Rank 2, Thread 3 [3546 MHz]: 3781 ms
-Rank 2, Iteration 0: 5088.958654 ms
-Rank 2, Iteration 0: 1406.966552 J, 276.474353 W
-Rank 3, Thread 0 [3414 MHz]: 2743 ms
-Rank 3, Thread 1 [3720 MHz]: 5092 ms
-Rank 3, Thread 2 [3379 MHz]: 2132 ms
-Rank 3, Thread 3 [3540 MHz]: 3731 ms
-Rank 3, Iteration 0: 5093.208824 ms
-Rank 3, Iteration 0: 1407.835569 J, 276.414264 W
-Rank 4, Thread 0 [3412 MHz]: 2729 ms
-Rank 4, Thread 1 [3720 MHz]: 5097 ms
-Rank 4, Thread 2 [3389 MHz]: 2238 ms
-Rank 4, Thread 3 [3534 MHz]: 3720 ms
-Rank 4, Iteration 0: 5097.813328 ms
-Rank 4, Iteration 0: 1408.747126 J, 276.343411 W
-Rank 7, Thread 0 [3449 MHz]: 3172 ms
-Rank 7, Thread 1 [3727 MHz]: 5186 ms
-Rank 7, Thread 2 [3386 MHz]: 2083 ms
-Rank 7, Thread 3 [3547 MHz]: 3851 ms
-Rank 7, Iteration 0: 5186.482533 ms
-Rank 7, Iteration 0: 1428.436956 J, 275.415360 W
-Rank 0, Thread 0 [3429 MHz]: 2918 ms
-Rank 0, Thread 1 [3728 MHz]: 5198 ms
-Rank 0, Thread 2 [3388 MHz]: 2154 ms
-Rank 0, Thread 3 [3550 MHz]: 3796 ms
-Rank 0, Iteration 0: 5198.735070 ms
-Rank 0, Iteration 0: 1431.081420 J, 275.274928 W
+Rank 0, Thread 0 [3388 MHz]: 2933 ms
+Rank 0, Thread 1 [3954 MHz]: 102612 ms
+Rank 0, Thread 2 [3567 MHz]: 37939 ms
+Rank 0, Thread 3 [3810 MHz]: 70989 ms
+Rank 0, Iteration 0: 102612.502742 ms
+Rank 0, Iteration 0: 25465.118891 J, 248.167798 W
+Rank 4, Thread 0 [3395 MHz]: 2834 ms
+Rank 4, Thread 1 [3954 MHz]: 102637 ms
+Rank 4, Thread 2 [3567 MHz]: 37972 ms
+Rank 4, Thread 3 [3809 MHz]: 71011 ms
+Rank 4, Iteration 0: 102637.867980 ms
+Rank 4, Iteration 0: 25469.175948 J, 248.145996 W
+Rank 6, Thread 0 [3386 MHz]: 3048 ms
+Rank 6, Thread 1 [3954 MHz]: 102672 ms
+Rank 6, Thread 2 [3567 MHz]: 38031 ms
+Rank 6, Thread 3 [3811 MHz]: 71046 ms
+Rank 6, Iteration 0: 102673.249559 ms
+Rank 6, Iteration 0: 25475.227630 J, 248.119425 W
+Rank 3, Thread 0 [3392 MHz]: 2565 ms
+Rank 3, Thread 1 [3956 MHz]: 103242 ms
+Rank 3, Thread 2 [3568 MHz]: 38500 ms
+Rank 3, Thread 3 [3813 MHz]: 71528 ms
+Rank 3, Iteration 0: 103243.184707 ms
+Rank 3, Iteration 0: 25573.043236 J, 247.697156 W
+Rank 2, Thread 0 [3383 MHz]: 2662 ms
+Rank 2, Thread 1 [3956 MHz]: 103263 ms
+Rank 2, Thread 2 [3569 MHz]: 38579 ms
+Rank 2, Thread 3 [3813 MHz]: 71632 ms
+Rank 2, Iteration 0: 103263.616746 ms
+Rank 2, Iteration 0: 25576.375015 J, 247.680411 W
+Rank 5, Thread 0 [3381 MHz]: 2834 ms
+Rank 5, Thread 1 [3956 MHz]: 103278 ms
+Rank 5, Thread 2 [3568 MHz]: 38502 ms
+Rank 5, Thread 3 [3813 MHz]: 71590 ms
+Rank 5, Iteration 0: 103278.459213 ms
+Rank 5, Iteration 0: 25578.696420 J, 247.667293 W
+Rank 1, Thread 0 [3384 MHz]: 2933 ms
+Rank 1, Thread 1 [3956 MHz]: 103327 ms
+Rank 1, Thread 2 [3569 MHz]: 38581 ms
+Rank 1, Thread 3 [3813 MHz]: 71589 ms
+Rank 1, Iteration 0: 103327.908238 ms
+Rank 1, Iteration 0: 25587.325854 J, 247.632283 W
+Rank 7, Thread 0 [3384 MHz]: 3048 ms
+Rank 7, Thread 1 [3956 MHz]: 103362 ms
+Rank 7, Thread 2 [3569 MHz]: 38625 ms
+Rank 7, Thread 3 [3814 MHz]: 71673 ms
+Rank 7, Iteration 0: 103363.371824 ms
+Rank 7, Iteration 0: 25593.589815 J, 247.607923 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-Rank 5, Thread 0 [3395 MHz]: 990 ms
-Rank 5, Thread 1 [3851 MHz]: 3634 ms
-Rank 5, Thread 2 [3413 MHz]: 1377 ms
-Rank 5, Thread 3 [3683 MHz]: 2534 ms
-Rank 5, Iteration 1: 3633.977779 ms
-Rank 5, Iteration 1: 1069.022104 J, 294.174089 W
-Rank 2, Thread 0 [3395 MHz]: 990 ms
-Rank 2, Thread 1 [3852 MHz]: 3634 ms
-Rank 2, Thread 2 [3412 MHz]: 1368 ms
-Rank 2, Thread 3 [3684 MHz]: 2533 ms
-Rank 2, Iteration 1: 3634.252058 ms
-Rank 2, Iteration 1: 1069.022104 J, 294.151888 W
-Rank 4, Thread 0 [3395 MHz]: 990 ms
-Rank 4, Thread 1 [3852 MHz]: 3634 ms
-Rank 4, Thread 2 [3412 MHz]: 1368 ms
-Rank 4, Thread 3 [3684 MHz]: 2534 ms
-Rank 4, Iteration 1: 3634.459927 ms
-Rank 4, Iteration 1: 1069.022104 J, 294.135064 W
-Rank 7, Thread 0 [3395 MHz]: 990 ms
-Rank 7, Thread 1 [3852 MHz]: 3635 ms
-Rank 7, Thread 2 [3412 MHz]: 1368 ms
-Rank 7, Thread 3 [3685 MHz]: 2541 ms
-Rank 7, Iteration 1: 3635.267114 ms
-Rank 7, Iteration 1: 1069.022104 J, 294.069754 W
-Rank 3, Thread 0 [3395 MHz]: 990 ms
-Rank 3, Thread 1 [3852 MHz]: 3635 ms
-Rank 3, Thread 2 [3412 MHz]: 1368 ms
-Rank 3, Thread 3 [3684 MHz]: 2534 ms
-Rank 3, Iteration 1: 3635.602972 ms
-Rank 3, Iteration 1: 1069.022104 J, 294.042587 W
-Rank 0, Thread 0 [3390 MHz]: 990 ms
-Rank 0, Thread 1 [3852 MHz]: 3638 ms
-Rank 0, Thread 2 [3409 MHz]: 1378 ms
-Rank 0, Thread 3 [3684 MHz]: 2533 ms
-Rank 0, Iteration 1: 3637.630688 ms
-Rank 0, Iteration 1: 1069.795845 J, 294.091384 W
-Rank 1, Thread 0 [3395 MHz]: 990 ms
-Rank 1, Thread 1 [3852 MHz]: 3639 ms
-Rank 1, Thread 2 [3412 MHz]: 1369 ms
-Rank 1, Thread 3 [3685 MHz]: 2542 ms
-Rank 1, Iteration 1: 3639.396092 ms
-Rank 1, Iteration 1: 1070.155341 J, 294.047505 W
-Rank 6, Thread 0 [3395 MHz]: 990 ms
-Rank 6, Thread 1 [3851 MHz]: 3642 ms
-Rank 6, Thread 2 [3414 MHz]: 1382 ms
-Rank 6, Thread 3 [3685 MHz]: 2540 ms
-Rank 6, Iteration 1: 3642.009947 ms
-Rank 6, Iteration 1: 1070.518683 J, 293.936233 W
+Rank 0, Thread 0 [3395 MHz]: 854 ms
+Rank 0, Thread 1 [3976 MHz]: 101420 ms
+Rank 0, Thread 2 [3573 MHz]: 37625 ms
+Rank 0, Thread 3 [3840 MHz]: 70027 ms
+Rank 0, Iteration 1: 101419.911540 ms
+Rank 0, Iteration 1: 23632.304064 J, 233.014442 W
+Rank 4, Thread 0 [3395 MHz]: 854 ms
+Rank 4, Thread 1 [3976 MHz]: 101421 ms
+Rank 4, Thread 2 [3573 MHz]: 37635 ms
+Rank 4, Thread 3 [3840 MHz]: 70025 ms
+Rank 4, Iteration 1: 101421.979147 ms
+Rank 4, Iteration 1: 23632.507066 J, 233.011693 W
+Rank 2, Thread 0 [3395 MHz]: 854 ms
+Rank 2, Thread 1 [3976 MHz]: 101428 ms
+Rank 2, Thread 2 [3573 MHz]: 37626 ms
+Rank 2, Thread 3 [3840 MHz]: 70059 ms
+Rank 2, Iteration 1: 101427.872968 ms
+Rank 2, Iteration 1: 23633.658735 J, 233.009508 W
+Rank 6, Thread 0 [3395 MHz]: 854 ms
+Rank 6, Thread 1 [3976 MHz]: 101430 ms
+Rank 6, Thread 2 [3573 MHz]: 37653 ms
+Rank 6, Thread 3 [3840 MHz]: 70030 ms
+Rank 6, Iteration 1: 101431.278227 ms
+Rank 6, Iteration 1: 23634.044721 J, 233.005490 W
+Rank 7, Thread 0 [3395 MHz]: 854 ms
+Rank 7, Thread 1 [3976 MHz]: 101433 ms
+Rank 7, Thread 2 [3573 MHz]: 37628 ms
+Rank 7, Thread 3 [3840 MHz]: 70031 ms
+Rank 7, Iteration 1: 101433.706083 ms
+Rank 7, Iteration 1: 23634.268292 J, 233.002117 W
+Rank 5, Thread 0 [3395 MHz]: 854 ms
+Rank 5, Thread 1 [3976 MHz]: 101434 ms
+Rank 5, Thread 2 [3573 MHz]: 37627 ms
+Rank 5, Thread 3 [3840 MHz]: 70030 ms
+Rank 5, Iteration 1: 101434.110525 ms
+Rank 5, Iteration 1: 23634.676616 J, 233.005214 W
+Rank 3, Thread 0 [3395 MHz]: 854 ms
+Rank 3, Thread 1 [3976 MHz]: 101448 ms
+Rank 3, Thread 2 [3573 MHz]: 37636 ms
+Rank 3, Thread 3 [3840 MHz]: 70037 ms
+Rank 3, Iteration 1: 101448.529924 ms
+Rank 3, Iteration 1: 23636.880956 J, 232.993824 W
+Rank 1, Thread 0 [3395 MHz]: 854 ms
+Rank 1, Thread 1 [3976 MHz]: 101465 ms
+Rank 1, Thread 2 [3573 MHz]: 37628 ms
+Rank 1, Thread 3 [3840 MHz]: 70025 ms
+Rank 1, Iteration 1: 101465.415068 ms
+Rank 1, Iteration 1: 23639.569487 J, 232.981548 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-Rank 2, Thread 0 [3395 MHz]: 987 ms
-Rank 2, Thread 1 [3843 MHz]: 3642 ms
-Rank 2, Thread 2 [3420 MHz]: 1365 ms
-Rank 2, Thread 3 [3688 MHz]: 2530 ms
-Rank 2, Iteration 2: 3642.006680 ms
-Rank 2, Iteration 2: 1068.017468 J, 293.249728 W
-Rank 4, Thread 0 [3395 MHz]: 987 ms
-Rank 4, Thread 1 [3844 MHz]: 3642 ms
-Rank 4, Thread 2 [3419 MHz]: 1366 ms
-Rank 4, Thread 3 [3689 MHz]: 2531 ms
-Rank 4, Iteration 2: 3642.501858 ms
-Rank 4, Iteration 2: 1068.017468 J, 293.209862 W
-Rank 7, Thread 0 [3395 MHz]: 987 ms
-Rank 7, Thread 1 [3844 MHz]: 3643 ms
-Rank 7, Thread 2 [3419 MHz]: 1365 ms
-Rank 7, Thread 3 [3688 MHz]: 2531 ms
-Rank 7, Iteration 2: 3642.810897 ms
-Rank 1, Thread 0 [3395 MHz]: 987 ms
-Rank 1, Thread 1 [3844 MHz]: 3643 ms
-Rank 1, Thread 2 [3419 MHz]: 1366 ms
-Rank 6, Thread 0 [3394 MHz]: 987 ms
-Rank 6, Thread 1 [3844 MHz]: 3643 ms
-Rank 6, Thread 2 [3419 MHz]: 1366 ms
-Rank 6, Thread 3 [3688 MHz]: 2531 ms
-Rank 1, Thread 3 [3688 MHz]: 2531 ms
-Rank 1, Iteration 2: 3642.853973 ms
-Rank 6, Iteration 2: 3642.853745 ms
-Rank 7, Iteration 2: 1068.017468 J, 293.184988 W
-Rank 6, Iteration 2: 1068.017468 J, 293.181539 W
-Rank 1, Iteration 2: 1068.017468 J, 293.181521 W
-Rank 0, Thread 0 [3395 MHz]: 987 ms
-Rank 0, Thread 1 [3844 MHz]: 3644 ms
-Rank 0, Thread 2 [3417 MHz]: 1369 ms
-Rank 0, Thread 3 [3688 MHz]: 2531 ms
-Rank 0, Iteration 2: 3643.910575 ms
-Rank 0, Iteration 2: 1068.017468 J, 293.096509 W
-Rank 5, Thread 0 [3395 MHz]: 987 ms
-Rank 5, Thread 1 [3844 MHz]: 3645 ms
-Rank 5, Thread 2 [3419 MHz]: 1366 ms
-Rank 5, Thread 3 [3688 MHz]: 2531 ms
-Rank 5, Iteration 2: 3645.537698 ms
-Rank 5, Iteration 2: 1068.762950 J, 293.170182 W
-Rank 3, Thread 0 [3395 MHz]: 987 ms
-Rank 3, Thread 1 [3844 MHz]: 3647 ms
-Rank 3, Thread 2 [3419 MHz]: 1365 ms
-Rank 3, Thread 3 [3688 MHz]: 2533 ms
-Rank 3, Iteration 2: 3647.395976 ms
-Rank 3, Iteration 2: 1068.762950 J, 293.020817 W
+Rank 4, Thread 0 [3395 MHz]: 855 ms
+Rank 4, Thread 1 [3957 MHz]: 101890 ms
+Rank 4, Thread 2 [3572 MHz]: 37633 ms
+Rank 4, Thread 3 [3815 MHz]: 70471 ms
+Rank 4, Iteration 2: 101893.481003 ms
+Rank 4, Iteration 2: 24719.364514 J, 242.600059 W
+Rank 0, Thread 0 [3395 MHz]: 855 ms
+Rank 0, Thread 1 [3957 MHz]: 101891 ms
+Rank 0, Thread 2 [3572 MHz]: 37625 ms
+Rank 0, Thread 3 [3815 MHz]: 70468 ms
+Rank 0, Iteration 2: 101893.857385 ms
+Rank 0, Iteration 2: 24719.552440 J, 242.601007 W
+Rank 2, Thread 0 [3395 MHz]: 855 ms
+Rank 2, Thread 1 [3957 MHz]: 101894 ms
+Rank 2, Thread 2 [3573 MHz]: 37627 ms
+Rank 2, Thread 3 [3815 MHz]: 70511 ms
+Rank 2, Iteration 2: 101897.061999 ms
+Rank 2, Iteration 2: 24720.103464 J, 242.598785 W
+Rank 6, Thread 0 [3395 MHz]: 855 ms
+Rank 6, Thread 1 [3957 MHz]: 101897 ms
+Rank 6, Thread 2 [3572 MHz]: 37638 ms
+Rank 6, Thread 3 [3815 MHz]: 70472 ms
+Rank 6, Iteration 2: 101900.591355 ms
+Rank 6, Iteration 2: 24720.570687 J, 242.594968 W
+Rank 7, Thread 0 [3395 MHz]: 855 ms
+Rank 7, Thread 1 [3957 MHz]: 101900 ms
+Rank 7, Thread 2 [3573 MHz]: 37628 ms
+Rank 7, Thread 3 [3815 MHz]: 70474 ms
+Rank 7, Iteration 2: 101902.803947 ms
+Rank 7, Iteration 2: 24720.941414 J, 242.593339 W
+Rank 5, Thread 0 [3395 MHz]: 855 ms
+Rank 5, Thread 1 [3957 MHz]: 101904 ms
+Rank 5, Thread 2 [3573 MHz]: 37635 ms
+Rank 5, Thread 3 [3815 MHz]: 70474 ms
+Rank 5, Iteration 2: 101906.587867 ms
+Rank 5, Iteration 2: 24721.627264 J, 242.591061 W
+Rank 3, Thread 0 [3395 MHz]: 855 ms
+Rank 3, Thread 1 [3957 MHz]: 101923 ms
+Rank 3, Thread 2 [3572 MHz]: 37627 ms
+Rank 3, Thread 3 [3815 MHz]: 70492 ms
+Rank 3, Iteration 2: 101926.359379 ms
+Rank 3, Iteration 2: 24724.984983 J, 242.576946 W
+Rank 1, Thread 0 [3394 MHz]: 855 ms
+Rank 1, Thread 1 [3957 MHz]: 101926 ms
+Rank 1, Thread 2 [3573 MHz]: 37627 ms
+Rank 1, Thread 3 [3815 MHz]: 70465 ms
+Rank 1, Iteration 2: 101928.972682 ms
+Rank 1, Iteration 2: 24725.621273 J, 242.576969 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-Rank 0, Thread 0 [3395 MHz]: 984 ms
-Rank 0, Thread 1 [3876 MHz]: 3609 ms
-Rank 0, Thread 2 [3417 MHz]: 1371 ms
-Rank 0, Thread 3 [3712 MHz]: 2514 ms
-Rank 0, Iteration 3: 3609.345738 ms
-Rank 0, Iteration 3: 1072.277223 J, 297.083544 W
-Rank 5, Thread 0 [3395 MHz]: 984 ms
-Rank 5, Thread 1 [3876 MHz]: 3610 ms
-Rank 5, Thread 2 [3420 MHz]: 1367 ms
-Rank 5, Thread 3 [3712 MHz]: 2515 ms
-Rank 5, Iteration 3: 3609.888687 ms
-Rank 5, Iteration 3: 1072.277223 J, 297.038861 W
-Rank 2, Thread 0 [3395 MHz]: 984 ms
-Rank 2, Thread 1 [3876 MHz]: 3610 ms
-Rank 2, Thread 2 [3419 MHz]: 1366 ms
-Rank 2, Thread 3 [3712 MHz]: 2514 ms
-Rank 2, Iteration 3: 3610.659268 ms
-Rank 2, Iteration 3: 1072.762878 J, 297.109973 W
-Rank 4, Thread 0 [3395 MHz]: 984 ms
-Rank 4, Thread 1 [3876 MHz]: 3611 ms
-Rank 4, Thread 2 [3419 MHz]: 1366 ms
-Rank 4, Thread 3 [3712 MHz]: 2514 ms
-Rank 4, Iteration 3: 3611.282572 ms
-Rank 6, Thread 0 [3395 MHz]: 984 ms
-Rank 6, Thread 1 [3876 MHz]: 3611 ms
-Rank 6, Thread 2 [3419 MHz]: 1366 ms
-Rank 6, Thread 3 [3712 MHz]: 2515 ms
-Rank 6, Iteration 3: 3611.461477 ms
-Rank 4, Iteration 3: 1072.762878 J, 297.058692 W
-Rank 6, Iteration 3: 1072.762878 J, 297.043976 W
-Rank 7, Thread 0 [3395 MHz]: 984 ms
-Rank 7, Thread 1 [3876 MHz]: 3612 ms
-Rank 7, Thread 2 [3420 MHz]: 1365 ms
-Rank 7, Thread 3 [3712 MHz]: 2515 ms
-Rank 7, Iteration 3: 3611.997682 ms
-Rank 7, Iteration 3: 1072.762878 J, 296.999880 W
-Rank 3, Thread 0 [3394 MHz]: 984 ms
-Rank 3, Thread 1 [3876 MHz]: 3613 ms
-Rank 3, Thread 2 [3419 MHz]: 1365 ms
-Rank 3, Thread 3 [3712 MHz]: 2517 ms
-Rank 3, Iteration 3: 3612.767711 ms
-Rank 3, Iteration 3: 1072.762878 J, 296.936577 W
-Rank 1, Thread 0 [3395 MHz]: 984 ms
-Rank 1, Thread 1 [3876 MHz]: 3625 ms
-Rank 1, Thread 2 [3419 MHz]: 1365 ms
-Rank 1, Thread 3 [3712 MHz]: 2514 ms
-Rank 1, Iteration 3: 3625.300239 ms
-Rank 1, Iteration 3: 1075.960075 J, 296.791991 W
+Rank 0, Thread 0 [3395 MHz]: 851 ms
+Rank 0, Thread 1 [3961 MHz]: 101787 ms
+Rank 0, Thread 2 [3574 MHz]: 37606 ms
+Rank 0, Thread 3 [3824 MHz]: 70304 ms
+Rank 0, Iteration 3: 101789.554450 ms
+Rank 0, Iteration 3: 24348.274399 J, 239.202092 W
+Rank 4, Thread 0 [3395 MHz]: 851 ms
+Rank 4, Thread 1 [3961 MHz]: 101788 ms
+Rank 4, Thread 2 [3574 MHz]: 37617 ms
+Rank 4, Thread 3 [3824 MHz]: 70305 ms
+Rank 4, Iteration 3: 101791.366054 ms
+Rank 4, Iteration 3: 24348.274399 J, 239.197835 W
+Rank 2, Thread 0 [3395 MHz]: 851 ms
+Rank 2, Thread 1 [3961 MHz]: 101790 ms
+Rank 2, Thread 2 [3574 MHz]: 37610 ms
+Rank 2, Thread 3 [3824 MHz]: 70313 ms
+Rank 2, Iteration 3: 101793.610164 ms
+Rank 2, Iteration 3: 24348.824690 J, 239.197968 W
+Rank 7, Thread 0 [3395 MHz]: 851 ms
+Rank 7, Thread 1 [3961 MHz]: 101797 ms
+Rank 7, Thread 2 [3574 MHz]: 37610 ms
+Rank 7, Thread 3 [3824 MHz]: 70310 ms
+Rank 7, Iteration 3: 101800.853477 ms
+Rank 7, Iteration 3: 24350.083476 J, 239.193314 W
+Rank 5, Thread 0 [3395 MHz]: 851 ms
+Rank 5, Thread 1 [3961 MHz]: 101818 ms
+Rank 5, Thread 2 [3574 MHz]: 37610 ms
+Rank 5, Thread 3 [3824 MHz]: 70307 ms
+Rank 5, Iteration 3: 101821.025364 ms
+Rank 5, Iteration 3: 24353.502962 J, 239.179510 W
+Rank 3, Thread 0 [3395 MHz]: 851 ms
+Rank 3, Thread 1 [3961 MHz]: 101829 ms
+Rank 3, Thread 2 [3574 MHz]: 37620 ms
+Rank 3, Thread 3 [3824 MHz]: 70312 ms
+Rank 3, Iteration 3: 101832.765746 ms
+Rank 3, Iteration 3: 24355.618069 J, 239.172705 W
+Rank 6, Thread 0 [3395 MHz]: 851 ms
+Rank 6, Thread 1 [3961 MHz]: 101832 ms
+Rank 6, Thread 2 [3574 MHz]: 37633 ms
+Rank 6, Thread 3 [3824 MHz]: 70310 ms
+Rank 6, Iteration 3: 101835.954366 ms
+Rank 6, Iteration 3: 24356.137538 J, 239.170317 W
+Rank 1, Thread 0 [3395 MHz]: 851 ms
+Rank 1, Thread 1 [3961 MHz]: 101857 ms
+Rank 1, Thread 2 [3574 MHz]: 37609 ms
+Rank 1, Thread 3 [3824 MHz]: 70303 ms
+Rank 1, Iteration 3: 101860.466782 ms
+Rank 1, Iteration 3: 24360.815016 J, 239.158682 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-Rank 6, Thread 0 [3395 MHz]: 983 ms
-Rank 6, Thread 1 [3869 MHz]: 3616 ms
-Rank 6, Thread 2 [3418 MHz]: 1366 ms
-Rank 6, Thread 3 [3698 MHz]: 2525 ms
-Rank 6, Iteration 4: 3615.943912 ms
-Rank 6, Iteration 4: 1071.806277 J, 296.411201 W
-sum of Rank 6, Thread 0: 7.114561 ms
-sum of Rank 6, Thread 1: 19.007952 ms
-sum of Rank 6, Thread 2: 7.136246 ms
-sum of Rank 6, Thread 3: 13.321278 ms
-Rank 2, Thread 0 [3395 MHz]: 983 ms
-Rank 2, Thread 1 [3869 MHz]: 3617 ms
-Rank 2, Thread 2 [3418 MHz]: 1365 ms
-Rank 2, Thread 3 [3698 MHz]: 2524 ms
-Rank 2, Iteration 4: 3617.619368 ms
-Rank 2, Iteration 4: 1072.353639 J, 296.425226 W
-sum of Rank 2, Thread 0: 6.919843 ms
-sum of Rank 2, Thread 1: 19.591461 ms
-sum of Rank 2, Thread 2: 7.569700 ms
-sum of Rank 2, Thread 3: 13.882743 ms
-Rank 0, Thread 0 [3395 MHz]: 983 ms
-Rank 0, Thread 1 [3869 MHz]: 3618 ms
-Rank 0, Thread 2 [3416 MHz]: 1370 ms
-Rank 0, Thread 3 [3698 MHz]: 2524 ms
-Rank 0, Iteration 4: 3617.779842 ms
-Rank 4, Thread 0 [3395 MHz]: 983 ms
-Rank 4, Thread 1 [3869 MHz]: 3618 ms
-Rank 4, Thread 2 [3418 MHz]: 1366 ms
-Rank 4, Thread 3 [3698 MHz]: 2524 ms
-Rank 4, Iteration 4: 3617.901232 ms
-Rank 0, Iteration 4: 1072.353639 J, 296.412077 W
-sum of Rank 0, Thread 0: 6.861014 ms
-sum of Rank 0, Thread 1: 19.706614 ms
-sum of Rank 0, Thread 2: 7.641126 ms
-sum of Rank 0, Thread 3: 13.897702 ms
-Rank 4, Iteration 4: 1072.353639 J, 296.402132 W
-sum of Rank 4, Thread 0: 6.671529 ms
-sum of Rank 4, Thread 1: 19.602416 ms
-sum of Rank 4, Thread 2: 7.703487 ms
-sum of Rank 4, Thread 3: 13.821458 ms
-Rank 5, Thread 0 [3395 MHz]: 983 ms
-Rank 5, Thread 1 [3869 MHz]: 3619 ms
-Rank 5, Thread 2 [3419 MHz]: 1369 ms
-Rank 5, Thread 3 [3699 MHz]: 2524 ms
-Rank 5, Iteration 4: 3619.181268 ms
-Rank 5, Iteration 4: 1072.353639 J, 296.297300 W
-sum of Rank 5, Thread 0: 5.688541 ms
-sum of Rank 5, Thread 1: 18.985669 ms
-sum of Rank 5, Thread 2: 7.146095 ms
-sum of Rank 5, Thread 3: 13.308836 ms
-Rank 3, Thread 0 [3395 MHz]: 983 ms
-Rank 3, Thread 1 [3869 MHz]: 3620 ms
-Rank 3, Thread 2 [3418 MHz]: 1367 ms
-Rank 3, Thread 3 [3699 MHz]: 2527 ms
-Rank 3, Iteration 4: 3620.564517 ms
-Rank 3, Iteration 4: 1073.016113 J, 296.367074 W
-sum of Rank 3, Thread 0: 6.685400 ms
-sum of Rank 3, Thread 1: 19.607726 ms
-sum of Rank 3, Thread 2: 7.597852 ms
-sum of Rank 3, Thread 3: 13.842902 ms
-Rank 7, Thread 0 [3395 MHz]: 983 ms
-Rank 7, Thread 1 [3869 MHz]: 3621 ms
-Rank 7, Thread 2 [3418 MHz]: 1366 ms
-Rank 7, Thread 3 [3698 MHz]: 2525 ms
-Rank 7, Iteration 4: 3620.919958 ms
-Rank 7, Iteration 4: 1073.016113 J, 296.337982 W
-sum of Rank 7, Thread 0: 7.114502 ms
-sum of Rank 7, Thread 1: 19.696330 ms
-sum of Rank 7, Thread 2: 7.547589 ms
-sum of Rank 7, Thread 3: 13.961858 ms
-Rank 1, Thread 0 [3395 MHz]: 983 ms
-Rank 1, Thread 1 [3869 MHz]: 3637 ms
-Rank 1, Thread 2 [3423 MHz]: 1407 ms
-Rank 1, Thread 3 [3699 MHz]: 2527 ms
-Rank 1, Iteration 4: 3636.991589 ms
-Rank 1, Iteration 4: 1076.922047 J, 296.102430 W
-sum of Rank 1, Thread 0: 6.920496 ms
-sum of Rank 1, Thread 1: 19.043229 ms
-sum of Rank 1, Thread 2: 7.167633 ms
-sum of Rank 1, Thread 3: 13.290169 ms
+Rank 0, Thread 0 [3395 MHz]: 848 ms
+Rank 0, Thread 1 [3977 MHz]: 101404 ms
+Rank 0, Thread 2 [3569 MHz]: 37655 ms
+Rank 0, Thread 3 [3839 MHz]: 70031 ms
+Rank 0, Iteration 4: 101406.717330 ms
+Rank 0, Iteration 4: 23599.050670 J, 232.716839 W
+sum of Rank 0, Thread 0: 6.340124 ms
+sum of Rank 0, Thread 1: 509.113965 ms
+sum of Rank 0, Thread 2: 188.449786 ms
+sum of Rank 0, Thread 3: 351.819181 ms
+Rank 4, Thread 0 [3395 MHz]: 848 ms
+Rank 4, Thread 1 [3977 MHz]: 101410 ms
+Rank 4, Thread 2 [3569 MHz]: 37659 ms
+Rank 4, Thread 3 [3839 MHz]: 70033 ms
+Rank 4, Iteration 4: 101413.092235 ms
+Rank 4, Iteration 4: 23600.089486 J, 232.712453 W
+sum of Rank 4, Thread 0: 6.241834 ms
+sum of Rank 4, Thread 1: 509.145414 ms
+sum of Rank 4, Thread 2: 188.515816 ms
+sum of Rank 4, Thread 3: 351.845891 ms
+Rank 2, Thread 0 [3395 MHz]: 848 ms
+Rank 2, Thread 1 [3977 MHz]: 101413 ms
+Rank 2, Thread 2 [3569 MHz]: 37654 ms
+Rank 2, Thread 3 [3839 MHz]: 70032 ms
+Rank 2, Iteration 4: 101416.052962 ms
+Rank 2, Iteration 4: 23600.674690 J, 232.711430 W
+sum of Rank 2, Thread 0: 6.069384 ms
+sum of Rank 2, Thread 1: 509.787704 ms
+sum of Rank 2, Thread 2: 189.096753 ms
+sum of Rank 2, Thread 3: 352.547473 ms
+Rank 6, Thread 0 [3395 MHz]: 848 ms
+Rank 6, Thread 1 [3977 MHz]: 101420 ms
+Rank 6, Thread 2 [3569 MHz]: 37657 ms
+Rank 6, Thread 3 [3839 MHz]: 70040 ms
+Rank 6, Iteration 4: 101423.542931 ms
+Rank 7, Thread 0 [3395 MHz]: 848 ms
+Rank 7, Thread 1 [3977 MHz]: 101420 ms
+Rank 7, Thread 2 [3569 MHz]: 37657 ms
+Rank 7, Thread 3 [3839 MHz]: 70037 ms
+Rank 7, Iteration 4: 101423.494835 ms
+Rank 6, Iteration 4: 23601.707036 J, 232.704423 W
+sum of Rank 6, Thread 0: 6.455544 ms
+sum of Rank 6, Thread 1: 509.252171 ms
+sum of Rank 6, Thread 2: 188.612116 ms
+sum of Rank 6, Thread 3: 351.898697 ms
+Rank 7, Iteration 4: 23601.707036 J, 232.704533 W
+sum of Rank 7, Thread 0: 6.455509 ms
+sum of Rank 7, Thread 1: 509.912882 ms
+sum of Rank 7, Thread 2: 189.148522 ms
+sum of Rank 7, Thread 3: 352.524633 ms
+Rank 1, Thread 0 [3394 MHz]: 848 ms
+Rank 1, Thread 1 [3977 MHz]: 101440 ms
+Rank 1, Thread 2 [3569 MHz]: 37655 ms
+Rank 1, Thread 3 [3839 MHz]: 70030 ms
+Rank 1, Iteration 4: 101443.263517 ms
+Rank 1, Iteration 4: 23605.209895 J, 232.693715 W
+sum of Rank 1, Thread 0: 6.340379 ms
+sum of Rank 1, Thread 1: 510.014698 ms
+sum of Rank 1, Thread 2: 189.100393 ms
+sum of Rank 1, Thread 3: 352.413113 ms
+Rank 3, Thread 0 [3395 MHz]: 848 ms
+Rank 3, Thread 1 [3977 MHz]: 101443 ms
+Rank 3, Thread 2 [3569 MHz]: 37666 ms
+Rank 3, Thread 3 [3839 MHz]: 70043 ms
+Rank 3, Iteration 4: 101446.004957 ms
+Rank 3, Iteration 4: 23605.627619 J, 232.691545 W
+sum of Rank 3, Thread 0: 5.972820 ms
+sum of Rank 3, Thread 1: 509.885252 ms
+sum of Rank 3, Thread 2: 189.048902 ms
+sum of Rank 3, Thread 3: 352.411675 ms
+Rank 5, Thread 0 [3395 MHz]: 848 ms
+Rank 5, Thread 1 [3977 MHz]: 101483 ms
+Rank 5, Thread 2 [3569 MHz]: 37666 ms
+Rank 5, Thread 3 [3839 MHz]: 70034 ms
+Rank 5, Iteration 4: 101485.418208 ms
+Rank 5, Iteration 4: 23613.657750 J, 232.680302 W
+sum of Rank 5, Thread 0: 6.241708 ms
+sum of Rank 5, Thread 1: 509.916441 ms
+sum of Rank 5, Thread 2: 189.039868 ms
+sum of Rank 5, Thread 3: 352.434407 ms
 
-Execution time: 20.837233 seconds
-Whole-program energy: 5899.522617 J
-Whole-program average power: 283.124088 W
+Execution time: 511.119392 seconds
+Whole-program energy: 122112.133743 J
+Whole-program average power: 238.911174 W

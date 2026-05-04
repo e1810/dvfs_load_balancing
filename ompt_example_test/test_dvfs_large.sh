@@ -25,8 +25,8 @@ start_energy_uj=$(cat /sys/class/powercap/intel-rapl:0/energy_uj)
 start_time=$(date +%s.%N)
 
 export OMP_NUM_THREADS=4
-#export OMP_TOOL=enabled OMP_TOOL_LIBRARIES=$PWD/libompt_test.so
-export OUTPUT_FILE=data_base_large.out
+export OMP_TOOL=enabled OMP_TOOL_LIBRARIES=$PWD/libompt_test.so
+export OUTPUT_FILE=data_ompt_large.out
 mpirun -n 8 ./ompt_dvfs_example 2>&1 | tee ${OUTPUT_FILE}
 mpi_status=${PIPESTATUS[0]}
 
