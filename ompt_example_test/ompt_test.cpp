@@ -10,13 +10,14 @@
 namespace {
 
 static bool debug = true;
+static int max_mhz = 4800; // xeon w7-3565x
 
 struct RegionState {
     const void* codeptr_ra;
     unsigned int begin_count;
     int nthreads;
     std::vector<double> elapsed_ms;
-    std::vector<unsigned int> target_mhz;
+    std::vector<double> target_mhz;
     std::vector<int> cpu_map;
     std::chrono::steady_clock::time_point start_time;
 
@@ -24,7 +25,7 @@ struct RegionState {
         : codeptr_ra(ev.codeptr_ra), begin_count(0) {
         nthreads = (ev.requested_parallelism > 0) ? static_cast<std::size_t>(ev.requested_parallelism) : static_cast<std::size_t>(omp_get_max_threads());
         elapsed_ms.assign(nthreads, 0.0);
-        target_mhz.assign(nthreads, 0U);
+        target_mhz.assign(nthreads, max_mhz);
         cpu_map.assign(nthreads, -1);
     }
 
@@ -34,22 +35,25 @@ struct RegionState {
                         codeptr_ra, begin_count, nthreads);
         }
 
-        int max_mhz = 4800;
         if(begin_count == 1) {
             msr::reset_freq_all(); // バグあり：master にしか効かない
             return;
         }
 
-        double max_elapsed = -1;
-        for (int i = 0; i < nthreads; i++) max_elapsed = std::max(max_elapsed, elapsed_ms[i]);
+        double max_work = 0.0;
         for (int i = 0; i < nthreads; i++) {
-            target_mhz[i] = max_mhz * (elapsed_ms[i] / max_elapsed);
+            max_work = std::max(max_work, elapsed_ms[i]*target_mhz[i]);
+        }
+        
+        for (int i = 0; i < nthreads; i++) {
+            double work = elapsed_ms[i] * target_mhz[i];
+            target_mhz[i] = max_mhz * (work / max_work);
             if(debug) {
-                std::fprintf(stderr, "\t(Thread %d: %u MHz previous elapsed: %.6f ms)\n",
-                            i, target_mhz[i], elapsed_ms[i]);
+                std::fprintf(stderr, "\t(Thread %d: previous elapsed: %.6f ms ==> %.0f MHz )\n",
+                            i, elapsed_ms[i], target_mhz[i]);
             }
         }
-    
+
         for (int tid = 0; tid < nthreads; tid++) {
             msr::set_freq_on_cpu(cpu_map[tid], target_mhz[tid], 100);
         }

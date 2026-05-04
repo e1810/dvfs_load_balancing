@@ -19,14 +19,14 @@
 [0] MPI startup(): 7       0          eth0
 [0] MPI startup(): ===== CPU pinning =====
 [0] MPI startup(): Rank    Pid      Node name             Pin cpu
-[0] MPI startup(): 0       459597   fanfan.dlab.internal  {0-3}
-[0] MPI startup(): 1       459598   fanfan.dlab.internal  {4-7}
-[0] MPI startup(): 2       459599   fanfan.dlab.internal  {8-11}
-[0] MPI startup(): 3       459600   fanfan.dlab.internal  {12-15}
-[0] MPI startup(): 4       459601   fanfan.dlab.internal  {16-19}
-[0] MPI startup(): 5       459602   fanfan.dlab.internal  {20-23}
-[0] MPI startup(): 6       459603   fanfan.dlab.internal  {24-27}
-[0] MPI startup(): 7       459604   fanfan.dlab.internal  {28-31}
+[0] MPI startup(): 0       464037   fanfan.dlab.internal  {0-3}
+[0] MPI startup(): 1       464038   fanfan.dlab.internal  {4-7}
+[0] MPI startup(): 2       464039   fanfan.dlab.internal  {8-11}
+[0] MPI startup(): 3       464040   fanfan.dlab.internal  {12-15}
+[0] MPI startup(): 4       464041   fanfan.dlab.internal  {16-19}
+[0] MPI startup(): 5       464042   fanfan.dlab.internal  {20-23}
+[0] MPI startup(): 6       464043   fanfan.dlab.internal  {24-27}
+[0] MPI startup(): 7       464044   fanfan.dlab.internal  {28-31}
 [0] MPI startup(): I_MPI_ROOT=/opt/intel/oneapi/mpi/2021.17
 [0] MPI startup(): ONEAPI_ROOT=/opt/intel/oneapi
 [0] MPI startup(): I_MPI_MPIRUN=mpirun
@@ -50,6 +50,14 @@ Threads workloads
 
 Threads times
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
+[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
@@ -57,179 +65,171 @@ Threads times
 [OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=1 thread_count=4)
-[OMPT] begin region  [0x402f26] (begin_count=1 thread_count=4)
-    Resetting frequency on CPU 28
-    Resetting frequency on CPU 29
-    Resetting frequency on CPU 30
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 31
-	(thread 0: 3039.283523 ms)
-	(thread 1: 102452.343904 ms)
-	(thread 2: 37965.297668 ms)
-	(thread 3: 70836.058927 ms)
-Rank 7, Thread 0 [3395 MHz]: 3039 ms
-Rank 7, Thread 1 [3959 MHz]: 102452 ms
-Rank 7, Thread 2 [3563 MHz]: 37965 ms
-Rank 7, Thread 3 [3818 MHz]: 70835 ms
-Rank 7, Iteration 0: 102452.788123 ms
-Rank 7, Iteration 0: 26162.865030 J, 255.365086 W
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 24
     Resetting frequency on CPU 25
     Resetting frequency on CPU 26
-    Resetting frequency on CPU 27
-	(thread 0: 1628.319413 ms)
-	(thread 1: 102461.245690 ms)
-	(thread 2: 37977.869073 ms)
-	(thread 3: 70854.097463 ms)
-Rank 6, Thread 0 [3396 MHz]: 1628 ms
-Rank 6, Thread 1 [3959 MHz]: 102461 ms
-Rank 6, Thread 2 [3562 MHz]: 37977 ms
-Rank 6, Thread 3 [3818 MHz]: 70854 ms
-Rank 6, Iteration 0: 102461.889565 ms
-Rank 6, Iteration 0: 26164.278783 J, 255.356200 W
-    Resetting frequency on CPU 12
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
 [OMPT] end region  [0x402f26]
-Rank 3, Thread 0 [3395 MHz]: 2845 ms
-Rank 3, Thread 1 [3959 MHz]: 102473 ms
-Rank 3, Thread 2 [3563 MHz]: 37988 ms
-Rank 3, Thread 3 [3818 MHz]: 70870 ms
-Rank 3, Iteration 0: 102473.970819 ms
-	(thread 0: 2845.180284 ms)
-	(thread 1: 102473.606368 ms)
-	(thread 2: 37988.862261 ms)
-	(thread 3: 70871.055162 ms)
-Rank 3, Iteration 0: 26166.780486 J, 255.350508 W
+    Resetting frequency on CPU 27
+	(thread 0: 3057.941394 ms)
+	(thread 1: 102526.538609 ms)
+	(thread 2: 38056.892460 ms)
+	(thread 3: 70912.767311 ms)
+Rank 6, Thread 0 [3395 MHz]: 3058 ms
+Rank 6, Thread 1 [3958 MHz]: 102526 ms
+Rank 6, Thread 2 [3555 MHz]: 38057 ms
+Rank 6, Thread 3 [3814 MHz]: 70913 ms
+Rank 6, Iteration 0: 102527.319499 ms
+Rank 6, Iteration 0: 25655.861628 J, 250.234394 W
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 4
+    Resetting frequency on CPU 5
+    Resetting frequency on CPU 6
+    Resetting frequency on CPU 7
+Rank 1, Thread 0 [3395 MHz]: 2840 ms
+Rank 1, Thread 1 [3958 MHz]: 102527 ms
+Rank 1, Thread 2 [3555 MHz]: 38041 ms
+Rank 1, Thread 3 [3814 MHz]: 70902 ms
+Rank 1, Iteration 0: 102528.427892 ms
+	(thread 0: 2840.087448 ms)
+	(thread 1: 102527.532116 ms)
+	(thread 2: 38041.559924 ms)
+	(thread 3: 70901.956168 ms)
+Rank 1, Iteration 0: 25655.861628 J, 250.231688 W
+[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 16
     Resetting frequency on CPU 17
     Resetting frequency on CPU 18
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 19
-	(thread 0: 2845.190068 ms)
-	(thread 1: 103065.815948 ms)
-	(thread 2: 38585.938228 ms)
-	(thread 3: 71434.488270 ms)
-Rank 4, Thread 0 [3395 MHz]: 2845 ms
-Rank 4, Thread 1 [3961 MHz]: 103065 ms
-Rank 4, Thread 2 [3565 MHz]: 38585 ms
-Rank 4, Thread 3 [3821 MHz]: 71434 ms
-Rank 4, Iteration 0: 103066.278083 ms
-Rank 4, Iteration 0: 26287.783716 J, 255.057078 W
+	(thread 0: 2846.112046 ms)
+	(thread 1: 102533.757025 ms)
+	(thread 2: 38066.857818 ms)
+	(thread 3: 70915.615512 ms)
+Rank 4, Thread 0 [3395 MHz]: 2846 ms
+Rank 4, Thread 1 [3958 MHz]: 102534 ms
+Rank 4, Thread 2 [3555 MHz]: 38067 ms
+Rank 4, Thread 3 [3814 MHz]: 70915 ms
+Rank 4, Iteration 0: 102534.303018 ms
+Rank 4, Iteration 0: 25657.033805 J, 250.228782 W
+    Resetting frequency on CPU 12
+    Resetting frequency on CPU 13
+    Resetting frequency on CPU 14
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 15
+	(thread 0: 2585.653256 ms)
+	(thread 1: 103113.959246 ms)
+	(thread 2: 38626.553785 ms)
+	(thread 3: 71438.745828 ms)
+Rank 3, Thread 0 [3395 MHz]: 2585 ms
+Rank 3, Thread 1 [3959 MHz]: 103114 ms
+Rank 3, Thread 2 [3557 MHz]: 38626 ms
+Rank 3, Thread 3 [3817 MHz]: 71438 ms
+Rank 3, Iteration 0: 103114.427188 ms
+Rank 3, Iteration 0: 25752.033623 J, 249.742294 W
+[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 8
     Resetting frequency on CPU 9
     Resetting frequency on CPU 10
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 11
-	(thread 0: 2672.250599 ms)
-	(thread 1: 103084.386062 ms)
-	(thread 2: 38636.331026 ms)
-	(thread 3: 71422.443753 ms)
-Rank 2, Thread 0 [3395 MHz]: 2672 ms
-Rank 2, Thread 1 [3961 MHz]: 103084 ms
-Rank 2, Thread 2 [3565 MHz]: 38636 ms
-Rank 2, Thread 3 [3821 MHz]: 71422 ms
-Rank 2, Iteration 0: 103085.039893 ms
-Rank 2, Iteration 0: 26290.968889 J, 255.041555 W
+Rank 2, Thread 0 [3395 MHz]: 2840 ms
+Rank 2, Thread 1 [3959 MHz]: 103117 ms
+Rank 2, Thread 2 [3557 MHz]: 38664 ms
+Rank 2, Thread 3 [3817 MHz]: 71462 ms
+Rank 2, Iteration 0: 103117.503347 ms
+	(thread 0: 2840.124902 ms)
+	(thread 1: 103116.908569 ms)
+	(thread 2: 38664.789363 ms)
+	(thread 3: 71462.109092 ms)
+Rank 2, Iteration 0: 25752.485710 J, 249.739228 W
     Resetting frequency on CPU 20
     Resetting frequency on CPU 21
     Resetting frequency on CPU 22
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 23
-	(thread 0: 2706.686956 ms)
-	(thread 1: 103117.818375 ms)
-	(thread 2: 38564.696877 ms)
-	(thread 3: 71448.697135 ms)
-Rank 5, Thread 0 [3395 MHz]: 2706 ms
-Rank 5, Thread 1 [3961 MHz]: 103117 ms
-Rank 5, Thread 2 [3565 MHz]: 38564 ms
-Rank 5, Thread 3 [3821 MHz]: 71448 ms
-Rank 5, Iteration 0: 103118.419063 ms
-Rank 5, Iteration 0: 26297.690673 J, 255.024184 W
-    Resetting frequency on CPU 4
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 7
-Rank 1, Thread 0 [3395 MHz]: 2782 ms
-Rank 1, Thread 1 [3961 MHz]: 103151 ms
-Rank 1, Thread 2 [3566 MHz]: 38663 ms
-Rank 1, Thread 3 [3821 MHz]: 71426 ms
-Rank 1, Iteration 0: 103153.297555 ms
-	(thread 0: 2782.185997 ms)
-	(thread 1: 103151.365363 ms)
-	(thread 2: 38663.830480 ms)
-	(thread 3: 71426.997475 ms)
-Rank 1, Iteration 0: 26304.410078 J, 255.003094 W
+	(thread 0: 2846.124833 ms)
+	(thread 1: 103187.777488 ms)
+	(thread 2: 38635.218672 ms)
+	(thread 3: 71497.683048 ms)
+Rank 5, Thread 0 [2237 MHz]: 2846 ms
+Rank 5, Thread 1 [3960 MHz]: 103188 ms
+Rank 5, Thread 2 [3557 MHz]: 38635 ms
+Rank 5, Thread 3 [3817 MHz]: 71497 ms
+Rank 5, Iteration 0: 103188.078882 ms
+Rank 5, Iteration 0: 25764.029442 J, 249.680290 W
     Resetting frequency on CPU 0
     Resetting frequency on CPU 1
     Resetting frequency on CPU 2
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 3
-Rank 0, Thread 0 [3395 MHz]: 3039 ms
-Rank 0, Thread 1 [3961 MHz]: 103222 ms
-Rank 0, Thread 2 [3565 MHz]: 38634 ms
-Rank 0, Thread 3 [3821 MHz]: 71476 ms
-Rank 0, Iteration 0: 103223.385368 ms
-Rank 0, Iteration 0: 26320.534365 J, 254.986157 W
+Rank 0, Thread 0 [3395 MHz]: 2789 ms
+Rank 0, Thread 1 [3959 MHz]: 103214 ms
+Rank 0, Thread 2 [3558 MHz]: 38702 ms
+Rank 0, Thread 3 [3817 MHz]: 71503 ms
+Rank 0, Iteration 0: 103214.622087 ms
+	(thread 0: 2788.938432 ms)
+	(thread 1: 103214.178398 ms)
+	(thread 2: 38702.216846 ms)
+	(thread 3: 71502.862501 ms)
+Rank 0, Iteration 0: 25768.357251 J, 249.658011 W
+    Resetting frequency on CPU 28
+    Resetting frequency on CPU 29
+    Resetting frequency on CPU 30
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 31
+Rank 7, Thread 0 [3395 MHz]: 3058 ms
+Rank 7, Thread 1 [3960 MHz]: 103291 ms
+Rank 7, Thread 2 [3558 MHz]: 38686 ms
+Rank 7, Thread 3 [3818 MHz]: 71572 ms
+Rank 7, Iteration 0: 103291.296047 ms
+	(thread 0: 3057.934670 ms)
+	(thread 1: 103290.892837 ms)
+	(thread 2: 38686.584856 ms)
+	(thread 3: 71572.273661 ms)
+Rank 7, Iteration 0: 25782.254981 J, 249.607237 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
-	(thread 0: 3039.299110 ms)
-	(thread 1: 103222.646259 ms)
-	(thread 2: 38634.384412 ms)
-	(thread 3: 71476.865813 ms)
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 141 MHz previous elapsed: 3039.299110 ms)
-	(Thread 1: 4800 MHz previous elapsed: 103222.646259 ms)
-	(Thread 2: 1796 MHz previous elapsed: 38634.384412 ms)
-	(Thread 3: 3323 MHz previous elapsed: 71476.865813 ms)
+	(Thread 0: previous elapsed: 2788.938432 ms ==> 130 MHz )
+	(Thread 1: previous elapsed: 103214.178398 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38702.216846 ms ==> 1800 MHz )
+	(Thread 3: previous elapsed: 71502.862501 ms ==> 3325 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 129 MHz previous elapsed: 2782.185997 ms)
-	(Thread 1: 4800 MHz previous elapsed: 103151.365363 ms)
-	(Thread 2: 1799 MHz previous elapsed: 38663.830480 ms)
-	(Thread 3: 3323 MHz previous elapsed: 71426.997475 ms)
+	(Thread 0: previous elapsed: 2840.124902 ms ==> 132 MHz )
+	(Thread 1: previous elapsed: 103116.908569 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38664.789363 ms ==> 1800 MHz )
+	(Thread 3: previous elapsed: 71462.109092 ms ==> 3326 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 124 MHz previous elapsed: 2672.250599 ms)
-	(Thread 1: 4800 MHz previous elapsed: 103084.386062 ms)
-	(Thread 2: 1799 MHz previous elapsed: 38636.331026 ms)
-	(Thread 3: 3325 MHz previous elapsed: 71422.443753 ms)
+	(Thread 0: previous elapsed: 2585.653256 ms ==> 120 MHz )
+	(Thread 1: previous elapsed: 103113.959246 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38626.553785 ms ==> 1798 MHz )
+	(Thread 3: previous elapsed: 71438.745828 ms ==> 3326 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 133 MHz previous elapsed: 2845.180284 ms)
-	(Thread 1: 4800 MHz previous elapsed: 102473.606368 ms)
-	(Thread 2: 1779 MHz previous elapsed: 37988.862261 ms)
-	(Thread 3: 3319 MHz previous elapsed: 70871.055162 ms)
+	(Thread 0: previous elapsed: 3057.941394 ms ==> 143 MHz )
+	(Thread 1: previous elapsed: 102526.538609 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38056.892460 ms ==> 1782 MHz )
+	(Thread 3: previous elapsed: 70912.767311 ms ==> 3320 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 132 MHz previous elapsed: 2845.190068 ms)
-	(Thread 1: 4800 MHz previous elapsed: 103065.815948 ms)
-	(Thread 2: 1797 MHz previous elapsed: 38585.938228 ms)
-	(Thread 3: 3326 MHz previous elapsed: 71434.488270 ms)
+	(Thread 0: previous elapsed: 3057.934670 ms ==> 142 MHz )
+	(Thread 1: previous elapsed: 103290.892837 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38686.584856 ms ==> 1798 MHz )
+	(Thread 3: previous elapsed: 71572.273661 ms ==> 3326 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 125 MHz previous elapsed: 2706.686956 ms)
-	(Thread 1: 4800 MHz previous elapsed: 103117.818375 ms)
-	(Thread 2: 1795 MHz previous elapsed: 38564.696877 ms)
-	(Thread 3: 3325 MHz previous elapsed: 71448.697135 ms)
+	(Thread 0: previous elapsed: 2840.087448 ms ==> 133 MHz )
+	(Thread 1: previous elapsed: 102527.532116 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38041.559924 ms ==> 1781 MHz )
+	(Thread 3: previous elapsed: 70901.956168 ms ==> 3319 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 76 MHz previous elapsed: 1628.319413 ms)
-	(Thread 1: 4800 MHz previous elapsed: 102461.245690 ms)
-	(Thread 2: 1779 MHz previous elapsed: 37977.869073 ms)
-	(Thread 3: 3319 MHz previous elapsed: 70854.097463 ms)
+	(Thread 0: previous elapsed: 2846.112046 ms ==> 133 MHz )
+	(Thread 1: previous elapsed: 102533.757025 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38066.857818 ms ==> 1782 MHz )
+	(Thread 3: previous elapsed: 70915.615512 ms ==> 3320 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=2 thread_count=4)
-	(Thread 0: 142 MHz previous elapsed: 3039.283523 ms)
-	(Thread 1: 4800 MHz previous elapsed: 102452.343904 ms)
-	(Thread 2: 1778 MHz previous elapsed: 37965.297668 ms)
-	(Thread 3: 3318 MHz previous elapsed: 70836.058927 ms)
+	(Thread 0: previous elapsed: 2846.124833 ms ==> 132 MHz )
+	(Thread 1: previous elapsed: 103187.777488 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 38635.218672 ms ==> 1797 MHz )
+	(Thread 3: previous elapsed: 71497.683048 ms ==> 3326 MHz )
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
@@ -238,171 +238,171 @@ Threads times
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=2 thread_count=4)
-    Resetting frequency on CPU 16
-    Resetting frequency on CPU 17
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 18
-    Resetting frequency on CPU 19
-Rank 4, Thread 0 [513 MHz]: 1875 ms
-Rank 4, Thread 1 [3758 MHz]: 107328 ms
-Rank 4, Thread 2 [1697 MHz]: 79288 ms
-Rank 4, Thread 3 [3295 MHz]: 81627 ms
-Rank 4, Iteration 1: 107329.088829 ms
-	(thread 0: 1875.292745 ms)
-	(thread 1: 107327.649060 ms)
-	(thread 2: 79287.960792 ms)
-	(thread 3: 81627.308724 ms)
-Rank 4, Iteration 1: 19267.451835 J, 179.517520 W
-    Resetting frequency on CPU 8
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-Rank 2, Thread 0 [525 MHz]: 1892 ms
-Rank 2, Thread 1 [3758 MHz]: 107331 ms
-Rank 2, Thread 2 [1697 MHz]: 79265 ms
-Rank 2, Thread 3 [3295 MHz]: 81652 ms
-Rank 2, Iteration 1: 107332.315658 ms
-	(thread 0: 1891.993360 ms)
-	(thread 1: 107330.933483 ms)
-	(thread 2: 79265.518508 ms)
-	(thread 3: 81651.898118 ms)
-Rank 2, Iteration 1: 19268.006948 J, 179.517295 W
-    Resetting frequency on CPU 12
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 13
-    Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [504 MHz]: 1892 ms
-Rank 3, Thread 1 [3758 MHz]: 107332 ms
-Rank 3, Thread 2 [1697 MHz]: 79268 ms
-Rank 3, Thread 3 [3295 MHz]: 81649 ms
-Rank 3, Iteration 1: 107333.666611 ms
-	(thread 0: 1891.749869 ms)
-	(thread 1: 107331.870587 ms)
-	(thread 2: 79268.496221 ms)
-	(thread 3: 81649.137971 ms)
-Rank 3, Iteration 1: 19268.006948 J, 179.515035 W
-    Resetting frequency on CPU 4
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 5
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 7
-	(thread 0: 1879.286809 ms)
-	(thread 1: 107333.924848 ms)
-	(thread 2: 79268.830066 ms)
-	(thread 3: 81623.727212 ms)
-Rank 1, Thread 0 [527 MHz]: 1879 ms
-Rank 1, Thread 1 [3758 MHz]: 107334 ms
-Rank 1, Thread 2 [1697 MHz]: 79269 ms
-Rank 1, Thread 3 [3295 MHz]: 81623 ms
-Rank 1, Iteration 1: 107335.958100 ms
-Rank 1, Iteration 1: 19268.476246 J, 179.515575 W
-    Resetting frequency on CPU 24
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 25
-    Resetting frequency on CPU 26
-    Resetting frequency on CPU 27
-	(thread 0: 1880.358650 ms)
-	(thread 1: 107336.028040 ms)
-	(thread 2: 79273.496455 ms)
-	(thread 3: 81635.262288 ms)
-Rank 6, Thread 0 [505 MHz]: 1880 ms
-Rank 6, Thread 1 [3758 MHz]: 107336 ms
-Rank 6, Thread 2 [1697 MHz]: 79273 ms
-Rank 6, Thread 3 [3295 MHz]: 81635 ms
-Rank 6, Iteration 1: 107337.131698 ms
-Rank 6, Iteration 1: 19268.745166 J, 179.516118 W
-    Resetting frequency on CPU 20
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 21
-    Resetting frequency on CPU 22
-    Resetting frequency on CPU 23
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 28
-    Resetting frequency on CPU 29
-    Resetting frequency on CPU 30
-    Resetting frequency on CPU 31
-	(thread 0: 1880.349355 ms)
-	(thread 1: 107339.620309 ms)
-	(thread 0: 1873.306583 ms)
-	(thread 1: 107340.094479 ms)
-	(thread 2: 79266.383279 ms)
-	(thread 3: 81634.678027 ms)
-Rank 5, Thread 0 [517 MHz]: 1880 ms
-Rank 5, Thread 1 [3758 MHz]: 107340 ms
-Rank 5, Thread 2 [1697 MHz]: 79268 ms
-Rank 5, Thread 3 [3295 MHz]: 81627 ms
-Rank 5, Iteration 1: 107341.375228 ms
-	(thread 2: 79268.512708 ms)
-	(thread 3: 81627.413903 ms)
-Rank 7, Thread 0 [537 MHz]: 1873 ms
-Rank 7, Thread 1 [3758 MHz]: 107340 ms
-Rank 7, Thread 2 [1697 MHz]: 79266 ms
-Rank 7, Thread 3 [3295 MHz]: 81635 ms
-Rank 7, Iteration 1: 107341.318364 ms
-Rank 5, Iteration 1: 19269.279955 J, 179.514003 W
-Rank 7, Iteration 1: 19269.279955 J, 179.514098 W
     Resetting frequency on CPU 0
     Resetting frequency on CPU 1
     Resetting frequency on CPU 2
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 3
-	(thread 0: 1821.878913 ms)
-	(thread 1: 107375.945815 ms)
-	(thread 2: 79271.017250 ms)
-	(thread 3: 81627.300929 ms)
-Rank 0, Thread 0 [619 MHz]: 1822 ms
-Rank 0, Thread 1 [3758 MHz]: 107376 ms
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 12
+    Resetting frequency on CPU 13
+    Resetting frequency on CPU 14
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 20
+    Resetting frequency on CPU 21
+Rank 0, Thread 0 [572 MHz]: 1863 ms
+Rank 0, Thread 1 [3744 MHz]: 107721 ms
 Rank 0, Thread 2 [1697 MHz]: 79271 ms
-Rank 0, Thread 3 [3295 MHz]: 81627 ms
-Rank 0, Iteration 1: 107377.342632 ms
-Rank 0, Iteration 1: 19275.407564 J, 179.510939 W
+Rank 0, Thread 3 [3295 MHz]: 81631 ms
+Rank 0, Iteration 1: 107721.811929 ms
+	(thread 0: 1863.398633 ms)
+	(thread 1: 107720.558383 ms)
+	(thread 2: 79270.841127 ms)
+	(thread 3: 81631.125524 ms)
+    Resetting frequency on CPU 22
+Rank 0, Iteration 1: 19455.572814 J, 180.609409 W
+    Resetting frequency on CPU 23
+	(thread 0: 1904.662782 ms)
+	(thread 1: 107721.389220 ms)
+	(thread 2: 79266.628650 ms)
+Rank 5, Thread 0 [512 MHz]: 1905 ms
+Rank 5, Thread 1 [3744 MHz]: 107721 ms
+	(thread 3: 81632.548890 ms)
+Rank 5, Thread 2 [1697 MHz]: 79266 ms
+Rank 5, Thread 3 [3295 MHz]: 81633 ms
+Rank 5, Iteration 1: 107722.019351 ms
+    Resetting frequency on CPU 15
+Rank 5, Iteration 1: 19455.572814 J, 180.609061 W
+Rank 3, Thread 0 [508 MHz]: 1882 ms
+Rank 3, Thread 1 [3744 MHz]: 107721 ms
+Rank 3, Thread 2 [1697 MHz]: 79270 ms
+Rank 3, Thread 3 [3295 MHz]: 81654 ms
+Rank 3, Iteration 1: 107722.578625 ms
+	(thread 0: 1881.644044 ms)
+	(thread 1: 107720.774124 ms)
+	(thread 2: 79269.800588 ms)
+	(thread 3: 81654.494082 ms)
+Rank 3, Iteration 1: 19455.572814 J, 180.608124 W
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 4
+    Resetting frequency on CPU 5
+    Resetting frequency on CPU 6
+    Resetting frequency on CPU 7
+Rank 1, Thread 0 [509 MHz]: 1873 ms
+Rank 1, Thread 1 [3744 MHz]: 107732 ms
+Rank 1, Thread 2 [1697 MHz]: 79270 ms
+Rank 1, Thread 3 [3295 MHz]: 81629 ms
+Rank 1, Iteration 1: 107733.829169 ms
+	(thread 0: 1872.889404 ms)
+	(thread 1: 107731.786216 ms)
+	(thread 2: 79269.872706 ms)
+	(thread 3: 81629.242686 ms)
+Rank 1, Iteration 1: 19457.275873 J, 180.605071 W
+    Resetting frequency on CPU 24
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 25
+    Resetting frequency on CPU 26
+    Resetting frequency on CPU 27
+Rank 6, Thread 0 [502 MHz]: 1904 ms
+Rank 6, Thread 1 [3744 MHz]: 107737 ms
+Rank 6, Thread 2 [1697 MHz]: 79273 ms
+Rank 6, Thread 3 [3295 MHz]: 81641 ms
+Rank 6, Iteration 1: 107738.600211 ms
+	(thread 0: 1904.116129 ms)
+	(thread 1: 107737.342713 ms)
+	(thread 2: 79272.793881 ms)
+	(thread 3: 81641.525704 ms)
+Rank 6, Iteration 1: 19458.257072 J, 180.606180 W
+    Resetting frequency on CPU 16
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 17
+    Resetting frequency on CPU 18
+    Resetting frequency on CPU 19
+	(thread 0: 1904.004920 ms)
+	(thread 1: 107742.735940 ms)
+	(thread 2: 79287.875486 ms)
+	(thread 3: 81642.998414 ms)
+Rank 4, Thread 0 [504 MHz]: 1904 ms
+Rank 4, Thread 1 [3744 MHz]: 107743 ms
+Rank 4, Thread 2 [1697 MHz]: 79288 ms
+Rank 4, Thread 3 [3295 MHz]: 81643 ms
+Rank 4, Iteration 1: 107744.274955 ms
+Rank 4, Iteration 1: 19459.206471 J, 180.605480 W
+    Resetting frequency on CPU 28
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 29
+    Resetting frequency on CPU 30
+    Resetting frequency on CPU 31
+	(thread 0: 1904.819626 ms)
+	(thread 1: 107749.068242 ms)
+	(thread 2: 79266.294755 ms)
+	(thread 3: 81637.450703 ms)
+Rank 7, Thread 0 [566 MHz]: 1905 ms
+Rank 7, Thread 1 [3744 MHz]: 107749 ms
+Rank 7, Thread 2 [1697 MHz]: 79266 ms
+Rank 7, Thread 3 [3295 MHz]: 81637 ms
+Rank 7, Iteration 1: 107749.082484 ms
+Rank 7, Iteration 1: 19459.829944 J, 180.603208 W
+    Resetting frequency on CPU 8
+    Resetting frequency on CPU 9
+    Resetting frequency on CPU 10
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 11
+Rank 2, Thread 0 [508 MHz]: 1873 ms
+Rank 2, Thread 1 [3744 MHz]: 107763 ms
+Rank 2, Thread 2 [1697 MHz]: 79264 ms
+Rank 2, Thread 3 [3295 MHz]: 81632 ms
+Rank 2, Iteration 1: 107764.001511 ms
+	(thread 0: 1873.067399 ms)
+	(thread 1: 107762.522981 ms)
+	(thread 2: 79264.460277 ms)
+	(thread 3: 81632.368083 ms)
+Rank 2, Iteration 1: 19462.327618 J, 180.601382 W
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
+	(Thread 0: previous elapsed: 1873.067399 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107762.522981 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79264.460277 ms ==> 1324 MHz )
+	(Thread 3: previous elapsed: 81632.368083 ms ==> 2520 MHz )
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
+	(Thread 0: previous elapsed: 1904.116129 ms ==> 3 MHz )
+	(Thread 1: previous elapsed: 107737.342713 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79272.793881 ms ==> 1311 MHz )
+	(Thread 3: previous elapsed: 81641.525704 ms ==> 2516 MHz )
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1891.749869 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107331.870587 ms)
-	(Thread 2: 3544 MHz previous elapsed: 79268.496221 ms)
-	(Thread 3: 3651 MHz previous elapsed: 81649.137971 ms)
+	(Thread 0: previous elapsed: 1863.398633 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107720.558383 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79270.841127 ms ==> 1325 MHz )
+	(Thread 3: previous elapsed: 81631.125524 ms ==> 2520 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 81 MHz previous elapsed: 1821.878913 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107375.945815 ms)
-	(Thread 2: 3543 MHz previous elapsed: 79271.017250 ms)
-	(Thread 3: 3648 MHz previous elapsed: 81627.300929 ms)
+	(Thread 0: previous elapsed: 1872.889404 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107731.786216 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79269.872706 ms ==> 1310 MHz )
+	(Thread 3: previous elapsed: 81629.242686 ms ==> 2515 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1880.349355 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107339.620309 ms)
-	(Thread 2: 3544 MHz previous elapsed: 79268.512708 ms)
-	(Thread 3: 3650 MHz previous elapsed: 81627.413903 ms)
+	(Thread 0: previous elapsed: 1881.644044 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107720.774124 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79269.800588 ms ==> 1323 MHz )
+	(Thread 3: previous elapsed: 81654.494082 ms ==> 2521 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1891.993360 ms)
+	(Thread 0: previous elapsed: 1904.004920 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107742.735940 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79287.875486 ms ==> 1311 MHz )
+	(Thread 3: previous elapsed: 81642.998414 ms ==> 2516 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 83 MHz previous elapsed: 1875.292745 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107327.649060 ms)
-	(Thread 2: 3545 MHz previous elapsed: 79287.960792 ms)
-	(Thread 3: 3650 MHz previous elapsed: 81627.308724 ms)
+	(Thread 0: previous elapsed: 1904.662782 ms ==> 2 MHz )
+	(Thread 1: previous elapsed: 107721.389220 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79266.628650 ms ==> 1322 MHz )
+	(Thread 3: previous elapsed: 81632.548890 ms ==> 2520 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1880.358650 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107336.028040 ms)
-	(Thread 2: 3545 MHz previous elapsed: 79273.496455 ms)
-	(Thread 3: 3650 MHz previous elapsed: 81635.262288 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 83 MHz previous elapsed: 1873.306583 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107340.094479 ms)
-	(Thread 2: 3544 MHz previous elapsed: 79266.383279 ms)
-	(Thread 3: 3650 MHz previous elapsed: 81634.678027 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=3 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1879.286809 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107330.933483 ms)
-	(Thread 2: 3544 MHz previous elapsed: 79265.518508 ms)
-	(Thread 3: 3651 MHz previous elapsed: 81651.898118 ms)
-	(Thread 1: 4800 MHz previous elapsed: 107333.924848 ms)
-	(Thread 2: 3544 MHz previous elapsed: 79268.830066 ms)
-	(Thread 3: 3650 MHz previous elapsed: 81623.727212 ms)
+	(Thread 0: previous elapsed: 1904.819626 ms ==> 3 MHz )
+	(Thread 1: previous elapsed: 107749.068242 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 79266.294755 ms ==> 1323 MHz )
+	(Thread 3: previous elapsed: 81637.450703 ms ==> 2520 MHz )
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
@@ -411,172 +411,171 @@ Threads times
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=3 thread_count=4)
-    Resetting frequency on CPU 16
-    Resetting frequency on CPU 17
-    Resetting frequency on CPU 18
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 19
-	(thread 0: 1881.589643 ms)
-	(thread 1: 101687.758106 ms)
-	(thread 2: 38592.195263 ms)
-	(thread 3: 75034.220390 ms)
-Rank 4, Thread 0 [509 MHz]: 1882 ms
-Rank 4, Thread 1 [3965 MHz]: 101688 ms
-Rank 4, Thread 2 [3484 MHz]: 38592 ms
-Rank 4, Thread 3 [3583 MHz]: 75034 ms
-Rank 4, Iteration 2: 101689.463438 ms
-Rank 4, Iteration 2: 23178.559132 J, 227.934718 W
     Resetting frequency on CPU 12
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 13
     Resetting frequency on CPU 14
 [OMPT] end region  [0x402f26]
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 24
-    Resetting frequency on CPU 25
     Resetting frequency on CPU 15
-    Resetting frequency on CPU 26
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 27
-    Resetting frequency on CPU 11
-	(thread 0: 1887.826186 ms)
-	(thread 1: 101693.520350 ms)
-	(thread 2: 38585.024573 ms)
-	(thread 3: 75036.831444 ms)
-Rank 6, Thread 0 [508 MHz]: 1888 ms
-Rank 6, Thread 1 [3965 MHz]: 101693 ms
-Rank 6, Thread 2 [3484 MHz]: 38585 ms
-Rank 6, Thread 3 [3583 MHz]: 75037 ms
-Rank 6, Iteration 2: 101693.932590 ms
-	(thread 0: 1894.705889 ms)
-	(thread 1: 101692.499334 ms)
-	(thread 2: 38597.163916 ms)
-Rank 3, Thread 0 [512 MHz]: 1895 ms
-Rank 3, Thread 1 [3965 MHz]: 101692 ms
-Rank 3, Thread 2 [3484 MHz]: 38597 ms
-Rank 3, Thread 3 [3583 MHz]: 75058 ms
-Rank 3, Iteration 2: 101693.733078 ms
-	(thread 3: 75058.542514 ms)
-Rank 6, Iteration 2: 23179.393724 J, 227.932907 W
-Rank 3, Iteration 2: 23179.393724 J, 227.933355 W
-Rank 2, Thread 0 [500 MHz]: 1895 ms
-Rank 2, Thread 1 [3965 MHz]: 101693 ms
-Rank 2, Thread 2 [3484 MHz]: 38583 ms
-Rank 2, Thread 3 [3583 MHz]: 75101 ms
-Rank 2, Iteration 2: 101694.407636 ms
-	(thread 0: 1894.701949 ms)
-	(thread 1: 101692.675940 ms)
-	(thread 2: 38583.347498 ms)
-	(thread 3: 75101.069564 ms)
-Rank 2, Iteration 2: 23179.393724 J, 227.931843 W
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 0
+	(thread 0: 1935.273963 ms)
+	(thread 1: 111466.346935 ms)
+	(thread 2: 103688.740411 ms)
+	(thread 3: 107793.077803 ms)
+    Resetting frequency on CPU 1
+Rank 3, Thread 0 [512 MHz]: 1935 ms
+Rank 3, Thread 1 [3619 MHz]: 111466 ms
+Rank 3, Thread 2 [1298 MHz]: 103689 ms
+Rank 3, Thread 3 [2496 MHz]: 107793 ms
+Rank 3, Iteration 2: 111467.249510 ms
+    Resetting frequency on CPU 2
+Rank 3, Iteration 2: 18603.921124 J, 166.900334 W
+    Resetting frequency on CPU 3
+	(thread 0: 1868.201463 ms)
+	(thread 1: 111467.496509 ms)
+	(thread 2: 103693.290265 ms)
+	(thread 3: 107762.220317 ms)
+Rank 0, Thread 0 [554 MHz]: 1868 ms
+Rank 0, Thread 1 [3619 MHz]: 111467 ms
+Rank 0, Thread 2 [1298 MHz]: 103693 ms
+Rank 0, Thread 3 [2496 MHz]: 107762 ms
+Rank 0, Iteration 2: 111468.078507 ms
+Rank 0, Iteration 2: 18603.921124 J, 166.899092 W
+    Resetting frequency on CPU 20
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 21
+    Resetting frequency on CPU 22
+    Resetting frequency on CPU 23
+	(thread 0: 1892.557555 ms)
+	(thread 1: 111471.527435 ms)
+	(thread 2: 103702.845749 ms)
+	(thread 3: 107762.385222 ms)
+Rank 5, Thread 0 [500 MHz]: 1893 ms
+Rank 5, Thread 1 [3619 MHz]: 111472 ms
+Rank 5, Thread 2 [1298 MHz]: 103703 ms
+Rank 5, Thread 3 [2496 MHz]: 107762 ms
+Rank 5, Iteration 2: 111471.593757 ms
+Rank 5, Iteration 2: 18604.753886 J, 166.901300 W
     Resetting frequency on CPU 4
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 5
     Resetting frequency on CPU 6
     Resetting frequency on CPU 7
-Rank 1, Thread 0 [521 MHz]: 1893 ms
-Rank 1, Thread 1 [3965 MHz]: 101697 ms
-Rank 1, Thread 2 [3484 MHz]: 38585 ms
-Rank 1, Thread 3 [3583 MHz]: 75031 ms
-Rank 1, Iteration 2: 101698.533396 ms
-	(thread 0: 1892.885246 ms)
-	(thread 1: 101696.945518 ms)
-	(thread 2: 38584.995129 ms)
-	(thread 3: 75031.407949 ms)
+	(thread 0: 1887.000775 ms)
+	(thread 1: 111481.960871 ms)
+	(thread 2: 103687.353988 ms)
+	(thread 3: 107757.771908 ms)
+Rank 1, Thread 0 [520 MHz]: 1887 ms
+Rank 1, Thread 1 [3619 MHz]: 111482 ms
+Rank 1, Thread 2 [1298 MHz]: 103687 ms
+Rank 1, Thread 3 [2496 MHz]: 107758 ms
+Rank 1, Iteration 2: 111483.262917 ms
 [OMPT] end region  [0x402f26]
-Rank 1, Iteration 2: 23180.185837 J, 227.930385 W
-    Resetting frequency on CPU 20
-    Resetting frequency on CPU 21
-    Resetting frequency on CPU 22
-    Resetting frequency on CPU 23
-	(thread 0: 1886.878046 ms)
-	(thread 1: 101697.385223 ms)
-	(thread 2: 38585.414673 ms)
-Rank 5, Thread 0 [521 MHz]: 1887 ms
-	(thread 3: 75034.760436 ms)
-Rank 5, Thread 1 [3965 MHz]: 101697 ms
-Rank 5, Thread 2 [3484 MHz]: 38585 ms
-Rank 5, Thread 3 [3583 MHz]: 75034 ms
-Rank 5, Iteration 2: 101699.139117 ms
-Rank 5, Iteration 2: 23180.185837 J, 227.929027 W
+    Resetting frequency on CPU 24
+    Resetting frequency on CPU 25
+Rank 1, Iteration 2: 18606.342871 J, 166.898083 W
+    Resetting frequency on CPU 26
+    Resetting frequency on CPU 27
+	(thread 0: 1879.206273 ms)
+	(thread 1: 111483.250290 ms)
+	(thread 2: 103704.811451 ms)
+Rank 6, Thread 0 [510 MHz]: 1879 ms
+	(thread 3: 107771.896773 ms)
+Rank 6, Thread 1 [3619 MHz]: 111483 ms
+Rank 6, Thread 2 [1298 MHz]: 103705 ms
+Rank 6, Thread 3 [2496 MHz]: 107772 ms
+Rank 6, Iteration 2: 111483.674768 ms
+Rank 6, Iteration 2: 18606.342871 J, 166.897466 W
+    Resetting frequency on CPU 16
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 17
+    Resetting frequency on CPU 18
+    Resetting frequency on CPU 19
+Rank 4, Thread 0 [504 MHz]: 1936 ms
+Rank 4, Thread 1 [3619 MHz]: 111494 ms
+Rank 4, Thread 2 [1298 MHz]: 103725 ms
+Rank 4, Thread 3 [2496 MHz]: 107767 ms
+Rank 4, Iteration 2: 111494.834207 ms
+	(thread 0: 1935.868701 ms)
+	(thread 1: 111494.003822 ms)
+	(thread 2: 103725.011559 ms)
+	(thread 3: 107767.181372 ms)
+Rank 4, Iteration 2: 18608.087434 J, 166.896409 W
     Resetting frequency on CPU 28
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 29
     Resetting frequency on CPU 30
     Resetting frequency on CPU 31
-	(thread 0: 1887.300784 ms)
-	(thread 1: 101699.368937 ms)
-	(thread 2: 38585.140839 ms)
-	(thread 3: 75041.037736 ms)
-Rank 7, Thread 0 [546 MHz]: 1887 ms
-Rank 7, Thread 1 [3965 MHz]: 101699 ms
-Rank 7, Thread 2 [3484 MHz]: 38585 ms
-Rank 7, Thread 3 [3583 MHz]: 75041 ms
-Rank 7, Iteration 2: 101700.354699 ms
-Rank 7, Iteration 2: 23180.185837 J, 227.926303 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
+	(thread 0: 1879.869316 ms)
+	(thread 1: 111505.332106 ms)
+	(thread 2: 103694.567471 ms)
+Rank 7, Thread 0 [532 MHz]: 1880 ms
+Rank 7, Thread 1 [3619 MHz]: 111505 ms
+Rank 7, Thread 2 [1298 MHz]: 103695 ms
+	(thread 3: 107766.239283 ms)
+Rank 7, Thread 3 [2496 MHz]: 107766 ms
+Rank 7, Iteration 2: 111504.488011 ms
+Rank 7, Iteration 2: 18609.767911 J, 166.897030 W
+    Resetting frequency on CPU 8
+    Resetting frequency on CPU 9
+    Resetting frequency on CPU 10
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 3
-	(thread 0: 1845.286765 ms)
-	(thread 1: 101727.650623 ms)
-	(thread 2: 38584.798418 ms)
-	(thread 3: 75036.271443 ms)
-Rank 0, Thread 0 [600 MHz]: 1845 ms
-Rank 0, Thread 1 [3965 MHz]: 101728 ms
-Rank 0, Thread 2 [3484 MHz]: 38585 ms
-Rank 0, Thread 3 [3583 MHz]: 75036 ms
-Rank 0, Iteration 2: 101729.104358 ms
-Rank 0, Iteration 2: 23185.109042 J, 227.910284 W
+    Resetting frequency on CPU 11
+	(thread 0: 1927.813437 ms)
+	(thread 1: 111524.407194 ms)
+	(thread 2: 103682.617777 ms)
+	(thread 3: 107764.553565 ms)
+Rank 2, Thread 0 [527 MHz]: 1928 ms
+Rank 2, Thread 1 [3619 MHz]: 111524 ms
+Rank 2, Thread 2 [1298 MHz]: 103683 ms
+Rank 2, Thread 3 [2496 MHz]: 107765 ms
+Rank 2, Iteration 2: 111524.113025 ms
+Rank 2, Iteration 2: 18612.859456 J, 166.895382 W
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
+	(Thread 0: previous elapsed: 1879.206273 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111483.250290 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103704.811451 ms ==> 1220 MHz )
+	(Thread 3: previous elapsed: 107771.896773 ms ==> 2432 MHz )
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 87 MHz previous elapsed: 1845.286765 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101727.650623 ms)
-	(Thread 2: 1820 MHz previous elapsed: 38584.798418 ms)
-	(Thread 3: 3540 MHz previous elapsed: 75036.271443 ms)
+	(Thread 0: previous elapsed: 1935.868701 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111494.003822 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103725.011559 ms ==> 1220 MHz )
+	(Thread 3: previous elapsed: 107767.181372 ms ==> 2432 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1894.701949 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101692.675940 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38583.347498 ms)
-	(Thread 3: 3544 MHz previous elapsed: 75101.069564 ms)
+	(Thread 0: previous elapsed: 1868.201463 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111467.496509 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103693.290265 ms ==> 1232 MHz )
+	(Thread 3: previous elapsed: 107762.220317 ms ==> 2436 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1892.885246 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101696.945518 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38584.995129 ms)
+	(Thread 0: previous elapsed: 1887.000775 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111481.960871 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103687.353988 ms ==> 1219 MHz )
+	(Thread 3: previous elapsed: 107757.771908 ms ==> 2431 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1894.705889 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101692.499334 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38597.163916 ms)
-	(Thread 3: 3542 MHz previous elapsed: 75058.542514 ms)
-	(Thread 3: 3541 MHz previous elapsed: 75031.407949 ms)
+	(Thread 0: previous elapsed: 1935.273963 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111466.346935 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103688.740411 ms ==> 1231 MHz )
+	(Thread 3: previous elapsed: 107793.077803 ms ==> 2438 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1886.878046 ms)
-	(Thread 1: 4799 MHz previous elapsed: 101697.385223 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38585.414673 ms)
-	(Thread 3: 3541 MHz previous elapsed: 75034.760436 ms)
+	(Thread 0: previous elapsed: 1892.557555 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111471.527435 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103702.845749 ms ==> 1230 MHz )
+	(Thread 3: previous elapsed: 107762.385222 ms ==> 2437 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1887.826186 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101693.520350 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38585.024573 ms)
-	(Thread 3: 3541 MHz previous elapsed: 75036.831444 ms)
+	(Thread 0: previous elapsed: 1879.869316 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111505.332106 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103694.567471 ms ==> 1230 MHz )
+	(Thread 3: previous elapsed: 107766.239283 ms ==> 2435 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 89 MHz previous elapsed: 1887.300784 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101699.368937 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38585.140839 ms)
-	(Thread 3: 3541 MHz previous elapsed: 75041.037736 ms)
-[OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=4 thread_count=4)
-	(Thread 0: 88 MHz previous elapsed: 1881.589643 ms)
-	(Thread 1: 4800 MHz previous elapsed: 101687.758106 ms)
-	(Thread 2: 1821 MHz previous elapsed: 38592.195263 ms)
-	(Thread 3: 3541 MHz previous elapsed: 75034.220390 ms)
+	(Thread 0: previous elapsed: 1927.813437 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 111524.407194 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 103682.617777 ms ==> 1231 MHz )
+	(Thread 3: previous elapsed: 107764.553565 ms ==> 2435 MHz )
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
@@ -584,172 +583,173 @@ Threads times
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
-    Resetting frequency on CPU 16
-    Resetting frequency on CPU 17
-    Resetting frequency on CPU 18
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 19
-	(thread 0: 1884.820542 ms)
-	(thread 1: 106571.353668 ms)
-	(thread 2: 74847.744114 ms)
-Rank 4, Thread 0 [504 MHz]: 1885 ms
-	(thread 3: 77114.889144 ms)
-Rank 4, Thread 1 [3784 MHz]: 106571 ms
-Rank 4, Thread 2 [1797 MHz]: 74848 ms
-Rank 4, Thread 3 [3487 MHz]: 77115 ms
-Rank 4, Iteration 3: 106572.698148 ms
-Rank 4, Iteration 3: 21672.846251 J, 203.362086 W
+[OMPT] begin region  [0x402f26] (begin_count=4 thread_count=4)
     Resetting frequency on CPU 12
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 13
     Resetting frequency on CPU 14
-    Resetting frequency on CPU 15
-Rank 3, Thread 0 [517 MHz]: 1884 ms
-Rank 3, Thread 1 [3784 MHz]: 106576 ms
-Rank 3, Thread 2 [1797 MHz]: 74865 ms
-Rank 3, Thread 3 [3487 MHz]: 77137 ms
-Rank 3, Iteration 3: 106577.181899 ms
-	(thread 0: 1884.526190 ms)
-	(thread 1: 106575.924996 ms)
-	(thread 2: 74865.298182 ms)
-	(thread 3: 77137.561389 ms)
-Rank 3, Iteration 3: 21673.667721 J, 203.361239 W
-    Resetting frequency on CPU 8
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-	(thread 0: 1896.747244 ms)
-	(thread 1: 106577.499388 ms)
-	(thread 2: 74836.685091 ms)
-	(thread 3: 77184.621815 ms)
-Rank 2, Thread 0 [513 MHz]: 1897 ms
-Rank 2, Thread 1 [3784 MHz]: 106577 ms
-Rank 2, Thread 2 [1797 MHz]: 74836 ms
-Rank 2, Thread 3 [3487 MHz]: 77185 ms
-Rank 2, Iteration 3: 106578.242599 ms
-Rank 2, Iteration 3: 21673.667721 J, 203.359215 W
+    Resetting frequency on CPU 15
+	(thread 0: 1942.878926 ms)
+	(thread 1: 112844.077881 ms)
+	(thread 2: 112353.404223 ms)
+	(thread 3: 112286.185274 ms)
+Rank 3, Thread 0 [500 MHz]: 1943 ms
+Rank 3, Thread 1 [3574 MHz]: 112844 ms
+Rank 3, Thread 2 [1198 MHz]: 112353 ms
+Rank 3, Thread 3 [2396 MHz]: 112286 ms
+Rank 3, Iteration 3: 112845.073001 ms
+Rank 3, Iteration 3: 18274.446442 J, 161.942794 W
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 0
+    Resetting frequency on CPU 1
+    Resetting frequency on CPU 2
+    Resetting frequency on CPU 3
+Rank 0, Thread 0 [549 MHz]: 1863 ms
+Rank 0, Thread 1 [3574 MHz]: 112847 ms
+Rank 0, Thread 2 [1198 MHz]: 112367 ms
+Rank 0, Thread 3 [2396 MHz]: 112256 ms
+Rank 0, Iteration 3: 112848.021129 ms
+	(thread 0: 1862.728479 ms)
+	(thread 1: 112847.106817 ms)
+	(thread 2: 112367.103498 ms)
+	(thread 3: 112256.229085 ms)
+Rank 0, Iteration 3: 18274.859222 J, 161.942221 W
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 4
+    Resetting frequency on CPU 5
+    Resetting frequency on CPU 6
+    Resetting frequency on CPU 7
+Rank 1, Thread 0 [510 MHz]: 1882 ms
+Rank 1, Thread 1 [3575 MHz]: 112858 ms
+Rank 1, Thread 2 [1198 MHz]: 112349 ms
+Rank 1, Thread 3 [2396 MHz]: 112258 ms
+Rank 1, Iteration 3: 112859.403502 ms
+	(thread 0: 1882.456423 ms)
+	(thread 1: 112857.860850 ms)
+	(thread 2: 112348.786541 ms)
+	(thread 3: 112258.564630 ms)
+Rank 1, Iteration 3: 18276.393764 J, 161.939486 W
+    Resetting frequency on CPU 16
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 17
+    Resetting frequency on CPU 18
+    Resetting frequency on CPU 19
+	(thread 0: 1878.827181 ms)
+	(thread 1: 112866.357574 ms)
+	(thread 2: 112375.378198 ms)
+Rank 4, Thread 0 [533 MHz]: 1879 ms
+	(thread 3: 112272.598167 ms)
+Rank 4, Thread 1 [3575 MHz]: 112866 ms
+Rank 4, Thread 2 [1198 MHz]: 112375 ms
+Rank 4, Thread 3 [2396 MHz]: 112272 ms
+Rank 4, Iteration 3: 112867.164982 ms
+Rank 4, Iteration 3: 18277.690086 J, 161.939835 W
     Resetting frequency on CPU 24
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 25
     Resetting frequency on CPU 26
     Resetting frequency on CPU 27
-	(thread 0: 1887.824760 ms)
-	(thread 1: 106579.087212 ms)
-	(thread 2: 74841.206286 ms)
-	(thread 3: 77121.259708 ms)
-Rank 6, Thread 0 [507 MHz]: 1888 ms
-Rank 6, Thread 1 [3784 MHz]: 106579 ms
-Rank 6, Thread 2 [1797 MHz]: 74841 ms
-Rank 6, Thread 3 [3487 MHz]: 77121 ms
-Rank 6, Iteration 3: 106579.998242 ms
-Rank 6, Iteration 3: 21673.946712 J, 203.358483 W
+Rank 6, Thread 0 [522 MHz]: 1896 ms
+Rank 6, Thread 1 [3575 MHz]: 112867 ms
+Rank 6, Thread 2 [1198 MHz]: 112365 ms
+Rank 6, Thread 3 [2396 MHz]: 112267 ms
+Rank 6, Iteration 3: 112868.551009 ms
+	(thread 0: 1896.103811 ms)
+	(thread 1: 112867.477736 ms)
+	(thread 2: 112365.407385 ms)
+	(thread 3: 112266.558124 ms)
+Rank 6, Iteration 3: 18277.946738 J, 161.940120 W
     Resetting frequency on CPU 28
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 29
     Resetting frequency on CPU 30
+    Resetting frequency on CPU 31
+	(thread 0: 1835.803804 ms)
+	(thread 1: 112874.030388 ms)
+	(thread 2: 112363.694863 ms)
+	(thread 3: 112262.835440 ms)
+Rank 7, Thread 0 [522 MHz]: 1836 ms
+Rank 7, Thread 1 [3575 MHz]: 112874 ms
+Rank 7, Thread 2 [1198 MHz]: 112364 ms
+Rank 7, Thread 3 [2396 MHz]: 112263 ms
+Rank 7, Iteration 3: 112874.149409 ms
+Rank 7, Iteration 3: 18278.958821 J, 161.941055 W
+    Resetting frequency on CPU 8
+    Resetting frequency on CPU 9
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 10
+    Resetting frequency on CPU 11
+	(thread 0: 1943.350710 ms)
+	(thread 1: 112897.447260 ms)
+	(thread 2: 112348.390557 ms)
+Rank 2, Thread 0 [516 MHz]: 1943 ms
+Rank 2, Thread 1 [3575 MHz]: 112897 ms
+	(thread 3: 112261.650941 ms)
+Rank 2, Thread 2 [1198 MHz]: 112348 ms
+Rank 2, Thread 3 [2396 MHz]: 112262 ms
+Rank 2, Iteration 3: 112898.079108 ms
+Rank 2, Iteration 3: 18282.766123 J, 161.940453 W
     Resetting frequency on CPU 20
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 4
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 21
-    Resetting frequency on CPU 5
     Resetting frequency on CPU 22
-    Resetting frequency on CPU 6
-    Resetting frequency on CPU 31
-    Resetting frequency on CPU 7
-	(thread 0: 1767.170411 ms)
-	(thread 1: 106583.194702 ms)
-	(thread 2: 74835.988570 ms)
-Rank 7, Thread 0 [542 MHz]: 1767 ms
-Rank 7, Thread 1 [3784 MHz]: 106583 ms
-Rank 7, Thread 2 [1797 MHz]: 74836 ms
-Rank 7, Thread 3 [3487 MHz]: 77120 ms
-	(thread 3: 77119.605984 ms)
     Resetting frequency on CPU 23
-Rank 7, Iteration 3: 106583.874681 ms
-	(thread 0: 1896.286780 ms)
-	(thread 1: 106582.713151 ms)
-	(thread 2: 74840.522228 ms)
-	(thread 3: 77113.061887 ms)
-Rank 1, Thread 0 [527 MHz]: 1896 ms
-Rank 1, Thread 1 [3784 MHz]: 106583 ms
-Rank 1, Thread 2 [1797 MHz]: 74840 ms
-Rank 1, Thread 3 [3487 MHz]: 77113 ms
-Rank 1, Iteration 3: 106584.277348 ms
-Rank 7, Iteration 3: 21674.540399 J, 203.356657 W
-Rank 1, Iteration 3: 21674.540399 J, 203.355888 W
-	(thread 0: 1887.350390 ms)
-	(thread 1: 106583.013551 ms)
-	(thread 2: 74837.198496 ms)
-	(thread 3: 77116.577435 ms)
-Rank 5, Thread 0 [510 MHz]: 1887 ms
-Rank 5, Thread 1 [3784 MHz]: 106583 ms
-Rank 5, Thread 2 [1797 MHz]: 74837 ms
-Rank 5, Thread 3 [3487 MHz]: 77117 ms
-Rank 5, Iteration 3: 106584.525677 ms
-Rank 5, Iteration 3: 21674.540399 J, 203.355415 W
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
-    Resetting frequency on CPU 3
-[OMPT] end region  [0x402f26]
-	(thread 0: 1825.277930 ms)
-	(thread 1: 106614.675797 ms)
-	(thread 2: 74840.493023 ms)
-	(thread 3: 77115.428034 ms)
-Rank 0, Thread 0 [596 MHz]: 1825 ms
-Rank 0, Thread 1 [3784 MHz]: 106615 ms
-Rank 0, Thread 2 [1797 MHz]: 74840 ms
-Rank 0, Thread 3 [3487 MHz]: 77115 ms
-Rank 0, Iteration 3: 106615.719430 ms
-Rank 0, Iteration 3: 21680.008220 J, 203.347202 W
+Rank 5, Thread 0 [500 MHz]: 1896 ms
+Rank 5, Thread 1 [3575 MHz]: 112921 ms
+Rank 5, Thread 2 [1198 MHz]: 112369 ms
+Rank 5, Thread 3 [2396 MHz]: 112259 ms
+Rank 5, Iteration 3: 112921.599927 ms
+	(thread 0: 1896.072039 ms)
+	(thread 1: 112920.714875 ms)
+	(thread 2: 112368.602713 ms)
+	(thread 3: 112258.674046 ms)
+Rank 5, Iteration 3: 18286.883727 J, 161.943187 W
 
 Threads workloads
 0 499999999 166666667 333333333 
 
 Threads times
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 82 MHz previous elapsed: 1825.277930 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106614.675797 ms)
-	(Thread 2: 3369 MHz previous elapsed: 74840.493023 ms)
-	(Thread 3: 3471 MHz previous elapsed: 77115.428034 ms)
+	(Thread 0: previous elapsed: 1882.456423 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112857.860850 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112348.786541 ms ==> 1213 MHz )
+	(Thread 3: previous elapsed: 112258.564630 ms ==> 2418 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1884.820542 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106571.353668 ms)
-	(Thread 2: 3371 MHz previous elapsed: 74847.744114 ms)
-	(Thread 3: 3473 MHz previous elapsed: 77114.889144 ms)
+	(Thread 0: previous elapsed: 1896.072039 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112920.714875 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112368.602713 ms ==> 1224 MHz )
+	(Thread 3: previous elapsed: 112258.674046 ms ==> 2422 MHz )
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
+	(Thread 0: previous elapsed: 1862.728479 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112847.106817 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112367.103498 ms ==> 1227 MHz )
+	(Thread 3: previous elapsed: 112256.229085 ms ==> 2423 MHz )
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
+	(Thread 0: previous elapsed: 1943.350710 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112897.447260 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112348.390557 ms ==> 1225 MHz )
+	(Thread 3: previous elapsed: 112261.650941 ms ==> 2421 MHz )
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
+	(Thread 0: previous elapsed: 1942.878926 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112844.077881 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112353.404223 ms ==> 1226 MHz )
+	(Thread 3: previous elapsed: 112286.185274 ms ==> 2426 MHz )
+[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
+	(Thread 0: previous elapsed: 1878.827181 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112866.357574 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112375.378198 ms ==> 1215 MHz )
+	(Thread 3: previous elapsed: 112272.598167 ms ==> 2419 MHz )
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 85 MHz previous elapsed: 1896.286780 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106582.713151 ms)
-	(Thread 2: 3370 MHz previous elapsed: 74840.522228 ms)
-	(Thread 3: 3472 MHz previous elapsed: 77113.061887 ms)
+	(Thread 0: previous elapsed: 1896.103811 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112867.477736 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112365.407385 ms ==> 1214 MHz )
+	(Thread 3: previous elapsed: 112266.558124 ms ==> 2419 MHz )
 [OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 85 MHz previous elapsed: 1896.747244 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106577.499388 ms)
-	(Thread 2: 3370 MHz previous elapsed: 74836.685091 ms)
-	(Thread 3: 3476 MHz previous elapsed: 77184.621815 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1884.526190 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106575.924996 ms)
-	(Thread 2: 3371 MHz previous elapsed: 74865.298182 ms)
-	(Thread 3: 3474 MHz previous elapsed: 77137.561389 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 84 MHz previous elapsed: 1887.350390 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106583.013551 ms)
-	(Thread 2: 3370 MHz previous elapsed: 74837.198496 ms)
-	(Thread 3: 3472 MHz previous elapsed: 77116.577435 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 85 MHz previous elapsed: 1887.824760 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106579.087212 ms)
-	(Thread 2: 3370 MHz previous elapsed: 74841.206286 ms)
-	(Thread 3: 3473 MHz previous elapsed: 77121.259708 ms)
-[OMPT] balancing frequencies for region [0x402f26] (begin_count=5 thread_count=4)
-	(Thread 0: 79 MHz previous elapsed: 1767.170411 ms)
-	(Thread 1: 4800 MHz previous elapsed: 106583.194702 ms)
-	(Thread 2: 3370 MHz previous elapsed: 74835.988570 ms)
-	(Thread 3: 3473 MHz previous elapsed: 77119.605984 ms)
+	(Thread 0: previous elapsed: 1835.803804 ms ==> 0 MHz )
+	(Thread 1: previous elapsed: 112874.030388 ms ==> 4800 MHz )
+	(Thread 2: previous elapsed: 112363.694863 ms ==> 1224 MHz )
+	(Thread 3: previous elapsed: 112262.835440 ms ==> 2422 MHz )
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
@@ -757,159 +757,159 @@ Threads times
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
 [OMPT] begin region  [0x402f26] (begin_count=5 thread_count=4)
-    Resetting frequency on CPU 16
-    Resetting frequency on CPU 17
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 18
-    Resetting frequency on CPU 19
-Rank 4, Thread 0 [511 MHz]: 1857 ms
-Rank 4, Thread 1 [3947 MHz]: 102149 ms
-Rank 4, Thread 2 [3295 MHz]: 40800 ms
-Rank 4, Thread 3 [3395 MHz]: 79202 ms
-Rank 4, Iteration 4: 102150.555849 ms
-	(thread 0: 1857.520624 ms)
-	(thread 1: 102148.909617 ms)
-	(thread 2: 40799.633092 ms)
-	(thread 3: 79202.487236 ms)
-Rank 4, Iteration 4: 22860.011180 J, 223.787438 W
-sum of Rank 4, Thread 0: 10.344055 ms
-sum of Rank 4, Thread 1: 520.800897 ms
-sum of Rank 4, Thread 2: 272.112771 ms
-sum of Rank 4, Thread 3: 384.412545 ms
-    Resetting frequency on CPU 24
-[OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 25
-    Resetting frequency on CPU 26
-    Resetting frequency on CPU 27
-	(thread 0: 1841.915573 ms)
-	(thread 1: 102154.618670 ms)
-	(thread 2: 40798.877288 ms)
-	(thread 3: 79203.421755 ms)
-Rank 6, Thread 0 [517 MHz]: 1842 ms
-Rank 6, Thread 1 [3947 MHz]: 102155 ms
-Rank 6, Thread 2 [3295 MHz]: 40799 ms
-Rank 6, Thread 3 [3395 MHz]: 79203 ms
-Rank 6, Iteration 4: 102155.303414 ms
-Rank 6, Iteration 4: 22860.899178 J, 223.785730 W
-sum of Rank 6, Thread 0: 9.125827 ms
-sum of Rank 6, Thread 1: 520.223789 ms
-sum of Rank 6, Thread 2: 271.475642 ms
-sum of Rank 6, Thread 3: 383.849530 ms
-[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 12
     Resetting frequency on CPU 13
     Resetting frequency on CPU 14
+[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 15
-Rank 3, Thread 0 [504 MHz]: 1858 ms
-Rank 3, Thread 1 [3947 MHz]: 102155 ms
-Rank 3, Thread 2 [3295 MHz]: 40800 ms
-Rank 3, Thread 3 [3395 MHz]: 79225 ms
-Rank 3, Iteration 4: 102156.298134 ms
-	(thread 0: 1857.839033 ms)
-	(thread 1: 102155.258303 ms)
-	(thread 2: 40800.202245 ms)
-	(thread 3: 79224.847234 ms)
-Rank 3, Iteration 4: 22860.899178 J, 223.783551 W
-sum of Rank 3, Thread 0: 10.373596 ms
-sum of Rank 3, Thread 1: 520.228537 ms
-sum of Rank 3, Thread 2: 271.519126 ms
-sum of Rank 3, Thread 3: 383.939478 ms
+Rank 3, Thread 0 [499 MHz]: 1902 ms
+Rank 3, Thread 1 [3566 MHz]: 113112 ms
+Rank 3, Thread 2 [1198 MHz]: 112351 ms
+Rank 3, Thread 3 [2396 MHz]: 112262 ms
+Rank 3, Iteration 4: 113113.226193 ms
+	(thread 0: 1902.391228 ms)
+	(thread 1: 113111.592604 ms)
+	(thread 2: 112351.411301 ms)
+	(thread 3: 112262.062120 ms)
+Rank 3, Iteration 4: 18257.435256 J, 161.408492 W
+sum of Rank 3, Thread 0: 10.247487 ms
+sum of Rank 3, Thread 1: 548.256426 ms
+sum of Rank 3, Thread 2: 446.289365 ms
+sum of Rank 3, Thread 3: 485.434067 ms
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 8
-    Resetting frequency on CPU 9
-    Resetting frequency on CPU 10
-    Resetting frequency on CPU 11
-	(thread 0: 1857.245592 ms)
-	(thread 1: 102155.645351 ms)
-	(thread 2: 40796.413440 ms)
-	(thread 3: 79270.177560 ms)
-Rank 2, Thread 0 [523 MHz]: 1857 ms
-Rank 2, Thread 1 [3947 MHz]: 102156 ms
-Rank 2, Thread 2 [3295 MHz]: 40796 ms
-Rank 2, Thread 3 [3395 MHz]: 79270 ms
-Rank 2, Iteration 4: 102157.374396 ms
-Rank 2, Iteration 4: 22860.899178 J, 223.781194 W
-sum of Rank 2, Thread 0: 10.212551 ms
-sum of Rank 2, Thread 1: 520.840328 ms
-sum of Rank 2, Thread 2: 272.117156 ms
-sum of Rank 2, Thread 3: 384.628764 ms
-    Resetting frequency on CPU 20
+    Resetting frequency on CPU 0
+    Resetting frequency on CPU 1
+    Resetting frequency on CPU 2
+    Resetting frequency on CPU 3
+	(thread 0: 1806.399705 ms)
+	(thread 1: 113115.071109 ms)
+	(thread 2: 112375.187107 ms)
+	(thread 3: 112255.198818 ms)
+Rank 0, Thread 0 [540 MHz]: 1806 ms
+Rank 0, Thread 1 [3566 MHz]: 113115 ms
+Rank 0, Thread 2 [1198 MHz]: 112375 ms
+Rank 0, Thread 3 [2396 MHz]: 112255 ms
+Rank 0, Iteration 4: 113116.021810 ms
+Rank 0, Iteration 4: 18257.906812 J, 161.408672 W
+sum of Rank 0, Thread 0: 10.189367 ms
+sum of Rank 0, Thread 1: 548.364137 ms
+sum of Rank 0, Thread 2: 446.408294 ms
+sum of Rank 0, Thread 3: 485.407241 ms
+    Resetting frequency on CPU 16
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 21
-    Resetting frequency on CPU 22
-    Resetting frequency on CPU 23
-Rank 5, Thread 0 [510 MHz]: 1841 ms
-Rank 5, Thread 1 [3947 MHz]: 102159 ms
-Rank 5, Thread 2 [3295 MHz]: 40798 ms
-Rank 5, Thread 3 [3395 MHz]: 79201 ms
-Rank 5, Iteration 4: 102160.279865 ms
-	(thread 0: 1841.204130 ms)
-	(thread 1: 102158.652569 ms)
-	(thread 2: 40797.848263 ms)
-	(thread 3: 79200.666584 ms)
-Rank 5, Iteration 4: 22861.667548 J, 223.782350 W
-sum of Rank 5, Thread 0: 10.202082 ms
-sum of Rank 5, Thread 1: 520.895897 ms
-sum of Rank 5, Thread 2: 272.052934 ms
-sum of Rank 5, Thread 3: 384.426285 ms
+    Resetting frequency on CPU 17
+    Resetting frequency on CPU 18
+    Resetting frequency on CPU 19
+	(thread 0: 1841.670952 ms)
+	(thread 1: 113126.584017 ms)
+	(thread 2: 112371.294853 ms)
+Rank 4, Thread 0 [510 MHz]: 1842 ms
+	(thread 3: 112273.101205 ms)
+Rank 4, Thread 1 [3566 MHz]: 113127 ms
+Rank 4, Thread 2 [1198 MHz]: 112371 ms
+Rank 4, Thread 3 [2396 MHz]: 112273 ms
+Rank 4, Iteration 4: 113127.582216 ms
+Rank 4, Iteration 4: 18259.639351 J, 161.407492 W
+sum of Rank 4, Thread 0: 10.406178 ms
+sum of Rank 4, Thread 1: 547.763139 ms
+sum of Rank 4, Thread 2: 445.825903 ms
+sum of Rank 4, Thread 3: 484.870578 ms
     Resetting frequency on CPU 4
 [OMPT] end region  [0x402f26]
     Resetting frequency on CPU 5
     Resetting frequency on CPU 6
     Resetting frequency on CPU 7
-Rank 1, Thread 0 [516 MHz]: 1857 ms
-Rank 1, Thread 1 [3947 MHz]: 102159 ms
-Rank 1, Thread 2 [3295 MHz]: 40799 ms
-Rank 1, Thread 3 [3395 MHz]: 79199 ms
-Rank 1, Iteration 4: 102161.168605 ms
-	(thread 0: 1857.154888 ms)
-	(thread 1: 102159.112209 ms)
-	(thread 2: 40798.969023 ms)
-	(thread 3: 79199.437289 ms)
-Rank 1, Iteration 4: 22861.667548 J, 223.780404 W
-sum of Rank 1, Thread 0: 10.307371 ms
-sum of Rank 1, Thread 1: 520.923518 ms
-sum of Rank 1, Thread 2: 272.156307 ms
-sum of Rank 1, Thread 3: 384.392849 ms
-    Resetting frequency on CPU 0
-    Resetting frequency on CPU 1
-    Resetting frequency on CPU 2
+	(thread 0: 1871.199047 ms)
+	(thread 1: 113128.423134 ms)
+	(thread 2: 112347.772741 ms)
+	(thread 3: 112254.052626 ms)
+Rank 1, Thread 0 [517 MHz]: 1871 ms
+Rank 1, Thread 1 [3566 MHz]: 113128 ms
+Rank 1, Thread 2 [1198 MHz]: 112348 ms
+Rank 1, Thread 3 [2396 MHz]: 112254 ms
+Rank 1, Iteration 4: 113130.327881 ms
+Rank 1, Iteration 4: 18260.135688 J, 161.407962 W
+sum of Rank 1, Thread 0: 10.353237 ms
+sum of Rank 1, Thread 1: 547.727162 ms
+sum of Rank 1, Thread 2: 445.694877 ms
+sum of Rank 1, Thread 3: 484.800516 ms
+    Resetting frequency on CPU 24
 [OMPT] end region  [0x402f26]
-    Resetting frequency on CPU 3
-	(thread 0: 1824.522351 ms)
-	(thread 1: 102188.812758 ms)
-	(thread 2: 40798.822621 ms)
-	(thread 3: 79200.677874 ms)
-Rank 0, Thread 0 [568 MHz]: 1824 ms
-Rank 0, Thread 1 [3947 MHz]: 102189 ms
-Rank 0, Thread 2 [3295 MHz]: 40799 ms
-Rank 0, Thread 3 [3395 MHz]: 79201 ms
-Rank 0, Iteration 4: 102189.938452 ms
-Rank 0, Iteration 4: 22867.037285 J, 223.769949 W
-sum of Rank 0, Thread 0: 10.355846 ms
-sum of Rank 0, Thread 1: 521.129343 ms
-sum of Rank 0, Thread 2: 272.128706 ms
-sum of Rank 0, Thread 3: 384.455760 ms
-[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 25
+    Resetting frequency on CPU 26
+    Resetting frequency on CPU 27
+	(thread 0: 1863.560897 ms)
+	(thread 1: 113134.084234 ms)
+	(thread 2: 112366.309031 ms)
+Rank 6, Thread 0 [522 MHz]: 1864 ms
+Rank 6, Thread 1 [3566 MHz]: 113134 ms
+	(thread 3: 112268.229084 ms)
+Rank 6, Thread 2 [1198 MHz]: 112366 ms
+Rank 6, Thread 3 [2396 MHz]: 112268 ms
+Rank 6, Iteration 4: 113135.339263 ms
+Rank 6, Iteration 4: 18261.084965 J, 161.409203 W
+sum of Rank 6, Thread 0: 10.600605 ms
+sum of Rank 6, Thread 1: 547.748314 ms
+sum of Rank 6, Thread 2: 445.765783 ms
+sum of Rank 6, Thread 3: 484.860251 ms
     Resetting frequency on CPU 28
+[OMPT] end region  [0x402f26]
     Resetting frequency on CPU 29
     Resetting frequency on CPU 30
     Resetting frequency on CPU 31
-Rank 7, Thread 0 [520 MHz]: 1806 ms
-Rank 7, Thread 1 [3947 MHz]: 102193 ms
-Rank 7, Thread 2 [3295 MHz]: 40797 ms
-Rank 7, Thread 3 [3395 MHz]: 79206 ms
-Rank 7, Iteration 4: 102194.810114 ms
-	(thread 0: 1806.488052 ms)
-	(thread 1: 102193.114063 ms)
-	(thread 2: 40797.235877 ms)
-	(thread 3: 79205.616795 ms)
-Rank 7, Iteration 4: 22868.017934 J, 223.768877 W
-sum of Rank 7, Thread 0: 10.373110 ms
-sum of Rank 7, Thread 1: 520.267564 ms
-sum of Rank 7, Thread 2: 271.448649 ms
-sum of Rank 7, Thread 3: 383.836212 ms
+	(thread 0: 1864.010053 ms)
+	(thread 1: 113137.675620 ms)
+	(thread 2: 112365.454677 ms)
+	(thread 3: 112263.011990 ms)
+Rank 7, Thread 0 [511 MHz]: 1864 ms
+Rank 7, Thread 1 [3566 MHz]: 113138 ms
+Rank 7, Thread 2 [1198 MHz]: 112365 ms
+Rank 7, Thread 3 [2396 MHz]: 112263 ms
+Rank 7, Iteration 4: 113137.787047 ms
+Rank 7, Iteration 4: 18261.574527 J, 161.410038 W
+sum of Rank 7, Thread 0: 10.542164 ms
+sum of Rank 7, Thread 1: 548.556694 ms
+sum of Rank 7, Thread 2: 446.375989 ms
+sum of Rank 7, Thread 3: 485.501441 ms
+    Resetting frequency on CPU 8
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 9
+    Resetting frequency on CPU 10
+    Resetting frequency on CPU 11
+	(thread 0: 1903.017832 ms)
+	(thread 1: 113161.702436 ms)
+	(thread 2: 112376.942871 ms)
+	(thread 3: 112259.281658 ms)
+Rank 2, Thread 0 [513 MHz]: 1903 ms
+Rank 2, Thread 1 [3566 MHz]: 113162 ms
+Rank 2, Thread 2 [1198 MHz]: 112377 ms
+Rank 2, Thread 3 [2396 MHz]: 112259 ms
+Rank 2, Iteration 4: 113162.864025 ms
+Rank 2, Iteration 4: 18265.868523 J, 161.412215 W
+sum of Rank 2, Thread 0: 10.487100 ms
+sum of Rank 2, Thread 1: 548.462738 ms
+sum of Rank 2, Thread 2: 446.336517 ms
+sum of Rank 2, Thread 3: 485.378779 ms
+    Resetting frequency on CPU 20
+[OMPT] end region  [0x402f26]
+    Resetting frequency on CPU 21
+    Resetting frequency on CPU 22
+    Resetting frequency on CPU 23
+Rank 5, Thread 0 [534 MHz]: 1862 ms
+Rank 5, Thread 1 [3566 MHz]: 113209 ms
+Rank 5, Thread 2 [1198 MHz]: 112371 ms
+Rank 5, Thread 3 [2396 MHz]: 112259 ms
+Rank 5, Iteration 4: 113209.446424 ms
+	(thread 0: 1862.095211 ms)
+	(thread 1: 113208.986837 ms)
+	(thread 2: 112370.609372 ms)
+	(thread 3: 112258.726301 ms)
+Rank 5, Iteration 4: 18276.130398 J, 161.436443 W
+sum of Rank 5, Thread 0: 10.401231 ms
+sum of Rank 5, Thread 1: 548.510139 ms
+sum of Rank 5, Thread 2: 446.343260 ms
+sum of Rank 5, Thread 3: 485.409655 ms
 
-Execution time: 522.469048 seconds
-Whole-program energy: 113513.984733 J
-Whole-program average power: 217.264516 W
+Execution time: 549.803188 seconds
+Whole-program energy: 100624.926177 J
+Whole-program average power: 183.019903 W
