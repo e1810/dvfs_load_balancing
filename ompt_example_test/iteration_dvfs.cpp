@@ -28,6 +28,9 @@ void divloop(int loopsize, int *ist, int *ied, int numth) {
     }
     ied[1] += (ied[1] - ist[1]) / 2;
     ist[2] = ied[1];
+
+    ied[0] = ied[1];
+    ist[1] = ied[1];
 }
 
 
@@ -91,7 +94,7 @@ int main(int argc, char **argv) {
             
             for(int i=ist[ith]; i<ied[ith]; i++) {
                 comp_buf[i] = i+iter;
-                for(int j=0; j<50000; j++) {
+                for(int j=0; j<5000; j++) {
                     if(j%2) comp_buf[i]++;
                     else comp_buf[i]--;
                 }

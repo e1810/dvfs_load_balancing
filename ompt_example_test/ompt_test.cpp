@@ -10,16 +10,16 @@
 namespace {
 
 static bool debug = true;
-static int max_mhz = 4800; // xeon w7-3565x
+static double max_mhz = 4800; // xeon w7-3565x
 
 struct RegionState {
     const void* codeptr_ra;
     unsigned int begin_count;
     int nthreads;
+    std::vector<std::chrono::steady_clock::time_point> start_times;
     std::vector<double> elapsed_ms;
     std::vector<double> target_mhz;
     std::vector<int> cpu_map;
-    std::chrono::steady_clock::time_point start_time;
 
     RegionState(const omptool::ParallelRegionBeginEvent& ev)
         : codeptr_ra(ev.codeptr_ra), begin_count(0) {
@@ -27,16 +27,20 @@ struct RegionState {
         elapsed_ms.assign(nthreads, 0.0);
         target_mhz.assign(nthreads, max_mhz);
         cpu_map.assign(nthreads, -1);
+        start_times.assign(nthreads, std::chrono::steady_clock::time_point{});
     }
 
-    void balance_freq() {
+    void plan_balanced_freq() {
         if(debug) {
             std::fprintf(stderr, "[OMPT] balancing frequencies for region [%p] (begin_count=%u thread_count=%d)\n",
                         codeptr_ra, begin_count, nthreads);
         }
 
         if(begin_count == 1) {
-            msr::reset_freq_all(); // バグあり：master にしか効かない
+            for(int i=0; i<nthreads; i++) target_mhz[i] = max_mhz;
+            if(debug) {
+                std::fprintf(stderr, "[OMPT]\t\t(First exec of region ==> %.0f MHz (MAX) for all threads)\n", max_mhz);
+            }
             return;
         }
 
@@ -49,13 +53,9 @@ struct RegionState {
             double work = elapsed_ms[i] * target_mhz[i];
             target_mhz[i] = max_mhz * (work / max_work);
             if(debug) {
-                std::fprintf(stderr, "\t(Thread %d: previous elapsed: %.6f ms ==> %.0f MHz )\n",
+                std::fprintf(stderr, "[OMPT]\t\t(Thread %d: previous elapsed: %.6f ms ==> %.0f MHz )\n",
                             i, elapsed_ms[i], target_mhz[i]);
             }
-        }
-
-        for (int tid = 0; tid < nthreads; tid++) {
-            msr::set_freq_on_cpu(cpu_map[tid], target_mhz[tid], 100);
         }
     }
 };
@@ -82,6 +82,11 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
         codeptr_ra,
     };
 
+    if (debug) {
+        std::fprintf(stderr, "[OMPT] begin region  [%p] (begin_count=%u thread_count=%d)\n",
+                    event.codeptr_ra, rs->begin_count, rs->nthreads);
+    }
+
     auto iter = region_states.find(event.codeptr_ra);
     if (iter == region_states.end()) {
         iter = region_states.emplace(event.codeptr_ra, RegionState(event)).first;
@@ -89,15 +94,8 @@ void dispatch_parallel_begin(ompt_data_t* encountering_task_data,
     auto* rs = &iter->second;
 
     rs->begin_count += 1;
-    rs->balance_freq();
-
-    rs->start_time = std::chrono::steady_clock::now();
+    rs->plan_balanced_freq();
     parallel_data->ptr = rs;
-
-    if (debug) {
-        std::fprintf(stderr, "[OMPT] begin region  [%p] (begin_count=%u thread_count=%d)\n",
-                    event.codeptr_ra, rs->begin_count, rs->nthreads);
-    }
 }
 
 
@@ -121,12 +119,86 @@ void dispatch_barrier_wait(ompt_sync_region_t kind,
 
     int tid = omp_get_thread_num();
     auto now = std::chrono::steady_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_time);
+    auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_times[tid]);
     rs->elapsed_ms[tid] = elapsed.count();
 
     if(rs->begin_count == 1) rs->cpu_map[tid] = msr::current_cpu();
 }
 
+void dispatch_implicit_task_begin(ompt_data_t* parallel_data,
+                                  ompt_data_t* task_data,
+                                  unsigned int team_size,
+                                  unsigned int thread_num,
+                                  int flags) {
+    (void)task_data; (void)team_size; (void)flags;
+    if (!parallel_data || !parallel_data->ptr) {
+        std::fprintf(stderr, "[OMPT] implicit_task_begin: parallel_data is not registered\n");
+        return;
+    }
+
+    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
+    if (!rs) {
+        std::fprintf(stderr, "[OMPT] implicit_task_begin: RegionState is not found\n");
+        return;
+    }
+
+    if(rs->begin_count == 1) rs->cpu_map[thread_num] = msr::current_cpu();
+    
+    msr::set_freq_on_cpu(rs->cpu_map[thread_num], rs->target_mhz[thread_num], 100);
+    
+    // 計測開始
+    rs->start_times[thread_num] = std::chrono::steady_clock::now();
+    task_data->ptr = rs;
+
+    if(debug) {
+        std::fprintf(stderr, "[OMPT] implicit_task_begin: thread %d on CPU %d, target %.0f MHz\n",
+                    thread_num, rs->cpu_map[thread_num], rs->target_mhz[thread_num]);
+    }
+}
+
+void dispatch_implicit_task_end(ompt_data_t* parallel_data,
+                                ompt_data_t* task_data,
+                                unsigned int team_size,
+                                unsigned int thread_num,
+                                int flags) {
+    (void)task_data; (void)team_size; (void)flags;
+    if (!parallel_data || !parallel_data->ptr) {
+        std::fprintf(stderr, "[OMPT] implicit_task_end: parallel_data is not registered\n");
+        return;
+    }
+
+    auto* rs = static_cast<RegionState*>(parallel_data->ptr);
+    if (!rs) {
+        std::fprintf(stderr, "[OMPT] implicit_task_end: RegionState is not found\n");
+        return;
+    }
+
+    std::fprintf(stderr, "[OMPT] implicit_task_end: thread %d", thread_num);
+    auto now = std::chrono::steady_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(now - rs->start_times[thread_num]);
+    rs->elapsed_ms[thread_num] = elapsed.count();
+    
+    if(debug) {
+        std::fprintf(stderr, "[OMPT] implicit_task_end: thread %d elapsed %.6f ms\n",
+                    thread_num, rs->elapsed_ms[thread_num]);
+    }
+}
+
+void dispatch_implicit_task(ompt_scope_endpoint_t endpoint,
+                            ompt_data_t* parallel_data,
+                            ompt_data_t* task_data,
+                            unsigned int team_size,
+                            unsigned int thread_num,
+                            int flags) {
+    if (endpoint == ompt_scope_begin) {
+        dispatch_implicit_task_begin(parallel_data, task_data, team_size, thread_num, flags);
+        return;
+    }
+
+    if (endpoint == ompt_scope_end) {
+        dispatch_implicit_task_end(parallel_data, task_data, team_size, thread_num, flags);
+    }
+}
 
 void dispatch_parallel_end(ompt_data_t* parallel_data,
                            ompt_data_t* task_data,
@@ -147,13 +219,13 @@ void dispatch_parallel_end(ompt_data_t* parallel_data,
     }
 
     for(int i = 0; i < rs->nthreads; i++) {
-        if(debug) printf("    Resetting frequency on CPU %d\n", rs->cpu_map[i]);
+        if(debug) std::fprintf(stderr, "[OMPT]\t\tResetting frequency on CPU %d\n", rs->cpu_map[i]);
         msr::set_freq_on_cpu(rs->cpu_map[i], 0, 100);
     }
 
     if(!debug) return;
     for (int i = 0; i < rs->nthreads; i++) {
-        std::fprintf(stderr, "\t(thread %d: %.6f ms)\n",
+        std::fprintf(stderr, "[OMPT]\t\t(thread %d: %.6f ms)\n",
                         i, rs->elapsed_ms[i]);
     }
 }
@@ -177,8 +249,10 @@ int ompt_initialize(ompt_function_lookup_t lookup,
                  reinterpret_cast<ompt_callback_t>(&dispatch_parallel_begin));
     set_callback(ompt_callback_parallel_end,
                  reinterpret_cast<ompt_callback_t>(&dispatch_parallel_end));
-    set_callback(ompt_callback_sync_region,
-                 reinterpret_cast<ompt_callback_t>(&dispatch_barrier_wait));
+    //set_callback(ompt_callback_sync_region,
+    //             reinterpret_cast<ompt_callback_t>(&dispatch_barrier_wait));
+    set_callback(ompt_callback_implicit_task,
+                 reinterpret_cast<ompt_callback_t>(&dispatch_implicit_task));
 
     msr::msr_init();
     msr::reset_freq_all();
